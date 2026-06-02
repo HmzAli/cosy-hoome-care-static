@@ -1,0 +1,43 @@
+# Windsurf Instructions
+
+## Project Summary
+
+This project contains static HTML pages that will later serve as references for WordPress theme development.
+
+The primary objective is to clean up, standardize, and improve consistency across all pages while preserving the intended design and functionality.
+
+## Development Guidelines
+
+### Code Quality
+
+* Write clean, readable, and concise code.
+* Prefer simple and maintainable solutions.
+* Remove unnecessary complexity, duplication, and inconsistencies where appropriate.
+* Keep formatting consistent throughout the project.
+
+### Standardization
+
+* Standardize markup, structure, naming, and organization across pages where appropriate.
+* Maintain consistency in reusable sections and components.
+* Improve code quality without changing the intended appearance or behavior.
+* When multiple approaches exist in the project, favor a single consistent pattern.
+
+### Changes
+
+* Only make changes that support the requested task.
+* Do not introduce new features unless explicitly requested.
+* Do not make unrelated modifications.
+* Preserve existing functionality and design unless instructed otherwise.
+
+### Project Standards
+
+* Follow existing project conventions where they are already consistent.
+* When inconsistencies are found, standardize them using the most appropriate pattern already present in the project.
+* Keep code organized, easy to understand, and easy to maintain.
+
+### Before Completing Work
+
+* Verify that pages remain visually and functionally consistent.
+* Confirm that changes align with the project's standardization goals.
+* Remove unused, redundant, or unnecessary code when relevant to the task.
+* Keep all changes focused, deliberate, and production-ready.

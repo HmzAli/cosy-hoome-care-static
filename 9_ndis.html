@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { display: none; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            color: #0f172a;
+            -webkit-font-smoothing: antialiased;
+        }
+        .nav-link-active {
+            color: #4076B8;
+            font-weight: 600;
+            position: relative;
+        }
+        .nav-link-active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #4076B8;
+        }
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #4076B8;
+        }
+        .social-icon {
+            transition: background-color 0.2s ease;
+        }
+        .social-icon:hover {
+            background-color: #5bc981;
+        }
+        .footer-link {
+            transition: color 0.2s ease;
+        }
+        .footer-link:hover {
+            color: #5bc981;
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.open {
+            display: block;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4076B8",
+                        "primary-dark": "#34629c",
+                        "navy": "#0f172a",
+                        "navy-deep": "#0f2a5c",
+                        "green-accent": "#5bc981",
+                        "blue-light": "#57B2E9",
+                        "border-light": "#EEE",
+                        "surface": "#f0f5fa",
+                        "surface-green": "#eef8f2",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="m-0 p-0 bg-[#FAFAFA]">
+
+    <!-- Utility Bar -->
+    <div id="utility-bar" class="w-full bg-[#0f2a5c] text-white py-2.5 px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center text-sm font-medium z-50 relative">
+        <div class="flex items-center gap-6 mb-2 sm:mb-0">
+            <a href="tel:+1300123456" class="flex items-center gap-2 hover:text-[#5bc981] transition-colors">
+                <i class="fa-solid fa-phone text-xs"></i>
+                <span>1300 123 456</span>
+            </a>
+            <div class="hidden sm:flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-xs"></i>
+                <span>123 Care Avenue, Sydney NSW 2000</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-white/80 hidden md:inline">Follow us on</span>
+            <div class="flex items-center gap-3">
+                <a href="#" class="social-icon w-7 h-7 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                <a href="#" class="social-icon w-7 h-7 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-brands fa-instagram text-xs"></i></a>
+                <a href="#" class="social-icon w-7 h-7 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header id="main-header" class="w-full bg-white border-b border-[#EEE] py-4 px-6 lg:px-12 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center group">
+                <img src="logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
+            </a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">Home</a>
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">About Us</a>
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">Services</a>
+                <a href="#" class="nav-link-active text-sm relative">NDIS</a>
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-btn" class="lg:hidden text-[#0f172a] hover:text-[#4076b8] text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden mt-4 pb-4 border-t border-[#EEE]">
+            <nav class="flex flex-col gap-4 pt-4">
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">Home</a>
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">About Us</a>
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">Services</a>
+                <a href="#" class="text-[#4076b8] font-semibold text-sm">NDIS</a>
+                <a href="#" class="nav-link text-[#0f172a] font-medium text-sm">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="hero-banner" class="w-full h-[320px] lg:h-[380px] relative overflow-hidden flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover object-center" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ca59ee0301-77dc06087a5abeb8091a.png" alt="wide hero banner background showing supportive care environment with soft blue and green tones, professional healthcare setting, abstract blurred background, warm and welcoming atmosphere" />
+            <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(15,42,92,0.88) 0%, rgba(64,118,184,0.75) 60%, rgba(64,118,184,0.45) 100%);"></div>
+        </div>
+        <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 w-full">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 text-white text-xs font-bold uppercase tracking-wider mb-5 border border-white/20">
+                    <i class="fa-solid fa-shield-halved text-[#5bc981] text-xs"></i>
+                    NDIS Support Services
+                </div>
+                <h1 class="text-3xl lg:text-5xl xl:text-[52px] font-extrabold text-white leading-tight tracking-tight mb-5">
+                    National Disability<br class="hidden sm:block" /> Insurance Scheme
+                </h1>
+                <div class="flex items-center gap-2 text-white/75 text-sm font-medium">
+                    <a href="#" class="hover:text-white transition-colors">Home</a>
+                    <i class="fa-solid fa-chevron-right text-xs text-white/50"></i>
+                    <span class="text-white font-semibold">NDIS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NDIS Main Content Section -->
+    <section id="ndis-main-section" class="w-full bg-white py-16 lg:py-24">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-start">
+
+                <!-- Left Column: Image -->
+                <div id="ndis-image-col" class="w-full">
+                    <div class="rounded-3xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(64,118,184,0.18)]" style="height: 540px;">
+                        <img class="w-full h-full object-cover object-center" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4ed65bb2ab-1b928c65bb7ff65300c9.png" alt="warm compassionate scene of a caring woman teacher or therapist guiding a young child through a learning activity at a bright table, educational support, soft natural light, professional photography style, warm tones" />
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div id="ndis-content-col" class="flex flex-col pt-0 lg:pt-2">
+
+                    <h2 id="ndis-heading" class="text-2xl lg:text-3xl xl:text-[34px] font-bold text-[#0f172a] leading-snug mb-6 tracking-tight">
+                        Supporting Individuals with Disabilities Through the <span class="text-[#4076b8]">NDIS</span>
+                    </h2>
+
+                    <p id="ndis-para-1" class="text-base lg:text-[17px] text-[#334155] leading-[1.8] mb-5">
+                        The National Disability Insurance Scheme (NDIS) supports individuals with disabilities, their families, and carers by providing funding for tailored services and early intervention. Through the NDIS Accommodation Scheme, people with significant disabilities gain access to personalised support, empowering them to achieve their goals and live better lives.
+                    </p>
+
+                    <p id="ndis-para-2" class="text-base lg:text-[17px] text-[#334155] leading-[1.8] mb-8">
+                        <span class="font-semibold text-[#0f172a]">Community Participation:</span> The NDIS often supports activities that promote social inclusion and community involvement. This assistance helps our clients engage more fully in their communities and improve their social inclusion. Cosy Home and Community Care helps individuals navigate the NDIS system, connect with government agencies, and access housing and support services.
+                    </p>
+
+                    <!-- Assists With Section -->
+                    <div id="ndis-assists-section" class="mb-2">
+                        <h3 class="text-lg font-semibold text-[#0f172a] mb-5 flex items-center gap-2">
+                            <span class="w-1 h-6 rounded-full bg-[#4076b8] inline-block flex-shrink-0"></span>
+                            Our experienced team assists with:
+                        </h3>
+                        <ul id="ndis-assists-list" class="flex flex-col gap-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-[#4076B8] text-sm mt-1 flex-shrink-0"></i>
+                                <span class="text-[#334155] text-base leading-[1.75]">Understanding NDIS eligibility and plans</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-[#4076B8] text-sm mt-1 flex-shrink-0"></i>
+                                <span class="text-[#334155] text-base leading-[1.75]">Preparing for NDIS planning meetings</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-[#4076B8] text-sm mt-1 flex-shrink-0"></i>
+                                <span class="text-[#334155] text-base leading-[1.75]">Accessing support services covered by NDIS</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-chevron-right text-[#4076B8] text-sm mt-1 flex-shrink-0"></i>
+                                <span class="text-[#334155] text-base leading-[1.75]">Implementing NDIS plans effectively</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full bg-[#0f2a5c] text-white pt-16 pb-8 px-6 lg:px-12">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+
+                <!-- Brand Column -->
+                <div id="footer-brand" class="lg:col-span-1">
+                    <a href="#" class="flex items-center mb-5 group">
+                        <div class="rounded-xl bg-white flex items-center justify-center shadow-md p-2">
+                            <img src="logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
+                        </div>
+                    </a>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6">
+                        Cosy Home Care builds a welcoming community where everybody matters. We provide compassionate, person-centred NDIS support.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="social-icon w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                        <a href="#" class="social-icon w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm"><i class="fa-brands fa-instagram text-xs"></i></a>
+                        <a href="#" class="social-icon w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div id="footer-links">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5">Quick Links</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Home</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">About Us</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Our Services</a></li>
+                        <li><a href="#" class="footer-link text-[#5bc981] text-sm font-semibold">NDIS Information</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Our Homes</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div id="footer-services">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5">Our Services</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Daily Living Support</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Community Participation</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Supported Independent Living</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Transport Assistance</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Capacity Building</a></li>
+                        <li><a href="#" class="footer-link text-white/70 text-sm font-medium">Health &amp; Wellbeing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div id="footer-contact">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5">Contact Us</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-phone text-[#5bc981] text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/50 text-xs font-medium uppercase tracking-wide mb-0.5">Phone</p>
+                                <a href="tel:+1300123456" class="footer-link text-white/80 text-sm font-medium">1300 123 456</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-envelope text-[#5bc981] text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/50 text-xs font-medium uppercase tracking-wide mb-0.5">Email</p>
+                                <a href="mailto:info@cosyhomecare.com.au" class="footer-link text-white/80 text-sm font-medium">info@cosyhomecare.com.au</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot text-[#5bc981] text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/50 text-xs font-medium uppercase tracking-wide mb-0.5">Address</p>
+                                <p class="text-white/80 text-sm font-medium">123 Care Avenue, Sydney NSW 2000</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div id="footer-bottom" class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-white/10">
+                <p class="text-white/50 text-sm font-medium">
+                    © 2024 Cosy Home Care. All rights reserved. NDIS Registered Provider.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="footer-link text-white/50 text-xs font-medium hover:text-white/80">Privacy Policy</a>
+                    <a href="#" class="footer-link text-white/50 text-xs font-medium hover:text-white/80">Terms of Service</a>
+                    <a href="#" class="footer-link text-white/50 text-xs font-medium hover:text-white/80">Accessibility</a>
+                </div>
+            </div>
+            <!-- Land Acknowledgment -->
+            <div class="flex flex-col items-center gap-3 mt-6">
+                <p class="text-white/40 text-xs leading-relaxed max-w-2xl text-center font-medium">
+                    We acknowledge the traditional custodians of the land on which we work &amp; live, the Wurundjeri, &amp; pay our respects to their Elders past, present, &amp; emerging.
+                </p>
+                <img src="acc.webp" alt="Acknowledgment of Country" class="h-[30px] w-auto object-contain">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('open');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (mobileMenu.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
