@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>window.FontAwesomeConfig = { autoReplaceSvg: "nest"};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: { DEFAULT: '#4076B8', foreground: '#FFFFFF' },
+        secondary: { DEFAULT: '#57B2E9', foreground: '#ffffff' },
+      },
+      fontFamily: { sans: ['Inter', 'sans-serif'] },
+    }
+  }
+}
+</script>
+<style>
+:root { --primary: #4076B8; --secondary: #57B2E9; --border: #EEE; }
+::-webkit-scrollbar { display: none; }
+body { font-family: Inter, sans-serif; }
+.nav-item-active { background-color: #4076B8; color: #fff !important; border-color: #4076B8 !important; }
+.nav-item { transition: all 0.2s; }
+.nav-item:hover { background-color: #f0f5fa; color: #4076B8; }
+</style>
+</head>
+<body class="m-0 p-0 bg-white">
+
+<div id="utility-bar" class="w-full text-white py-2.5 px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center text-sm font-medium z-50 relative" style="background-color:#0f2a5c;">
+  <div class="flex items-center gap-6 mb-2 sm:mb-0 flex-wrap">
+    <a href="tel:0394575968" class="flex items-center gap-2 hover:text-secondary transition-colors"><i class="fa-solid fa-phone text-xs"></i><span>(03) 9457 5968</span></a>
+    <div class="hidden sm:flex items-center gap-2"><i class="fa-solid fa-location-dot text-xs"></i><span>Level 2, Uni Hill Town Centre 1-3 Janefield Dr, Bundoora VIC 3083</span></div>
+    <a href="mailto:referral@cosyhomecare.com.au" class="hidden md:flex items-center gap-2 hover:text-secondary transition-colors"><i class="fa-solid fa-envelope text-xs"></i><span>referral@cosyhomecare.com.au</span></a>
+  </div>
+  <div class="flex items-center gap-4">
+    <span class="text-white/80 hidden md:inline">Follow us on</span>
+    <div class="flex items-center gap-3">
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+    </div>
+  </div>
+</div>
+
+<header id="main-header" class="w-full bg-white border-b py-4 px-6 lg:px-12 sticky top-0 z-40 shadow-sm" style="border-color:#EEE;">
+  <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-md" style="background-color:#4076B8;"><i class="fa-solid fa-hands-holding-child text-xl"></i></div>
+      <div class="flex flex-col">
+        <span class="font-bold text-xl leading-tight tracking-tight" style="color:#0f2a5c;">Cosy Home Care</span>
+        <span class="text-[10px] uppercase tracking-wider font-semibold" style="color:#4076B8;">Support Services</span>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Home</a>
+      <a href="#" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">About Us</a>
+      <a href="#" class="font-semibold text-sm" style="color:#4076B8;">Services</a>
+      <a href="#" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">NDIS</a>
+      <a href="#" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Contact Us</a>
+      <a href="#" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl text-white font-semibold text-sm hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);"><i class="fa-solid fa-house-chimney-window text-xs"></i> View Housing Vacancies</a>
+    </nav>
+    <button class="lg:hidden text-xl" style="color:#0f172a;"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div id="breadcrumb" class="w-full border-b py-3 px-6 lg:px-12" style="background-color:#f8fafc;border-color:#EEE;">
+  <div class="max-w-[1440px] mx-auto flex items-center gap-2 text-sm flex-wrap">
+    <a href="#" class="font-medium hover:underline" style="color:#4076B8;">Home</a>
+    <i class="fa-solid fa-chevron-right text-xs" style="color:#94a3b8;"></i>
+    <a href="#" class="font-medium hover:underline" style="color:#4076B8;">Services</a>
+    <i class="fa-solid fa-chevron-right text-xs" style="color:#94a3b8;"></i>
+    <span class="font-medium" style="color:#64748b;">Specialist Disability Accommodation (SDA)</span>
+  </div>
+</div>
+
+<div id="page-banner" class="relative w-full overflow-hidden flex items-center justify-center" style="height:260px;">
+  <div class="absolute inset-0">
+    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/022d19b31d-c5a6778b7c29cc3b90ca.png" alt="modern accessible disability accommodation building exterior" />
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(15,42,92,0.88) 0%,rgba(64,118,184,0.80) 100%);"></div>
+  </div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">Specialist Disability Accommodation <span style="color:#57B2E9;">(SDA)</span></h1>
+  </div>
+</div>
+
+<section id="service-detail-section" class="w-full py-16 px-6 lg:px-12" style="background-color:#F4F6F9;">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="flex flex-col lg:flex-row gap-10">
+
+      <div id="service-sidebar" class="w-full lg:w-[300px] xl:w-[320px] flex-shrink-0 flex flex-col gap-6">
+        <div id="services-nav" class="bg-white rounded-xl overflow-hidden shadow-sm border" style="border-color:#EEE;">
+          <div class="px-5 py-4 border-b" style="border-color:#EEE;background-color:#f8fafc;">
+            <h3 class="font-bold text-sm uppercase tracking-wider" style="color:#0f2a5c;">Our Services</h3>
+          </div>
+          <nav class="flex flex-col p-3 gap-1">
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Supported Independent Living (SIL)</a>
+            <a href="#" class="nav-item nav-item-active px-4 py-3 rounded-lg text-sm font-semibold">Specialist Disability Accommodation (SDA)</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Assistance with Self Care and Daily Living</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Community Access and Participation</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Respite Care / STA / MTA</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Life Skills Development</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Inclusive Youth Basketball Competition</a>
+          </nav>
+        </div>
+
+        <div id="sidebar-contact" class="bg-white rounded-xl shadow-sm border overflow-hidden" style="border-color:#EEE;">
+          <div class="px-5 py-4" style="background-color:#4076B8;">
+            <h3 class="font-bold text-white text-base">Get in Touch</h3>
+            <p class="text-white/80 text-xs mt-1">We'd love to hear from you</p>
+          </div>
+          <form class="p-5 flex flex-col gap-4" onsubmit="return false;">
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Full Name <span style="color:#e53e3e;">*</span></label>
+              <input type="text" placeholder="Full Name" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Phone <span style="color:#e53e3e;">*</span></label>
+              <input type="tel" placeholder="Phone" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Email <span style="color:#e53e3e;">*</span></label>
+              <input type="email" placeholder="Email" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Which House are you interested in? <span style="color:#e53e3e;">*</span></label>
+              <select class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors appearance-none" style="border-color:#d1d5db;color:#0f172a;">
+                <option value="" disabled selected>Location</option>
+                <option>Heidelberg West, VIC</option>
+                <option>Heidelberg Heights, VIC</option>
+                <option>Ivanhoe East, VIC</option>
+                <option>Kalkallo, VIC</option>
+                <option>Bundoora, VIC</option>
+                <option>Laverton, VIC</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Additional Info <span class="font-normal" style="color:#94a3b8;">(optional)</span></label>
+              <textarea placeholder="Tell us more..." rows="3" class="w-full rounded-lg border px-3 py-2 text-sm focus:outline-none transition-colors resize-none" style="border-color:#d1d5db;color:#0f172a;"></textarea>
+            </div>
+            <button type="submit" class="w-full h-11 rounded-lg text-white font-bold text-sm hover:opacity-90 transition-all hover:-translate-y-0.5" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="service-content" class="flex-1 min-w-0 flex flex-col gap-10">
+
+        <div id="sda-intro" class="bg-white rounded-xl p-8 shadow-sm border" style="border-color:#EEE;">
+          <h2 class="text-2xl font-extrabold mb-5" style="color:#0f2a5c;">Specialist Disability Accommodation <span style="color:#4076B8;">(SDA)</span></h2>
+          <p class="text-base leading-relaxed" style="color:#475569;">Our Specialist Disability Accommodation is designed for individuals with significant functional limitations or extensive support needs. This type of housing, funded through the NDIS, aims to empower individuals to live independently, engage in their communities, and exercise choice and control over their lives. We offer brand-new SDA approved accommodation in West Melbourne, Ivanhoe, and Kalkallo. Designed with state-of-the-art facilities, our homes provide exceptional comfort and seamless accessibility, setting a new benchmark for quality living.</p>
+        </div>
+
+        <div id="sda-image" class="rounded-xl overflow-hidden shadow-sm" style="height:360px;">
+          <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5cc4c17101-e76e59c2e87db29a5dc9.png" alt="disabled person in wheelchair being helped to board a bus by a care worker" />
+        </div>
+
+        <div id="sda-homes-slider-section" class="bg-white rounded-xl p-8 shadow-sm border" style="border-color:#EEE;">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-extrabold" style="color:#0f2a5c;">Available Houses</h2>
+            <div class="flex items-center gap-3">
+              <button id="slider-prev" class="w-10 h-10 rounded-full border-2 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all" style="border-color:#4076B8;color:#4076B8;">
+                <i class="fa-solid fa-chevron-left text-sm"></i>
+              </button>
+              <button id="slider-next" class="w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:opacity-90" style="background-color:#4076B8;">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+              </button>
+            </div>
+          </div>
+          <div class="overflow-hidden" id="slider-viewport">
+            <div id="homes-slider-track" class="flex gap-6" style="transition: transform 0.4s ease;">
+
+              <div class="home-slide flex-shrink-0 bg-white rounded-xl overflow-hidden border hover:border-secondary hover:shadow-xl transition-all duration-300 group" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+                <div class="relative overflow-hidden" style="height:200px;">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e91926fdf-3166b2ece49a8c4762e8.png" alt="modern accessible house exterior in Kalkallo VIC" />
+                  <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">SIL Approved</div>
+                  <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-sm"><i class="fa-solid fa-share-nodes text-xs" style="color:#4076B8;"></i></button>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base mb-4" style="color:#0f172a;">Kalkallo, VIC</h3>
+                  <div class="grid grid-cols-3 gap-3">
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bed mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">5</div><div class="text-xs mt-1" style="color:#64748b;">Bedrooms</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bath mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">3</div><div class="text-xs mt-1" style="color:#64748b;">Bathrooms</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-toilet mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">3</div><div class="text-xs mt-1" style="color:#64748b;">Toilets</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-car mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b;">Parking</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-wheelchair mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b;">Accessible</div></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="home-slide flex-shrink-0 bg-white rounded-xl overflow-hidden border hover:border-secondary hover:shadow-xl transition-all duration-300 group" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+                <div class="relative overflow-hidden" style="height:200px;">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e91926fdf-f67530fd7359061b6150.png" alt="modern accessible house exterior in Ivanhoe East VIC" />
+                  <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">SIL Approved</div>
+                  <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-sm"><i class="fa-solid fa-share-nodes text-xs" style="color:#4076B8;"></i></button>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base mb-4" style="color:#0f172a;">Ivanhoe East, VIC</h3>
+                  <div class="grid grid-cols-3 gap-3">
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bed mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">4</div><div class="text-xs mt-1" style="color:#64748b;">Bedrooms</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bath mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b;">Bathrooms</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-toilet mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b;">Toilets</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-car mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b;">Parking</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-wheelchair mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">1</div><div class="text-xs mt-1" style="color:#64748b;">Accessible</div></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="home-slide flex-shrink-0 bg-white rounded-xl overflow-hidden border hover:border-secondary hover:shadow-xl transition-all duration-300 group" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+                <div class="relative overflow-hidden" style="height:200px;">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e91926fdf-63eea989772e2262ba34.png" alt="modern accessible house exterior in Heidelberg West VIC" />
+                  <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">SIL Approved</div>
+                  <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-sm"><i class="fa-solid fa-share-nodes text-xs" style="color:#4076B8;"></i></button>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base mb-4" style="color:#0f172a;">Heidelberg West, VIC</h3>
+                  <div class="grid grid-cols-3 gap-3">
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bed mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">5</div><div class="text-xs mt-1" style="color:#64748b;">Bedrooms</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bath mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">3</div><div class="text-xs mt-1" style="color:#64748b;">Bathrooms</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-toilet mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">3</div><div class="text-xs mt-1" style="color:#64748b;">Toilets</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-car mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b;">Parking</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-wheelchair mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b;">Accessible</div></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="home-slide flex-shrink-0 bg-white rounded-xl overflow-hidden border hover:border-secondary hover:shadow-xl transition-all duration-300 group" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+                <div class="relative overflow-hidden" style="height:200px;">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e91926fdf-96043eb65a50d63e16aa.png" alt="modern accessible house exterior in Bundoora VIC" />
+                  <div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">SIL Approved</div>
+                  <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-sm"><i class="fa-solid fa-share-nodes text-xs" style="color:#4076B8;"></i></button>
+                </div>
+                <div class="p-5">
+                  <h3 class="font-bold text-base mb-4" style="color:#0f172a;">Bundoora, VIC</h3>
+                  <div class="grid grid-cols-3 gap-3">
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bed mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">4</div><div class="text-xs mt-1" style="color:#64748b;">Bedrooms</div></div></div>
+                    <div class="flex items-start gap-2"><i class="fa-solid fa-bath mt-0.5 text-sm flex-shrink-0" style="color:#4076B8;"></i><div><div class="text-xl font-extrabold leading-none" style="color:#0f172a;">2</div><div class="text-xs mt-1" style="color:#64748b
