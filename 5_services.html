@@ -52,11 +52,11 @@ body { font-family: Inter, sans-serif; }
 
 <header id="main-header" class="w-full bg-white border-b py-4 px-6 lg:px-12 sticky top-0 z-40 shadow-sm" style="border-color:#EEE;">
   <div class="max-w-[1440px] mx-auto flex justify-between items-center">
-    <a href="#" class="flex items-center">
-      <img src="logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
+    <a href="index.html" class="flex items-center">
+      <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
     </a>
     <nav class="hidden lg:flex items-center gap-8">
-      <a href="1_home-page.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Home</a>
+      <a href="index.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Home</a>
       <a href="2_about_us.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">About Us</a>
       <a href="5_services.html" class="font-semibold text-sm relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-[#4076B8]" style="color:#4076B8;">Services</a>
       <a href="9_ndis.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">NDIS</a>
@@ -69,7 +69,7 @@ body { font-family: Inter, sans-serif; }
 
 <div id="breadcrumb" class="w-full border-b py-3 px-6 lg:px-12" style="background-color:#f8fafc;border-color:#EEE;">
   <div class="max-w-[1440px] mx-auto flex items-center gap-2 text-sm flex-wrap">
-    <a href="1_home-page.html" class="font-medium hover:underline" style="color:#4076B8;">Home</a>
+    <a href="index.html" class="font-medium hover:underline" style="color:#4076B8;">Home</a>
     <i class="fa-solid fa-chevron-right text-xs" style="color:#94a3b8;"></i>
     <span class="font-medium" style="color:#64748b;">Services</span>
   </div>
@@ -77,19 +77,18 @@ body { font-family: Inter, sans-serif; }
 
 <div id="page-banner" class="relative w-full overflow-hidden flex items-center justify-center" style="height:280px;">
   <div class="absolute inset-0">
-    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/42232f779f-a327c506b1de4dcc4171.png" alt="disability support services, caring environment, healthcare professionals" />
+    <img class="w-full h-full object-cover" src="images/main-banner.webp" alt="disability support services, caring environment, healthcare professionals" />
     <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(15,42,92,0.85) 0%,rgba(64,118,184,0.78) 100%);"></div>
   </div>
   <div class="relative z-10 text-center px-6">
     <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">Our Services</h1>
-    <p class="mt-4 text-white/80 text-lg font-medium max-w-2xl mx-auto">Comprehensive, person-centred disability support tailored to empower your independence and quality of life.</p>
   </div>
 </div>
 
 <section id="services-page-section" class="w-full py-20 px-6 lg:px-12" style="background-color:#F4F6F9;">
   <div class="max-w-[1440px] mx-auto">
 
-    <div id="services-ai-filter" class="flex justify-center mb-14">
+    <div id="services-ai-filter" class="flex justify-center mb-5">
       <div class="w-full max-w-3xl relative">
         <div class="absolute left-5 top-1/2 -translate-y-1/2 flex items-center gap-2 pointer-events-none">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
@@ -108,11 +107,15 @@ body { font-family: Inter, sans-serif; }
       </div>
     </div>
 
+    <div id="search-results-summary" class="text-center mb-6">
+      <p class="text-base font-semibold" style="color: #0f172a;">1 service matches your question <span style="color: #64748b;">"Need help with meal preparation"</span></p>
+    </div>
+
     <div id="services-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-items-center">
 
-      <div id="svc-card-1" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+      <div id="svc-card-1" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
         <div class="relative overflow-hidden" style="height:220px;">
-          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/42232f779f-a327c506b1de4dcc4171.png" alt="nurse helping patient transition from hospital to home, warm caring environment" />
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/hospital-to-home.jpg" alt="nurse helping patient transition from hospital to home, warm caring environment" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
         </div>
         <div class="p-6 flex flex-col flex-1">
@@ -122,9 +125,9 @@ body { font-family: Inter, sans-serif; }
         </div>
       </div>
 
-      <div id="svc-card-2" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+      <div id="svc-card-2" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
         <div class="relative overflow-hidden" style="height:220px;">
-          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/18a5076e3c-d678faca1133d4c90c22.png" alt="person with disability living independently in modern accessible home" />
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/sil.webp" alt="person with disability living independently in modern accessible home" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
         </div>
         <div class="p-6 flex flex-col flex-1">
@@ -134,7 +137,7 @@ body { font-family: Inter, sans-serif; }
         </div>
       </div>
 
-      <div id="svc-card-3" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+      <div id="svc-card-3" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
         <div class="relative overflow-hidden" style="height:220px;">
           <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/52f9246ccf-7475f015cde2ace5a154.png" alt="modern purpose-built specialist disability accommodation exterior, accessible design" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
@@ -146,9 +149,9 @@ body { font-family: Inter, sans-serif; }
         </div>
       </div>
 
-      <div id="svc-card-4" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+      <div id="svc-card-4" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
         <div class="relative overflow-hidden" style="height:220px;">
-          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/76ae92bf81-210320080475face6570.png" alt="care worker helping person with disability with daily living activities, personal care" />
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/daily-care.webp" alt="care worker helping person with disability with daily living activities, personal care" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
         </div>
         <div class="p-6 flex flex-col flex-1">
@@ -158,7 +161,7 @@ body { font-family: Inter, sans-serif; }
         </div>
       </div>
 
-      <div id="svc-card-5" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+      <div id="svc-card-5" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
         <div class="relative overflow-hidden" style="height:220px;">
           <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f57b658d6c-d7b3e72ac278ecc2d1b3.png" alt="diverse group of people with disabilities participating in community activities, social inclusion" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
@@ -170,7 +173,7 @@ body { font-family: Inter, sans-serif; }
         </div>
       </div>
 
-      <div id="svc-card-6" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+      <div id="svc-card-6" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
         <div class="relative overflow-hidden" style="height:220px;">
           <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4d4d75018d-d0ec764e915b95274a49.png" alt="therapist and client with disability in a calming therapy session, positive behaviour support" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
@@ -181,9 +184,10 @@ body { font-family: Inter, sans-serif; }
           <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
         </div>
       </div>
+      </a>
 
       <div class="sm:col-span-2 lg:col-span-3 flex justify-center w-full">
-        <div id="svc-card-7" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full sm:w-1/2 lg:w-1/3" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
+        <div id="svc-card-7" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full sm:w-1/2 lg:w-1/3 cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
           <div class="relative overflow-hidden" style="height:220px;">
             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fc98daafde-14c39473373dbdfc2573.png" alt="NDIS support coordinator helping client manage their plan, professional office setting" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
@@ -194,7 +198,7 @@ body { font-family: Inter, sans-serif; }
             <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
           </div>
         </div>
-      </div>
+        </div>
 
     </div>
   </div>
@@ -209,10 +213,7 @@ body { font-family: Inter, sans-serif; }
     <div class="absolute -bottom-16 left-24 w-72 h-72 rounded-full border" style="border-color:rgba(64,118,184,0.1);"></div>
   </div>
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-8 border shadow-sm" style="background-color:#f0f5fa;color:#4076B8;border-color:#e0ebf5;">
-      <span class="w-2 h-2 rounded-full animate-pulse" style="background-color:#5bc981;"></span>
-      Available 24/7
-    </div>
+
     <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mb-12" style="color:#0f172a;">
       We're only a <span style="color:#4076B8;">Phone Call</span> away when you need us
     </h2>
@@ -233,7 +234,7 @@ body { font-family: Inter, sans-serif; }
                     <div id="footer-brand" class="flex flex-col gap-5">
                         <a href="#" class="flex items-center group w-max">
                             <div class="rounded-xl bg-white flex items-center justify-center shadow-md group-hover:bg-white/90 transition-colors p-2">
-                                <img src="logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
+                                <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
                             </div>
                         </a>
                         <p class="text-white/70 text-sm leading-relaxed max-w-lg font-medium">
@@ -353,7 +354,7 @@ body { font-family: Inter, sans-serif; }
                 <p class="text-white/45 text-xs leading-relaxed max-w-3xl font-medium">
                     We acknowledge the traditional custodians of the land on which we work &amp; live, the Wurundjeri, &amp; pay our respects to their Elders past, present, &amp; emerging.
                 </p>
-                <img src="acc.webp" alt="Acknowledgment of Country" class="h-[30px] w-auto object-contain my-3">
+                <img src="images/acc.webp" alt="Acknowledgment of Country" class="h-[30px] w-auto object-contain my-3">
             </div>
         </div>
     </footer>
