@@ -63,9 +63,73 @@ body { font-family: Inter, sans-serif; }
       <a href="8_contact_us.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Contact Us</a>
       <a href="7_housing-vacancies.html" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl text-white font-semibold text-sm hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);"><i class="fa-solid fa-house-chimney-window text-xs"></i> View Housing Vacancies</a>
     </nav>
-    <button class="lg:hidden text-xl" style="color:#0f172a;"><i class="fa-solid fa-bars"></i></button>
+    <button id="mobile-menu-btn" class="lg:hidden text-xl" style="color:#0f172a;"><i class="fa-solid fa-bars"></i></button>
   </div>
 </header>
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-drawer" class="fixed inset-0 z-50 hidden">
+    <!-- Overlay -->
+    <div id="drawer-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    
+    <!-- Drawer Content -->
+    <div id="drawer-content" class="absolute right-0 top-0 h-[100dvh] w-80 max-w-[85vw] bg-[#4076B8] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between p-6 border-b border-white/20">
+                <a href="index.html" class="flex items-center group">
+                    <div class="rounded-xl bg-white flex items-center justify-center shadow-md p-2">
+                        <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] w-auto object-contain">
+                    </div>
+                </a>
+                <button id="close-drawer-btn" class="text-white hover:text-white/80 text-2xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Drawer Menu Items -->
+            <nav class="flex-1 overflow-y-auto p-6">
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-semibold text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-house text-xs"></i>
+                        Home
+                    </a>
+                    <a href="2_about_us.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-users text-xs"></i>
+                        About Us
+                    </a>
+                    <a href="5_services.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-semibold text-sm bg-white/20">
+                        <i class="fa-solid fa-heart-pulse text-xs"></i>
+                        Services
+                    </a>
+                    <a href="9_ndis.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-hand-holding-heart text-xs"></i>
+                        NDIS
+                    </a>
+                    <a href="8_contact_us.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        Contact Us
+                    </a>
+                    <div class="my-4 border-t border-white/20"></div>
+                    <a href="7_housing-vacancies.html" class="mobile-nav-item inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white text-[#4076B8] font-semibold text-sm shadow-[0_4px_14px_-4px_rgba(255,255,255,0.3)] hover:bg-white/90 transition-all">
+                        <i class="fa-solid fa-house-chimney-window text-xs"></i>
+                        View Housing Vacancies
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Drawer Footer -->
+            <div class="p-6 border-t border-white/20">
+                <div class="flex items-center gap-3">
+                    <a href="mailto:referral@cosyhomecare.com.au" class="flex items-center gap-2 text-white/80 text-sm hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        <span>referral@cosyhomecare.com.au</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="breadcrumb" class="w-full border-b py-3 px-6 lg:px-12" style="background-color:#f8fafc;border-color:#EEE;">
   <div class="max-w-[1440px] mx-auto flex items-center gap-2 text-sm flex-wrap">
@@ -100,7 +164,7 @@ body { font-family: Inter, sans-serif; }
             </defs>
           </svg>
         </div>
-        <input id="services-search-input" type="text" placeholder="What are you looking for?" class="w-full h-[68px] rounded-full border-2 bg-white text-base font-medium focus:outline-none transition-colors shadow-lg" style="border-color:#e0ebf5;color:#0f172a;padding-left:52px;padding-right:72px;font-size:1.1rem;" onfocus="this.style.borderColor='#4076B8'" onblur="this.style.borderColor='#e0ebf5'" />
+        <input id="services-search-input" type="text" placeholder="What are you looking for? We’ll match you to the right service" class="w-full h-[68px] rounded-full border-2 bg-white text-base font-medium focus:outline-none transition-colors shadow-lg" style="border-color:#e0ebf5;color:#0f172a;padding-left:52px;padding-right:72px;font-size:1.1rem;" onfocus="this.style.borderColor='#4076B8'" onblur="this.style.borderColor='#e0ebf5'" />
         <button class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-colors shadow-md" style="background-color:#4076B8;" title="Voice search">
           <i class="fa-solid fa-microphone text-sm"></i>
         </button>
@@ -358,6 +422,50 @@ body { font-family: Inter, sans-serif; }
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile Drawer Menu Toggle
+        (function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeDrawerBtn = document.getElementById('close-drawer-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const drawerContent = document.getElementById('drawer-content');
+            const drawerOverlay = document.getElementById('drawer-overlay');
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+            function openDrawer() {
+                drawer.classList.remove('hidden');
+                setTimeout(function () {
+                    drawerContent.classList.remove('translate-x-full');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeDrawer() {
+                drawerContent.classList.add('translate-x-full');
+                setTimeout(function () {
+                    drawer.classList.add('hidden');
+                }, 300);
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuBtn.addEventListener('click', openDrawer);
+            closeDrawerBtn.addEventListener('click', closeDrawer);
+            drawerOverlay.addEventListener('click', closeDrawer);
+
+            // Close drawer when clicking a nav item
+            mobileNavItems.forEach(function (item) {
+                item.addEventListener('click', closeDrawer);
+            });
+
+            // Close drawer on escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !drawer.classList.contains('hidden')) {
+                    closeDrawer();
+                }
+            });
+        })();
+    </script>
 
 </body>
 </html>
