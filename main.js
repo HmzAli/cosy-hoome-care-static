@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Initialize Slick Slider for Homes
+    $('#homes-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '30px'
+                }
+            }
+        ]
+    });
+    
     // Counter Animation
     const animateCounter = (element, target, duration = 2000) => {
         let start = 0;

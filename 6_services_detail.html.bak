@@ -227,7 +227,7 @@ body { font-family: Inter, sans-serif; }
                 Available <span style="color: #57B2E9;">Houses</span>
               </h2>
               <p class="text-lg text-[#64748b] font-medium max-w-2xl leading-relaxed">
-                Discover our purpose-built, fully accessible SIL homes - thoughtfully designed for comfort, independence, and community connection across Victoria.
+                Discover our purpose-built, fully accessible SIL homes — thoughtfully designed for comfort, independence, and community connection across Victoria.
               </p>
             </div>
             <div id="homes-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
@@ -257,7 +257,7 @@ body { font-family: Inter, sans-serif; }
                     </div>
                   </div>
                   <p class="text-sm text-[#64748b] leading-relaxed mb-5">
-                    A warm, modern home with open-plan living, wide hallways and full wheelchair access - designed to maximise independence and comfort.
+                    A warm, modern home with open-plan living, wide hallways and full wheelchair access — designed to maximise independence and comfort.
                   </p>
                   <div class="border-t border-[#EEE] pt-5">
                     <div class="grid grid-cols-3 gap-y-4 gap-x-2">

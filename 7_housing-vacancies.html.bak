@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Housing Vacancies</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>window.FontAwesomeConfig = { autoReplaceSvg: "nest"};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Inter', 'sans-serif'] },
+      colors: {
+        primary: '#4076B8',
+        secondary: '#57B2E9',
+        tertiary: '#0f2a5c',
+      }
+    }
+  }
+}
+</script>
+<style>
+::-webkit-scrollbar{display:none;}
+body{font-family:'Inter',sans-serif;}
+</style>
+</head>
+<body class="m-0 p-0 bg-white">
+
+<div id="utility-bar" class="w-full text-white py-2.5 px-3 lg:px-12 flex flex-col sm:flex-row justify-between items-center text-sm font-medium z-50 relative" style="background-color:#0f2a5c;">
+  <div class="flex items-center gap-6 mb-2 sm:mb-0 flex-wrap">
+    <a href="tel:0394575968" class="flex items-center gap-2 hover:text-secondary transition-colors" style="color:white;"><i class="fa-solid fa-phone text-xs"></i><span>(03) 9457 5968</span></a>
+    <div class="hidden sm:flex items-center gap-2"><i class="fa-solid fa-location-dot text-xs"></i><span>Level 2, Uni Hill Town Centre 1-3 Janefield Dr, Bundoora VIC 3083</span></div>
+    <a href="mailto:referral@cosyhomecare.com.au" class="hidden md:flex items-center gap-2 hover:opacity-80 transition-colors" style="color:white;"><i class="fa-solid fa-envelope text-xs"></i><span>referral@cosyhomecare.com.au</span></a>
+  </div>
+  <div class="flex items-center gap-4">
+    <span class="text-white/80 hidden md:inline">Follow us on</span>
+    <div class="flex items-center gap-3">
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/25 transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/25 transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/25 transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+    </div>
+  </div>
+</div>
+
+<header id="main-header" class="w-full bg-white border-b py-4 px-3 lg:px-12 sticky top-0 z-40 shadow-sm" style="border-color:#EEE;">
+  <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+    <a href="index.html" class="flex items-center">
+      <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] md:h-[70px] w-auto object-contain">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="index.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Home</a>
+      <a href="2_about_us.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">About Us</a>
+      <a href="5_services.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Services</a>
+      <a href="9_ndis.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">NDIS</a>
+      <a href="8_contact_us.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Contact Us</a>
+      <a href="7_housing-vacancies.html" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl text-white font-semibold text-sm hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);"><i class="fa-solid fa-house-chimney-window text-xs"></i> View Housing Vacancies</a>
+    </nav>
+    <button id="mobile-menu-btn" class="lg:hidden text-xl" style="color:#0f172a;"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-drawer" class="fixed inset-0 z-50 hidden">
+    <!-- Overlay -->
+    <div id="drawer-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    
+    <!-- Drawer Content -->
+    <div id="drawer-content" class="absolute right-0 top-0 h-[100dvh] w-80 max-w-[85vw] bg-[#4076B8] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between p-6 border-b border-white/20">
+                <a href="index.html" class="flex items-center group">
+                    <div class="rounded-xl bg-white flex items-center justify-center shadow-md p-2">
+                        <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] w-auto object-contain">
+                    </div>
+                </a>
+                <button id="close-drawer-btn" class="text-white hover:text-white/80 text-2xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Drawer Menu Items -->
+            <nav class="flex-1 overflow-y-auto p-6">
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-semibold text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-house text-xs"></i>
+                        Home
+                    </a>
+                    <a href="2_about_us.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-users text-xs"></i>
+                        About Us
+                    </a>
+                    <a href="5_services.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-heart-pulse text-xs"></i>
+                        Services
+                    </a>
+                    <a href="9_ndis.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-hand-holding-heart text-xs"></i>
+                        NDIS
+                    </a>
+                    <a href="8_contact_us.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        Contact Us
+                    </a>
+                    <div class="my-4 border-t border-white/20"></div>
+                    <a href="7_housing-vacancies.html" class="mobile-nav-item inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white text-[#4076B8] font-semibold text-sm shadow-[0_4px_14px_-4px_rgba(255,255,255,0.3)] hover:bg-white/90 transition-all">
+                        <i class="fa-solid fa-house-chimney-window text-xs"></i>
+                        View Housing Vacancies
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Drawer Footer -->
+            <div class="p-6 border-t border-white/20">
+                <div class="flex items-center gap-3">
+                    <a href="mailto:referral@cosyhomecare.com.au" class="flex items-center gap-2 text-white/80 text-sm hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        <span>referral@cosyhomecare.com.au</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="breadcrumb" class="w-full border-b py-3 px-3 lg:px-12" style="background-color:#f8fafc;border-color:#EEE;">
+  <div class="max-w-[1440px] mx-auto flex items-center gap-2 text-sm flex-wrap">
+    <a href="index.html" class="font-medium hover:underline" style="color:#4076B8;">Home</a>
+    <i class="fa-solid fa-chevron-right text-xs" style="color:#94a3b8;"></i>
+    <span class="font-medium" style="color:#64748b;">Housing Vacancies</span>
+  </div>
+</div>
+
+<div id="page-banner" class="relative w-full overflow-hidden flex items-center justify-center" style="height:280px;">
+  <div class="absolute inset-0">
+    <img class="w-full h-full object-cover" src="images/main-banner.webp" alt="modern residential homes exterior, warm sunlight, suburban Australia" />
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(15,42,92,0.85) 0%,rgba(64,118,184,0.78) 100%);"></div>
+  </div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">Housing Vacancies</h1>
+  </div>
+</div>
+
+<section id="vacancies-list" class="w-full py-16 px-3 lg:px-12" style="background-color:#f4f6f9;">
+  <div class="max-w-[1440px] mx-auto flex flex-col gap-8">
+
+    <div id="house-card-1" class="relative bg-white rounded-2xl shadow-md overflow-hidden flex flex-col lg:flex-row" style="border:1px solid #EEE;">
+      <div class="relative lg:w-80 xl:w-96 flex-shrink-0" style="min-height:280px;">
+        <img class="w-full h-full object-cover absolute inset-0" style="min-height:280px;" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/740e7ae8f1-19348846f87f89f9d409.png" alt="modern accessible SIL home exterior Laverton Victoria suburban Australia blue sky daytime" />
+        <div class="absolute top-4 left-4">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-md" style="background-color:#4076B8;"><i class="fa-solid fa-check-circle text-xs"></i> SIL Approved</span>
+        </div>
+      </div>
+      <div class="flex-1 p-8 flex flex-col justify-between gap-6">
+        <div class="flex flex-col gap-3">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Laverton, VIC</h2>
+            <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Experience Modern SIL at the heart of Laverton! Enquire now!</p>
+          </div>
+          <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">7</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">7</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
+            </div>
+          </div>
+                  </div>
+        <div>
+          <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">
+            <i class="fa-solid fa-house-chimney-window text-xs"></i> View House
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="house-card-2" class="relative bg-white rounded-2xl shadow-md overflow-hidden flex flex-col lg:flex-row" style="border:1px solid #EEE;">
+      <div class="relative lg:w-80 xl:w-96 flex-shrink-0" style="min-height:280px;">
+        <img class="w-full h-full object-cover absolute inset-0" style="min-height:280px;" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8e015b14ec-22a3570b025ad1d37e44.png" alt="modern brick house exterior Bundoora Victoria Australia daytime accessible home" />
+        <div class="absolute top-4 left-4">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-md" style="background-color:#4076B8;"><i class="fa-solid fa-check-circle text-xs"></i> SIL Approved</span>
+        </div>
+      </div>
+      <div class="flex-1 p-8 flex flex-col justify-between gap-6">
+        <div class="flex flex-col gap-3">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Bundoora, VIC</h2>
+            <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Premium SIL living close to shops, parks & transport. Enquire today!</p>
+          </div>
+          <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">3</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
+            </div>
+          </div>
+                  </div>
+        <div>
+          <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">
+            <i class="fa-solid fa-house-chimney-window text-xs"></i> View House
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="house-card-3" class="relative bg-white rounded-2xl shadow-md overflow-hidden flex flex-col lg:flex-row" style="border:1px solid #EEE;">
+      <div class="relative lg:w-80 xl:w-96 flex-shrink-0" style="min-height:280px;">
+        <img class="w-full h-full object-cover absolute inset-0" style="min-height:280px;" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/c7e2aac1f8-ee9efd3243516dafc41a.png" alt="modern NDIS home exterior Kalkallo Victoria daylight new build accessible" />
+        <div class="absolute top-4 left-4">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-md" style="background-color:#4076B8;"><i class="fa-solid fa-check-circle text-xs"></i> SIL Approved</span>
+        </div>
+      </div>
+      <div class="flex-1 p-8 flex flex-col justify-between gap-6">
+        <div class="flex flex-col gap-3">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Kalkallo, VIC</h2>
+            <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Brand-new SDA-ready home in a peaceful community. Enquire now!</p>
+          </div>
+          <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
+            </div>
+          </div>
+                  </div>
+        <div>
+          <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">
+            <i class="fa-solid fa-house-chimney-window text-xs"></i> View House
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="house-card-4" class="relative bg-white rounded-2xl shadow-md overflow-hidden flex flex-col lg:flex-row" style="border:1px solid #EEE;">
+      <div class="relative lg:w-80 xl:w-96 flex-shrink-0" style="min-height:280px;">
+        <img class="w-full h-full object-cover absolute inset-0" style="min-height:280px;" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/30a9c44db9-bb18397594c9a77e8aa4.png" alt="modern accessible home exterior Heidelberg West Victoria Australia sunny day" />
+        <div class="absolute top-4 left-4">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-md" style="background-color:#4076B8;"><i class="fa-solid fa-check-circle text-xs"></i> SIL Approved</span>
+        </div>
+      </div>
+      <div class="flex-1 p-8 flex flex-col justify-between gap-6">
+        <div class="flex flex-col gap-3">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Heidelberg West, VIC</h2>
+            <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Fully accessible SIL home in vibrant Heidelberg West. Enquire now!</p>
+          </div>
+          <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
+            </div>
+          </div>
+                  </div>
+        <div>
+          <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">
+            <i class="fa-solid fa-house-chimney-window text-xs"></i> View House
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="house-card-5" class="relative bg-white rounded-2xl shadow-md overflow-hidden flex flex-col lg:flex-row" style="border:1px solid #EEE;">
+      <div class="relative lg:w-80 xl:w-96 flex-shrink-0" style="min-height:280px;">
+        <img class="w-full h-full object-cover absolute inset-0" style="min-height:280px;" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f092b3f949-0abf03a69d6fe28b28e7.png" alt="modern residential home exterior Ivanhoe East Victoria Australia daytime leafy suburb" />
+        <div class="absolute top-4 left-4">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-md" style="background-color:#4076B8;"><i class="fa-solid fa-check-circle text-xs"></i> SIL Approved</span>
+        </div>
+      </div>
+      <div class="flex-1 p-8 flex flex-col justify-between gap-6">
+        <div class="flex flex-col gap-3">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Ivanhoe East, VIC</h2>
+            <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Peaceful SIL living in a leafy, connected suburb. Enquire now!</p>
+          </div>
+          <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
+            </div>
+          </div>
+                  </div>
+        <div>
+          <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">
+            <i class="fa-solid fa-house-chimney-window text-xs"></i> View House
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="house-card-6" class="relative bg-white rounded-2xl shadow-md overflow-hidden flex flex-col lg:flex-row" style="border:1px solid #EEE;">
+      <div class="relative lg:w-80 xl:w-96 flex-shrink-0" style="min-height:280px;">
+        <img class="w-full h-full object-cover absolute inset-0" style="min-height:280px;" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/740e7ae8f1-2cbd4e3a2555aea5fe38.png" alt="modern accessible SIL home exterior Heidelberg Heights Victoria Australia bright day" />
+        <div class="absolute top-4 left-4">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-md" style="background-color:#4076B8;"><i class="fa-solid fa-check-circle text-xs"></i> SIL Approved</span>
+        </div>
+      </div>
+      <div class="flex-1 p-8 flex flex-col justify-between gap-6">
+        <div class="flex flex-col gap-3">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Heidelberg Heights, VIC</h2>
+            <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Modern accessible home close to Heidelberg Hospital. Enquire now!</p>
+          </div>
+          <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">3</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 py-2">
+            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
+            </div>
+            <div>
+              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
+            </div>
+          </div>
+                  </div>
+        <div>
+          <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">
+            <i class="fa-solid fa-house-chimney-window text-xs"></i> View House
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <script>
+        // Mobile Drawer Menu Toggle
+        (function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeDrawerBtn = document.getElementById('close-drawer-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const drawerContent = document.getElementById('drawer-content');
+            const drawerOverlay = document.getElementById('drawer-overlay');
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+            function openDrawer() {
+                drawer.classList.remove('hidden');
+                setTimeout(function () {
+                    drawerContent.classList.remove('translate-x-full');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeDrawer() {
+                drawerContent.classList.add('translate-x-full');
+                setTimeout(function () {
+                    drawer.classList.add('hidden');
+                }, 300);
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuBtn.addEventListener('click', openDrawer);
+            closeDrawerBtn.addEventListener('click', closeDrawer);
+            drawerOverlay.addEventListener('click', closeDrawer);
+
+            // Close drawer when clicking a nav item
+            mobileNavItems.forEach(function (item) {
+                item.addEventListener('click', closeDrawer);
+            });
+
+            // Close drawer on escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !drawer.classList.contains('hidden')) {
+                    closeDrawer();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>

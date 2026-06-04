@@ -395,7 +395,7 @@ body { font-family: Inter, sans-serif; }
         Discover the Cosy Home Care <span class="italic" style="color: rgba(255,255,255,0.8);">Difference</span>
       </h2>
       <p class="text-base md:text-lg leading-relaxed font-medium max-w-2xl" style="color: rgba(255,255,255,0.85);">
-        At Cosy Home Care, we prioritize safety, quality, and personalised care designed to meet your unique needs. With guidance from global best practices, our skilled team - featuring Occupational Therapists and Client Managers - is committed to improving livability and promoting independence.
+        At Cosy Home Care, we prioritize safety, quality, and personalised care designed to meet your unique needs. With guidance from global best practices, our skilled team — featuring Occupational Therapists and Client Managers — is committed to improving livability and promoting independence.
       </p>
     </div>
     <div class="flex flex-col items-center lg:items-start gap-5 flex-shrink-0">

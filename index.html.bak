@@ -5,8 +5,6 @@
 <script>window.FontAwesomeConfig = { autoReplaceSvg: "nest"};</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
 
             
@@ -34,28 +32,6 @@
           --font-mono: JetBrains Mono, monospace;
           --radius: 10px;
           --shadow: -2px 4px 12px 4px rgba(51,51,51,0.05);
-}
-</style>
-
-<style>
-/* Slick Slider Custom Styles */
-.homes-slider .slick-list {
-    margin: 0 -8px;
-}
-
-.homes-slider .slick-dots {
-    bottom: -40px;
-}
-
-.homes-slider .slick-dots li button:before {
-    color: #4076B8;
-    opacity: 0.3;
-    font-size: 12px;
-}
-
-.homes-slider .slick-dots li.slick-active button:before {
-    color: #4076B8;
-    opacity: 1;
 }
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -316,261 +292,255 @@
                 </p>
             </div>
 
-            <!-- Property Cards Slider -->
-            <div class="relative mb-14">
-                <div id="homes-slider" class="homes-slider">
-                    <!-- Card 1: Kalkallo, VIC -->
-                    <div class="px-2">
-                        <div id="property-card-1" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
-                            <div class="relative h-56 overflow-hidden">
-                                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f23565e5bd-0868191d8db3f87701e0.png" alt="Modern accessible SIL home exterior in Kalkallo Victoria" />
-                                <div class="absolute top-0 left-0 z-10">
-                                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#4076B8] text-white text-xs font-bold px-3 py-1.5 uppercase tracking-wide" style="border-radius: 0 6px 6px 0;">
-                                        <i class="fa-solid fa-circle-check text-[10px]"></i>
-                                        SIL Approved
-                                    </span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-10">
-                                    <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
-                                        <i class="fa-solid fa-share-nodes text-sm"></i>
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
-                            </div>
-                            <div class="p-6">
-                                <div class="mb-3">
-                                    <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Kalkallo, VIC</h3>
-                                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
-                                        <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
-                                        <span>25 Harvest Drive, Kalkallo 3064</span>
-                                    </div>
-                                </div>
+            <!-- Property Cards Grid -->
+            <div id="homes-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
 
-                                <p class="text-sm text-[#64748b] leading-relaxed mb-5">
-                                    A warm, modern home with open-plan living, wide hallways and full wheelchair access - designed to maximise independence and comfort.
-                                </p>
-
-                                <div class="border-t border-[#EEE] pt-5">
-                                    <div class="grid grid-cols-3 gap-y-4 gap-x-2">
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-car text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Std. Parking</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-wheelchair text-[#5bc981] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">1</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Access Parking</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Card 1: Kalkallo, VIC -->
+                <div id="property-card-1" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
+                    <div class="relative h-56 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f23565e5bd-0868191d8db3f87701e0.png" alt="Modern accessible SIL home exterior in Kalkallo Victoria" />
+                        <div class="absolute top-0 left-0 z-10">
+                            <span class="sil-badge inline-flex items-center gap-1.5 bg-[#4076B8] text-white text-xs font-bold px-3 py-1.5 uppercase tracking-wide" style="border-radius: 0 6px 6px 0;">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i>
+                                SIL Approved
+                            </span>
+                        </div>
+                        <div class="absolute top-3 right-3 z-10">
+                            <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
+                                <i class="fa-solid fa-share-nodes text-sm"></i>
+                            </a>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-3">
+                            <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Kalkallo, VIC</h3>
+                            <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
+                                <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
+                                <span>25 Harvest Drive, Kalkallo 3064</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Card 2: Craigieburn, VIC -->
-                    <div class="px-2">
-                        <div id="property-card-2" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
-                            <div class="relative h-56 overflow-hidden">
-                                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7f19ac9e12-b7da17bcdb2b889cec79.png" alt="Spacious modern accessible home interior Craigieburn Victoria" />
-                                <div class="absolute top-0 left-0 z-10">
-                                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#4076B8] text-white text-xs font-bold px-3 py-1.5 uppercase tracking-wide" style="border-radius: 0 6px 6px 0;">
-                                        <i class="fa-solid fa-circle-check text-[10px]"></i>
-                                        SIL Approved
-                                    </span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-10">
-                                    <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
-                                        <i class="fa-solid fa-share-nodes text-sm"></i>
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
-                            </div>
-                            <div class="p-6">
-                                <div class="mb-3">
-                                    <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Craigieburn, VIC</h3>
-                                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
-                                        <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
-                                        <span>8 Ridgeline Blvd, Craigieburn 3064</span>
+                        <p class="text-sm text-[#64748b] leading-relaxed mb-5">
+                            A warm, modern home with open-plan living, wide hallways and full wheelchair access - designed to maximise independence and comfort.
+                        </p>
+
+                        <div class="border-t border-[#EEE] pt-5">
+                            <div class="grid grid-cols-3 gap-y-4 gap-x-2">
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
                                     </div>
                                 </div>
-
-                                <p class="text-sm text-[#64748b] leading-relaxed mb-5">
-                                    Elegantly designed with ceiling hoists, roll-in showers and a north-facing garden, this home offers premium accessible living close to shops and transport.
-                                </p>
-
-                                <div class="border-t border-[#EEE] pt-5">
-                                    <div class="grid grid-cols-3 gap-y-4 gap-x-2">
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">5</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-car text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Std. Parking</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-wheelchair text-[#5bc981] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Access Parking</p>
-                                            </div>
-                                        </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Wollert, VIC -->
-                    <div class="px-2">
-                        <div id="property-card-3" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
-                            <div class="relative h-56 overflow-hidden">
-                                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/aa55f1dcbb-9ba23c317be72172e762.png" alt="Beautiful modern accessible SIL home exterior Wollert Victoria" />
-                                <div class="absolute top-0 left-0 z-10">
-                                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#4076B8] text-white text-xs font-bold px-3 py-1.5 uppercase tracking-wide" style="border-radius: 0 6px 6px 0;">
-                                        <i class="fa-solid fa-circle-check text-[10px]"></i>
-                                        SIL Approved
-                                    </span>
-                                </div>
-                                <div class="absolute top-3 right-3 z-10">
-                                    <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
-                                        <i class="fa-solid fa-share-nodes text-sm"></i>
-                                    </a>
-                                </div>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
-                            </div>
-                            <div class="p-6">
-                                <div class="mb-3">
-                                    <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Wollert, VIC</h3>
-                                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
-                                        <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
-                                        <span>14 Sunbury Crescent, Wollert 3750</span>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
                                     </div>
                                 </div>
-
-                                <p class="text-sm text-[#64748b] leading-relaxed mb-5">
-                                    Purpose-built for high physical support needs with smart home technology, backup power and on-site carer accommodation for round-the-clock care.
-                                </p>
-
-                                <div class="border-t border-[#EEE] pt-5">
-                                    <div class="grid grid-cols-3 gap-y-4 gap-x-2">
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-car text-[#4076B8] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Std. Parking</p>
-                                            </div>
-                                        </div>
-                                        <div class="spec-item flex items-center gap-2.5">
-                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
-                                                <i class="fa-solid fa-wheelchair text-[#5bc981] text-sm"></i>
-                                            </div>
-                                            <div>
-                                                <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
-                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Access Parking</p>
-                                            </div>
-                                        </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-car text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Std. Parking</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-wheelchair text-[#5bc981] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">1</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Access Parking</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card 2: Craigieburn, VIC -->
+                <div id="property-card-2" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
+                    <div class="relative h-56 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7f19ac9e12-b7da17bcdb2b889cec79.png" alt="Spacious modern accessible home interior Craigieburn Victoria" />
+                        <div class="absolute top-0 left-0 z-10">
+                            <span class="sil-badge inline-flex items-center gap-1.5 bg-[#4076B8] text-white text-xs font-bold px-3 py-1.5 uppercase tracking-wide" style="border-radius: 0 6px 6px 0;">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i>
+                                SIL Approved
+                            </span>
+                        </div>
+                        <div class="absolute top-3 right-3 z-10">
+                            <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
+                                <i class="fa-solid fa-share-nodes text-sm"></i>
+                            </a>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-3">
+                            <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Craigieburn, VIC</h3>
+                            <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
+                                <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
+                                <span>8 Ridgeline Blvd, Craigieburn 3064</span>
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-[#64748b] leading-relaxed mb-5">
+                            Elegantly designed with ceiling hoists, roll-in showers and a north-facing garden, this home offers premium accessible living close to shops and transport.
+                        </p>
+
+                        <div class="border-t border-[#EEE] pt-5">
+                            <div class="grid grid-cols-3 gap-y-4 gap-x-2">
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">5</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-car text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Std. Parking</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-wheelchair text-[#5bc981] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Access Parking</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Wollert, VIC -->
+                <div id="property-card-3" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
+                    <div class="relative h-56 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/aa55f1dcbb-9ba23c317be72172e762.png" alt="Beautiful modern accessible SIL home exterior Wollert Victoria" />
+                        <div class="absolute top-0 left-0 z-10">
+                            <span class="sil-badge inline-flex items-center gap-1.5 bg-[#4076B8] text-white text-xs font-bold px-3 py-1.5 uppercase tracking-wide" style="border-radius: 0 6px 6px 0;">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i>
+                                SIL Approved
+                            </span>
+                        </div>
+                        <div class="absolute top-3 right-3 z-10">
+                            <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
+                                <i class="fa-solid fa-share-nodes text-sm"></i>
+                            </a>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-3">
+                            <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Wollert, VIC</h3>
+                            <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
+                                <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
+                                <span>14 Sunbury Crescent, Wollert 3750</span>
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-[#64748b] leading-relaxed mb-5">
+                            Purpose-built for high physical support needs with smart home technology, backup power and on-site carer accommodation for round-the-clock care.
+                        </p>
+
+                        <div class="border-t border-[#EEE] pt-5">
+                            <div class="grid grid-cols-3 gap-y-4 gap-x-2">
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">4</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-car text-[#4076B8] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">3</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Std. Parking</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item flex items-center gap-2.5">
+                                    <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-wheelchair text-[#5bc981] text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-extrabold text-[#0f172a] leading-none">2</p>
+                                        <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Access Parking</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- CTA Button -->
@@ -1149,8 +1119,6 @@
             });
         })();
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="main.js"></script>
 
 </body>

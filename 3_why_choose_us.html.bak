@@ -158,7 +158,7 @@ tailwind.config = {
 <section id="intro-text-section" class="w-full bg-white py-16 px-3 lg:px-12">
   <div class="max-w-[900px] mx-auto text-center">
     <p class="text-lg md:text-xl leading-relaxed font-medium" style="color: #475569;">
-      At Cosy Home Care, we are more than just a disability service provider-we are <span class="font-bold" style="color: #4076B8;">innovators</span>, passionate about enriching lives and giving back to the community. Through youth sports initiatives like our <span class="font-bold" style="color: #4076B8;">Limitless League</span> and our commitment to high-quality disability care, we empower participants to live their best lives.
+      At Cosy Home Care, we are more than just a disability service provider—we are <span class="font-bold" style="color: #4076B8;">innovators</span>, passionate about enriching lives and giving back to the community. Through youth sports initiatives like our <span class="font-bold" style="color: #4076B8;">Limitless League</span> and our commitment to high-quality disability care, we empower participants to live their best lives.
     </p>
   </div>
 </section>
@@ -261,7 +261,7 @@ tailwind.config = {
         Discover the Cosy Home Care <span class="italic" style="color: rgba(255,255,255,0.8);">Difference</span>
       </h2>
       <p class="text-base md:text-lg leading-relaxed font-medium max-w-2xl" style="color: rgba(255,255,255,0.90);">
-        At Cosy Home Care, we don't just provide support-we create opportunities for growth, independence, and an inclusive future.
+        At Cosy Home Care, we don't just provide support—we create opportunities for growth, independence, and an inclusive future.
       </p>
     </div>
     <div class="flex flex-col items-center lg:items-start gap-5 flex-shrink-0">

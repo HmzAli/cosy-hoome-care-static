@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>window.FontAwesomeConfig = { autoReplaceSvg: "nest"};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: { DEFAULT: '#4076B8', foreground: '#FFFFFF' },
+        secondary: { DEFAULT: '#57B2E9', foreground: '#ffffff' },
+      },
+      fontFamily: { sans: ['Inter', 'sans-serif'] },
+    }
+  }
+}
+</script>
+<style>
+:root {
+  --primary: #4076B8;
+  --secondary: #57B2E9;
+  --border: #EEE;
+}
+::-webkit-scrollbar { display: none; }
+body { font-family: Inter, sans-serif; }
+</style>
+</head>
+<body class="m-0 p-0 bg-white">
+
+<div id="utility-bar" class="w-full text-white py-2.5 px-3 lg:px-12 flex flex-col sm:flex-row justify-between items-center text-sm font-medium z-50 relative" style="background-color:#0f2a5c;">
+  <div class="flex items-center gap-6 mb-2 sm:mb-0 flex-wrap">
+    <a href="tel:0394575968" class="flex items-center gap-2 hover:text-secondary transition-colors"><i class="fa-solid fa-phone text-xs"></i><span>(03) 9457 5968</span></a>
+    <div class="hidden sm:flex items-center gap-2"><i class="fa-solid fa-location-dot text-xs"></i><span>Level 2, Uni Hill Town Centre 1-3 Janefield Dr, Bundoora VIC 3083</span></div>
+    <a href="mailto:referral@cosyhomecare.com.au" class="hidden md:flex items-center gap-2 hover:text-secondary transition-colors"><i class="fa-solid fa-envelope text-xs"></i><span>referral@cosyhomecare.com.au</span></a>
+  </div>
+  <div class="flex items-center gap-4">
+    <span class="text-white/80 hidden md:inline">Follow us on</span>
+    <div class="flex items-center gap-3">
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
+      <a href="#" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+    </div>
+  </div>
+</div>
+
+<header id="main-header" class="w-full bg-white border-b py-4 px-3 lg:px-12 sticky top-0 z-40 shadow-sm" style="border-color:#EEE;">
+  <div class="max-w-[1440px] mx-auto flex justify-between items-center">
+    <a href="index.html" class="flex items-center">
+      <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] md:h-[70px] w-auto object-contain">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="index.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Home</a>
+      <a href="2_about_us.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">About Us</a>
+      <a href="5_services.html" class="font-semibold text-sm relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-[#4076B8]" style="color:#4076B8;">Services</a>
+      <a href="9_ndis.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">NDIS</a>
+      <a href="8_contact_us.html" class="font-medium text-sm hover:text-primary transition-colors" style="color:#64748b;">Contact Us</a>
+      <a href="7_housing-vacancies.html" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl text-white font-semibold text-sm hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);"><i class="fa-solid fa-house-chimney-window text-xs"></i> View Housing Vacancies</a>
+    </nav>
+    <button id="mobile-menu-btn" class="lg:hidden text-xl" style="color:#0f172a;"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- Mobile Drawer Menu -->
+<div id="mobile-drawer" class="fixed inset-0 z-50 hidden">
+    <!-- Overlay -->
+    <div id="drawer-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    
+    <!-- Drawer Content -->
+    <div id="drawer-content" class="absolute right-0 top-0 h-[100dvh] w-80 max-w-[85vw] bg-[#4076B8] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between p-6 border-b border-white/20">
+                <a href="index.html" class="flex items-center group">
+                    <div class="rounded-xl bg-white flex items-center justify-center shadow-md p-2">
+                        <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] w-auto object-contain">
+                    </div>
+                </a>
+                <button id="close-drawer-btn" class="text-white hover:text-white/80 text-2xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Drawer Menu Items -->
+            <nav class="flex-1 overflow-y-auto p-6">
+                <div class="flex flex-col gap-2">
+                    <a href="index.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-semibold text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-house text-xs"></i>
+                        Home
+                    </a>
+                    <a href="2_about_us.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-users text-xs"></i>
+                        About Us
+                    </a>
+                    <a href="5_services.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-semibold text-sm bg-white/20">
+                        <i class="fa-solid fa-heart-pulse text-xs"></i>
+                        Services
+                    </a>
+                    <a href="9_ndis.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-hand-holding-heart text-xs"></i>
+                        NDIS
+                    </a>
+                    <a href="8_contact_us.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        Contact Us
+                    </a>
+                    <div class="my-4 border-t border-white/20"></div>
+                    <a href="7_housing-vacancies.html" class="mobile-nav-item inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-white text-[#4076B8] font-semibold text-sm shadow-[0_4px_14px_-4px_rgba(255,255,255,0.3)] hover:bg-white/90 transition-all">
+                        <i class="fa-solid fa-house-chimney-window text-xs"></i>
+                        View Housing Vacancies
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Drawer Footer -->
+            <div class="p-6 border-t border-white/20">
+                <div class="flex items-center gap-3">
+                    <a href="mailto:referral@cosyhomecare.com.au" class="flex items-center gap-2 text-white/80 text-sm hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        <span>referral@cosyhomecare.com.au</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="breadcrumb" class="w-full border-b py-3 px-3 lg:px-12" style="background-color:#f8fafc;border-color:#EEE;">
+  <div class="max-w-[1440px] mx-auto flex items-center gap-2 text-sm flex-wrap">
+    <a href="index.html" class="font-medium hover:underline" style="color:#4076B8;">Home</a>
+    <i class="fa-solid fa-chevron-right text-xs" style="color:#94a3b8;"></i>
+    <span class="font-medium" style="color:#64748b;">Services</span>
+  </div>
+</div>
+
+<div id="page-banner" class="relative w-full overflow-hidden flex items-center justify-center" style="height:280px;">
+  <div class="absolute inset-0">
+    <img class="w-full h-full object-cover" src="images/main-banner.webp" alt="disability support services, caring environment, healthcare professionals" />
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(15,42,92,0.85) 0%,rgba(64,118,184,0.78) 100%);"></div>
+  </div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">Our Services</h1>
+  </div>
+</div>
+
+<section id="services-page-section" class="w-full py-20 px-3 lg:px-12" style="background-color:#F4F6F9;">
+  <div class="max-w-[1440px] mx-auto">
+
+    <div id="services-ai-filter" class="flex justify-center mb-5">
+      <div class="w-full max-w-3xl relative">
+        <div class="absolute left-5 top-1/2 -translate-y-1/2 flex items-center gap-2 pointer-events-none">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+            <path d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z" fill="url(#sparkle-grad-svc)" />
+            <defs>
+              <linearGradient id="sparkle-grad-svc" x1="3" y1="2" x2="21" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4076B8"/><stop offset="1" stop-color="#57B2E9"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <input id="services-search-input" type="text" placeholder="What are you looking for? We’ll match you to the right service" class="w-full h-[68px] rounded-full border-2 bg-white text-base font-medium focus:outline-none transition-colors shadow-lg" style="border-color:#e0ebf5;color:#0f172a;padding-left:52px;padding-right:72px;font-size:1.1rem;" onfocus="this.style.borderColor='#4076B8'" onblur="this.style.borderColor='#e0ebf5'" />
+        <button class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-colors shadow-md" style="background-color:#4076B8;" title="Voice search">
+          <i class="fa-solid fa-microphone text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="search-results-summary" class="text-center mb-6">
+      <p class="text-base font-semibold" style="color: #0f172a;">1 service matches your question <span style="color: #57B2E9;">"Need help with meal preparation"</span></p>
+    </div>
+
+    <div id="services-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-items-center">
+
+      <div id="svc-card-1" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
+        <div class="relative overflow-hidden" style="height:220px;">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/hospital-to-home.jpg" alt="nurse helping patient transition from hospital to home, warm caring environment" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base font-bold leading-snug mb-2 group-hover:text-primary transition-colors" style="color:#0f172a;">Hospital to Home Discharge</h3>
+          <p class="text-sm leading-relaxed mb-5 flex-1" style="color:#64748b;">Seamless transition support from hospital to home, ensuring safe recovery and continuity of care for NDIS participants with tailored care plans.</p>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+
+      <div id="svc-card-2" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
+        <div class="relative overflow-hidden" style="height:220px;">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/sil.webp" alt="person with disability living independently in modern accessible home" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base font-bold leading-snug mb-2 group-hover:text-primary transition-colors" style="color:#0f172a;">Supported Independent Living (SIL)</h3>
+          <p class="text-sm leading-relaxed mb-5 flex-1" style="color:#64748b;">24/7 personalised support for individuals in shared or independent accommodation, promoting autonomy and community participation.</p>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+
+      <div id="svc-card-3" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
+        <div class="relative overflow-hidden" style="height:220px;">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/52f9246ccf-7475f015cde2ace5a154.png" alt="modern purpose-built specialist disability accommodation exterior, accessible design" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base font-bold leading-snug mb-2 group-hover:text-primary transition-colors" style="color:#0f172a;">Specialist Disability Accommodation (SDA)</h3>
+          <p class="text-sm leading-relaxed mb-5 flex-1" style="color:#64748b;">Purpose-built, NDIS-approved homes designed for people with extreme functional impairment or very high support needs.</p>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+
+      <div id="svc-card-4" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
+        <div class="relative overflow-hidden" style="height:220px;">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/daily-care.webp" alt="care worker helping person with disability with daily living activities, personal care" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base font-bold leading-snug mb-2 group-hover:text-primary transition-colors" style="color:#0f172a;">Assistance with Self Care & Daily Living</h3>
+          <p class="text-sm leading-relaxed mb-5 flex-1" style="color:#64748b;">Compassionate support with personal hygiene, grooming, meal preparation and daily routines to foster dignity and independence.</p>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+
+      <div id="svc-card-5" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
+        <div class="relative overflow-hidden" style="height:220px;">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f57b658d6c-d7b3e72ac278ecc2d1b3.png" alt="diverse group of people with disabilities participating in community activities, social inclusion" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base font-bold leading-snug mb-2 group-hover:text-primary transition-colors" style="color:#0f172a;">Community Participation & Social Support</h3>
+          <p class="text-sm leading-relaxed mb-5 flex-1" style="color:#64748b;">Encouraging meaningful engagement in community life through social activities, recreational programs and peer connections.</p>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+
+      <div id="svc-card-6" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
+        <div class="relative overflow-hidden" style="height:220px;">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4d4d75018d-d0ec764e915b95274a49.png" alt="therapist and client with disability in a calming therapy session, positive behaviour support" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base font-bold leading-snug mb-2 group-hover:text-primary transition-colors" style="color:#0f172a;">Behaviour Support & Therapy</h3>
+          <p class="text-sm leading-relaxed mb-5 flex-1" style="color:#64748b;">Evidence-based positive behaviour support plans developed by qualified practitioners to improve quality of life and reduce restrictive practices.</p>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+      </a>
+
+      <div class="sm:col-span-2 lg:col-span-3 flex justify-center w-full">
+        <div id="svc-card-7" class="service-card bg-white rounded-xl overflow-hidden flex flex-col border hover:border-secondary hover:shadow-xl transition-all duration-300 group w-full sm:w-1/2 lg:w-1/3 cursor-pointer" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);" onclick="window.location.href='6_services_detail.html'">
+          <div class="relative overflow-hidden" style="height:220px;">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fc98daafde-14c39473373dbdfc2573.png" alt="NDIS support coordinator helping client manage their plan, professional office setting" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-base font-bold leading-snug mb-2 group-hover:text-primary transition-colors" style="color:#0f172a;">Plan Management & Support Coordination</h3>
+            <p class="text-sm leading-relaxed mb-5 flex-1" style="color:#64748b;">Expert guidance to help you navigate your NDIS plan, connect with providers and make the most of your funding and entitlements.</p>
+            <a href="#" class="inline-flex items-center gap-2 font-semibold text-sm hover:gap-3 transition-all duration-200" style="color:#4076B8;">Read More <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+        </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cta-section" class="w-full bg-white py-28 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-20" style="background:radial-gradient(circle,#57B2E9 0%,transparent 70%);transform:translate(-30%,-40%);"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full opacity-15" style="background:radial-gradient(circle,#4076B8 0%,transparent 70%);transform:translate(30%,40%);"></div>
+    <svg class="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dot-p" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="#4076B8"/></pattern></defs><rect width="100%" height="100%" fill="url(#dot-p)"/></svg>
+    <div class="absolute -top-16 right-24 w-64 h-64 rounded-full border" style="border-color:rgba(64,118,184,0.1);"></div>
+    <div class="absolute -bottom-16 left-24 w-72 h-72 rounded-full border" style="border-color:rgba(64,118,184,0.1);"></div>
+  </div>
+  <div class="relative z-10 max-w-[1440px] mx-auto px-3 lg:px-12 flex flex-col items-center text-center">
+
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mb-12" style="color:#0f172a;">
+      We're only a <span style="color:#4076B8;">Phone Call</span> away when you need us
+    </h2>
+    <a href="#" class="inline-flex items-center gap-3 h-16 px-12 rounded-xl text-white font-bold text-lg hover:-translate-y-1 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 12px 32px -8px rgba(64,118,184,0.45);">
+      Contact Us Today <i class="fa-solid fa-arrow-right text-base"></i>
+    </a>
+  </div>
+</section>
+
+<footer id="footer" class="w-full" style="background-color: #2D4C76;">
+        <!-- Main Footer Content -->
+        <div class="max-w-[1440px] mx-auto px-3 lg:px-12 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+
+                <!-- Left Column (8/12) -->
+                <div id="footer-left" class="lg:col-span-8 flex flex-col gap-10">
+                    <!-- Logo + Description -->
+                    <div id="footer-brand" class="flex flex-col gap-5">
+                        <a href="#" class="flex items-center group w-max">
+                            <div class="rounded-xl bg-white flex items-center justify-center shadow-md group-hover:bg-white/90 transition-colors p-2">
+                                <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] md:h-[70px] w-auto object-contain">
+                            </div>
+                        </a>
+                        <p class="text-white/70 text-sm leading-relaxed max-w-lg font-medium">
+                            At Cosy Home Care, we ensure safety, quality, and personalised care tailored to your unique needs. We build a welcoming community where everybody matters.
+                        </p>
+                    </div>
+
+                    <!-- 3 Sub-columns -->
+                    <div id="footer-links-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+                        <!-- Links -->
+                        <div id="footer-links-col">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/15">Links</h4>
+                            <ul class="flex flex-col gap-2.5">
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Home</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">About Us</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">NDIS</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">FAQs</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Feedback</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Blog</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Make a Referral</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Housing -->
+                        <div id="footer-housing-col">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/15">Housing</h4>
+                            <ul class="flex flex-col gap-2.5">
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Heidelberg West, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Heidelberg Heights, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Ivanhoe East, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Kalkallo, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Bundoora, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Laverton, VIC</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div id="footer-services-col">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/15">Services</h4>
+                            <ul class="flex flex-col gap-2.5">
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Supported Independent Living (SIL)</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Specialist Disability Accommodation (SDA)</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Assistance with Self Care and Daily Living</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Community Access and Participation</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Respite Care / STA / MTA</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Life Skills Development</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Inclusive Youth Basketball Competition</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column (4/12) -->
+                <div id="footer-right" class="lg:col-span-4 flex flex-col gap-7">
+                    <h3 class="text-white font-bold text-xl tracking-tight">Get in touch</h3>
+
+                    <!-- Address -->
+                    <div id="footer-address" class="flex items-start gap-4">
+                        <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(255,255,255,0.1);">
+                            <i class="fa-solid fa-location-dot text-[#57B2E9] text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">Address</p>
+                            <p class="text-white/70 text-sm leading-relaxed font-medium">Level 2, Uni Hill Town Centre<br>1-3 Janefield Dr,<br>Bundoora VIC 3083</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div id="footer-contact" class="flex items-start gap-4">
+                        <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(255,255,255,0.1);">
+                            <i class="fa-solid fa-phone text-[#57B2E9] text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">Contact Info</p>
+                            <a href="tel:0394575968" class="block text-white/70 text-sm font-medium hover:text-white transition-colors">(03) 9457 5968</a>
+                            <a href="mailto:referral@cosyhomecare.com.au" class="block text-white/70 text-sm font-medium hover:text-white transition-colors mt-1">referral@cosyhomecare.com.au</a>
+                        </div>
+                    </div>
+
+                    <!-- Social -->
+                    <div id="footer-social">
+                        <p class="text-white font-semibold text-sm mb-4">Follow us on</p>
+                        <div class="flex items-center gap-3">
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors" style="background-color: rgba(255,255,255,0.1);" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors" style="background-color: rgba(255,255,255,0.1);" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors" style="background-color: rgba(255,255,255,0.1);" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div id="footer-bottom" class="border-t w-full" style="border-color: rgba(255,255,255,0.1); background-color: rgba(0,0,0,0.15);">
+            <div class="max-w-[1440px] mx-auto px-3 lg:px-12 py-6 flex flex-col items-center gap-4 text-center">
+                <!-- Copyright -->
+                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-white/60 text-sm font-medium">
+                    <span>© 2025 Cosy Home Care. All Rights Reserved.</span>
+                    <span class="hidden sm:inline text-white/30">|</span>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <span class="text-white/30">|</span>
+                        <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+                <!-- Land Acknowledgment -->
+                <p class="text-white/45 text-xs leading-relaxed max-w-3xl font-medium">
+                    We acknowledge the traditional custodians of the land on which we work &amp; live, the Wurundjeri, &amp; pay our respects to their Elders past, present, &amp; emerging.
+                </p>
+                <img src="images/acc.webp" alt="Acknowledgment of Country" class="h-[30px] w-auto object-contain my-3">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Drawer Menu Toggle
+        (function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeDrawerBtn = document.getElementById('close-drawer-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const drawerContent = document.getElementById('drawer-content');
+            const drawerOverlay = document.getElementById('drawer-overlay');
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+            function openDrawer() {
+                drawer.classList.remove('hidden');
+                setTimeout(function () {
+                    drawerContent.classList.remove('translate-x-full');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeDrawer() {
+                drawerContent.classList.add('translate-x-full');
+                setTimeout(function () {
+                    drawer.classList.add('hidden');
+                }, 300);
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuBtn.addEventListener('click', openDrawer);
+            closeDrawerBtn.addEventListener('click', closeDrawer);
+            drawerOverlay.addEventListener('click', closeDrawer);
+
+            // Close drawer when clicking a nav item
+            mobileNavItems.forEach(function (item) {
+                item.addEventListener('click', closeDrawer);
+            });
+
+            // Close drawer on escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !drawer.classList.contains('hidden')) {
+                    closeDrawer();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
+              
