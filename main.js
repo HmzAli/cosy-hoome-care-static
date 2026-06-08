@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const response = await fetch('http://localhost:8080/api/cosy/contact', {
+                const response = await fetch('https://api.hapapoint.co.ke/api/cosy/contact', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
