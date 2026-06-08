@@ -1,7 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        const message = document.getElementById('contact-form-message');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const submitLabel = submitButton ? submitButton.innerHTML : '';
+
+        const showMessage = (text, isSuccess) => {
+            if (!message) return;
+            message.textContent = text;
+            message.classList.remove('hidden');
+            message.style.color = isSuccess ? '#16a34a' : '#dc2626';
+        };
+
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const selectedServices = Array.from(contactForm.querySelectorAll('input[name="selectedServices"]:checked')).map((input) => input.value);
+
+            if (!selectedServices.length) {
+                showMessage('Please select at least one service.', false);
+                return;
+            }
+
+            const data = {
+                firstName: contactForm.firstName.value.trim(),
+                lastName: contactForm.lastName.value.trim(),
+                email: contactForm.email.value.trim(),
+                phone: contactForm.phone.value.trim(),
+                selectedServices,
+                seekingFor: contactForm.querySelector('.pill-btn.active')?.textContent.trim() || '',
+                details: contactForm.details.value.trim()
+            };
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Sending...';
+            }
+
+            try {
+                const response = await fetch('/.netlify/functions/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Contact request failed');
+                }
+
+                contactForm.reset();
+                showMessage("Thank you. We've received your message and we'll get back to you shortly.", true);
+            } catch (error) {
+                showMessage('Something went wrong. Please try again or contact us directly.', false);
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = submitLabel;
+                }
+            }
+        });
+    }
     
     // Initialize Slick Slider for Homes
-    $('#homes-slider').slick({
+    if (window.jQuery && $('#homes-slider').length) {
+        $('#homes-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
@@ -23,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         ]
-    });
+        });
+    }
     
     // Counter Animation
     const animateCounter = (element, target, duration = 2000) => {

@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "resend": "^4.0.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.38.1"
+  }
+}
