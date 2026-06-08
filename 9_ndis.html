@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NDIS</title>
@@ -8,7 +11,6 @@
     <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Inter', sans-serif; }
         ::-webkit-scrollbar { display: none; }
@@ -117,7 +119,7 @@
             </a>
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="index.html" class="text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">Home</a>
-                <a href="2_about_us.html" class="text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">About Us</a>
+                <button type="button" class="about-drawer-trigger inline-flex items-center gap-1.5 text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">About Us <i class="fa-solid fa-caret-down text-[10px]"></i></button>
                 <a href="5_services.html" class="text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">Services</a>
                 <a href="9_ndis.html" class="text-[#4076b8] font-semibold text-sm hover:text-[#0f2a5c] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-[#4076b8]">NDIS</a>
                 <a href="8_contact_us.html" class="text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">Contact Us</a>
@@ -131,6 +133,37 @@
             </button>
         </div>
     </header>
+
+<div id="about-drawer" class="fixed inset-0 z-50 hidden">
+    <div id="about-drawer-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div id="about-drawer-content" class="absolute right-0 top-0 h-[100dvh] w-80 max-w-[85vw] bg-[#4076B8] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-6 border-b border-white/20">
+                <div class="rounded-xl bg-white flex items-center justify-center shadow-md p-2">
+                    <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] w-auto object-contain">
+                </div>
+                <button type="button" id="close-about-drawer-btn" class="text-white hover:text-white/80 text-2xl" aria-label="Close About Us menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex-1 overflow-y-auto p-6">
+                <h3 class="text-white text-xl font-extrabold mb-5">About us</h3>
+                <div class="flex flex-col gap-2">
+                    <a href="2_about_us.html" class="about-drawer-link flex items-center px-4 py-3 rounded-xl text-white font-semibold text-sm hover:bg-white/20 transition-colors">
+                        Who We are
+                    </a>
+                    <a href="3_why_choose_us.html" class="about-drawer-link flex items-center px-4 py-3 rounded-xl text-white font-semibold text-sm hover:bg-white/20 transition-colors">
+                        Why Choose Us
+                    </a>
+                    <a href="2_about_us.html#team-header" class="about-drawer-link flex items-center px-4 py-3 rounded-xl text-white font-semibold text-sm hover:bg-white/20 transition-colors">
+                        Meet The Team
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
 
     <!-- Mobile Drawer Menu -->
     <div id="mobile-drawer" class="fixed inset-0 z-50 hidden">
@@ -160,7 +193,6 @@
                             Home
                         </a>
                         <a href="2_about_us.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
-                            <i class="fa-solid fa-users text-xs"></i>
                             About Us
                         </a>
                         <a href="5_services.html" class="mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-white font-medium text-sm hover:bg-white/20 transition-colors">
@@ -479,6 +511,53 @@
         <i class="fa-solid fa-phone text-xs"></i>
         Contact Us
     </a>
+
+
+<script>
+    (function () {
+        const aboutDrawerTriggers = document.querySelectorAll('.about-drawer-trigger');
+        const aboutDrawer = document.getElementById('about-drawer');
+        const aboutDrawerContent = document.getElementById('about-drawer-content');
+        const aboutDrawerOverlay = document.getElementById('about-drawer-overlay');
+        const closeAboutDrawerBtn = document.getElementById('close-about-drawer-btn');
+        const aboutDrawerLinks = document.querySelectorAll('.about-drawer-link');
+
+        if (!aboutDrawer || !aboutDrawerContent) return;
+
+        function openAboutDrawer() {
+            aboutDrawer.classList.remove('hidden');
+            setTimeout(function () {
+                aboutDrawerContent.classList.remove('translate-x-full');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAboutDrawer() {
+            aboutDrawerContent.classList.add('translate-x-full');
+            setTimeout(function () {
+                aboutDrawer.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        aboutDrawerTriggers.forEach(function (trigger) {
+            trigger.addEventListener('click', openAboutDrawer);
+        });
+
+        if (aboutDrawerOverlay) aboutDrawerOverlay.addEventListener('click', closeAboutDrawer);
+        if (closeAboutDrawerBtn) closeAboutDrawerBtn.addEventListener('click', closeAboutDrawer);
+
+        aboutDrawerLinks.forEach(function (link) {
+            link.addEventListener('click', closeAboutDrawer);
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && !aboutDrawer.classList.contains('hidden')) {
+                closeAboutDrawer();
+            }
+        });
+    })();
+</script>
 
 </body>
 </html>
