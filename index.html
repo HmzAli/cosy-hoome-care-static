@@ -1241,7 +1241,7 @@
                     !loading && error && e('div', { id: 'search-results-summary', className: 'text-center mb-10' },
                         e('p', { className: 'text-base font-semibold text-red-600' }, error)
                     ),
-                    e('div', { id: 'services-cards-grid', className: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mb-14 justify-items-center' + (filteredIds && visibleServices.length < 3 ? ' lg:flex lg:justify-center' : '') },
+                    e('div', { id: 'services-cards-grid', className: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-16 mb-14 justify-items-center' + (filteredIds && visibleServices.length < 3 ? ' lg:flex lg:justify-center' : '') },
                         visibleServices.length ? visibleServices.map(function (service, index) {
                             return e(ServiceCard, { key: service.id, service: service, isCentered: visibleServices.length % 3 === 1 && index === visibleServices.length - 1 });
                         }) : e('div', { className: 'sm:col-span-2 lg:col-span-3 text-center py-10' },
