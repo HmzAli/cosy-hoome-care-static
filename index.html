@@ -1223,7 +1223,7 @@
                                 disabled: loading,
                                 className: 'absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#4076B8] flex items-center justify-center text-white hover:bg-[#34629c] transition-colors shadow-md disabled:opacity-70',
                                 title: hasSearchState ? 'Reset services' : 'Search services'
-                            }, loading ? e('i', { className: 'fa-solid fa-spinner fa-spin text-sm' }) : e('span', { className: 'text-2xl font-bold leading-none -mt-0.5' }, hasSearchState ? '×' : '>'))
+                            }, loading ? e('i', { className: 'fa-solid fa-spinner fa-spin text-sm' }) : e('span', { className: 'text-2xl font-bold leading-none -mt-0.5' }, hasSearchState ? 'x' : '>'))
                         )
                     ),
                     loading && e('div', { className: 'text-center mb-10' },
