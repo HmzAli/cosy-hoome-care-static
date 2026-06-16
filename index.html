@@ -948,21 +948,23 @@
     <!-- Footer -->
     <footer id="footer" class="w-full" style="background-color: #2D4C76;">
         <!-- Main Footer Content -->
-        <div class="max-w-[1440px] mx-auto px-6 lg:px-122 py-16">
+        <div class="max-w-[1440px] mx-auto px-2 lg:px-122 py-16">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
                 <!-- Left Column (8/12) -->
                 <div id="footer-left" class="lg:col-span-8 flex flex-col gap-10">
                     <!-- Logo + Description -->
                     <div id="footer-brand" class="flex flex-col gap-5">
-                        <a href="#" class="flex items-center group w-max">
-                            <div class="rounded-xl bg-white flex items-center justify-center shadow-md group-hover:bg-white/90 transition-colors p-2">
-                                <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
-                            </div>
-                        </a>
-                        <p class="text-white/70 text-sm leading-relaxed max-w-lg font-medium">
-                            At Cosy Home Care, we ensure safety, quality, and personalised care tailored to your unique needs. We build a welcoming community where everybody matters.
-                        </p>
+                        <div class="footer-logo-wrapper flex flex-col md:flex-row md:items-center gap-5 md:gap-6">
+                            <a href="#" class="flex items-center group w-max md:pr-2">
+                                <div class="rounded-xl bg-white flex items-center justify-center shadow-md group-hover:bg-white/90 transition-colors p-2">
+                                    <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
+                                </div>
+                            </a>
+                            <p class="text-white/70 text-md leading-relaxed max-w-lg font-medium">
+                                At Cosy Home Care, we ensure safety, quality, and personalised care tailored to your unique needs. We build a welcoming community where everybody matters.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- 3 Sub-columns -->
@@ -1015,6 +1017,18 @@
 
                 <!-- Right Column (4/12) -->
                 <div id="footer-right" class="lg:col-span-4 flex flex-col gap-7">
+                    <!-- Newsletter Subscription -->
+                    <div class="mb-8">
+                        <h3 class="text-white font-bold text-xl tracking-tight mb-4">Subscribe to our newsletter</h3>
+                        <form class="flex flex-col gap-3">
+                            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-xl text-sm border outline-none bg-white/10 text-white placeholder-white/50 focus:ring-2 transition-all" style="border-color: rgba(255,255,255,0.2);" />
+                            <button type="submit" class="w-full px-6 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.5);">
+                                Submit
+                            </button>
+                        </form>
+                        <p class="text-white/70 text-sm leading-relaxed mt-3 font-medium">Receive a FREE printable property brochure when you join our mailing list.</p>
+                    </div>
+
                     <h3 class="text-white font-bold text-xl tracking-tight">Get in touch</h3>
 
                     <!-- Address -->
