@@ -17,3 +17,7 @@
 .why-choose-icon {
   background-color: #EEF4FC;
 }
+
+#footer {
+  overflow: hidden;
+}
