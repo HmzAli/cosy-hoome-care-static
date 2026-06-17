@@ -263,23 +263,24 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-3">
-                    <label class="text-sm font-semibold" style="color:#374151;">Enquiry type</label>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border hover:border-primary transition-all" style="border-color:#e5e7eb;">
-                            <input type="radio" name="enquiryType" value="Services inquiry" class="w-4 h-4 rounded" style="accent-color:#4076B8;" />
-                            <span class="text-sm font-medium" style="color:#374151;">Services inquiry</span>
-                        </label>
-                        <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border hover:border-primary transition-all" style="border-color:#e5e7eb;">
-                            <input type="radio" name="enquiryType" value="Other inquiries" class="w-4 h-4 rounded" style="accent-color:#4076B8;" />
-                            <span class="text-sm font-medium" style="color:#374151;">Other inquiries</span>
-                        </label>
-                    </div>
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-sm font-semibold" style="color:#374151;">Enquiry Type <span style="color:#ef4444;">*</span></label>
+                    <select name="enquiryType" required class="w-full px-4 py-3 rounded-xl text-sm border outline-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';">
+                        <option value="">Select enquiry type</option>
+                        <option value="General Enquiry" selected>General Enquiry</option>
+                        <option value="SIL Accommodation">SIL Accommodation</option>
+                        <option value="SDA Accommodation">SDA Accommodation</option>
+                        <option value="Daily Living Support">Daily Living Support</option>
+                        <option value="Community Participation">Community Participation</option>
+                        <option value="Behaviour Support">Behaviour Support</option>
+                        <option value="Hospital to Home">Hospital to Home</option>
+                        <option value="NDIS Funding">NDIS Funding</option>
+                    </select>
                 </div>
 
                 <div class="flex flex-col gap-1.5">
-                    <label class="text-sm font-semibold" style="color:#374151;">Details <span style="color:#ef4444;">*</span></label>
-                    <textarea rows="4" name="details" required class="w-full px-4 py-3 rounded-xl text-sm border outline-none resize-none transition-all" style="border-color:#d1d5db;color:#374151;"></textarea>
+                    <label class="text-sm font-semibold" style="color:#374151;">Provide Details <span style="color:#ef4444;">*</span></label>
+                    <textarea rows="5" name="details" required placeholder="Tell us more about your situation and what you're looking for..." class="w-full px-4 py-3 rounded-xl text-sm border outline-none resize-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';"></textarea>
                 </div>
 
                 <div class="pt-2">
