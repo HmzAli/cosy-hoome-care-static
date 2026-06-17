@@ -222,13 +222,13 @@ body{font-family:'Inter',sans-serif;}
             <input type="tel" name="phone" required placeholder="e.g. 0400 000 000" class="w-full px-4 py-3 rounded-xl text-sm border outline-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';" />
           </div>
           <div class="flex flex-col gap-1.5">
-            <label class="text-sm font-semibold" style="color:#374151;">Email <span style="color:#ef4444;">*</span></label>
-            <input type="email" name="email" required placeholder="e.g. john@email.com" class="w-full px-4 py-3 rounded-xl text-sm border outline-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';" />
+            <label class="text-sm font-semibold" style="color:#374151;">Email</label>
+            <input type="email" name="email" placeholder="e.g. john@email.com" class="w-full px-4 py-3 rounded-xl text-sm border outline-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';" />
           </div>
         </div>
 
         <div class="flex flex-col gap-3">
-          <label class="text-sm font-semibold" style="color:#374151;">Services <span style="color:#ef4444;">*</span></label>
+          <label class="text-sm font-semibold" style="color:#374151;">Services</label>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border hover:border-primary transition-all" style="border-color:#e5e7eb;">
               <input type="checkbox" name="selectedServices" value="Supported Independent Living" class="w-4 h-4 rounded accent-primary" style="accent-color:#4076B8;" />
@@ -258,6 +258,10 @@ body{font-family:'Inter',sans-serif;}
               <input type="checkbox" name="selectedServices" value="Assistance with Self Care and Daily Living" class="w-4 h-4 rounded" style="accent-color:#4076B8;" />
               <span class="text-sm font-medium" style="color:#374151;">Assistance with Self Care and Daily Living</span>
             </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border hover:border-primary transition-all" style="border-color:#e5e7eb;">
+              <input type="checkbox" name="selectedServices" value="Others" class="w-4 h-4 rounded" style="accent-color:#4076B8;" />
+              <span class="text-sm font-medium" style="color:#374151;">Others</span>
+            </label>
           </div>
         </div>
 
@@ -270,8 +274,8 @@ body{font-family:'Inter',sans-serif;}
         </div>
 
         <div class="flex flex-col gap-1.5">
-          <label class="text-sm font-semibold" style="color:#374151;">Provide Details</label>
-          <textarea rows="5" name="details" placeholder="Tell us more about your situation and what you're looking for..." class="w-full px-4 py-3 rounded-xl text-sm border outline-none resize-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';"></textarea>
+          <label class="text-sm font-semibold" style="color:#374151;">Provide Details <span style="color:#ef4444;">*</span></label>
+          <textarea rows="5" name="details" required placeholder="Tell us more about your situation and what you're looking for..." class="w-full px-4 py-3 rounded-xl text-sm border outline-none resize-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';"></textarea>
         </div>
 
         <div class="pt-2">
