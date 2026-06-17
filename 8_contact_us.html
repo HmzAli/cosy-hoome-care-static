@@ -173,7 +173,7 @@ body{font-family:'Inter',sans-serif;}
   </div>
 </div>
 
-<div id="page-banner" class="relative w-full overflow-hidden flex items-center justify-center" style="height:280px;">
+<div id="page-banner" class="relative w-full overflow-hidden flex items-center justify-center" style="height: 230px;">
   <div class="absolute inset-0">
     <img class="w-full h-full object-cover" src="images/main-banner.webp" alt="contact us office modern building" />
     <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(15,42,92,0.88) 0%,rgba(64,118,184,0.80) 100%);"></div>
@@ -341,110 +341,161 @@ body{font-family:'Inter',sans-serif;}
   </div>
 </section>
 
-<footer id="footer" class="w-full" style="background-color:#2D4C76;">
-  <div class="max-w-[1440px] mx-auto px-3 lg:px-12 pt-14 pb-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-10">
+<!-- Footer -->
+    <footer id="footer" class="w-full" style="background-color: #2D4C76;">
+        <!-- Main Footer Content -->
+        <div class="max-w-[1440px] mx-auto px-2 lg:px-122 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
-      <!-- Left Column 8/12 -->
-      <div class="lg:col-span-8 flex flex-col gap-8">
-        <!-- Logo + Description -->
-        <div class="flex flex-col gap-4">
-          <a href="#" class="flex items-center w-fit">
-            <div class="rounded-xl bg-white flex items-center justify-center shadow-md p-2">
-              <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[50px] md:h-[70px] w-auto object-contain">
+                <!-- Left Column (8/12) -->
+                <div id="footer-left" class="lg:col-span-8 flex flex-col gap-10">
+                    <!-- Logo + Description -->
+                    <div id="footer-brand" class="flex flex-col gap-5">
+                        <div class="footer-logo-wrapper flex flex-col md:flex-row md:items-center gap-5 md:gap-6">
+                            <a href="#" class="flex items-center group w-max md:pr-2">
+                                <div class="rounded-xl bg-white flex items-center justify-center shadow-md group-hover:bg-white/90 transition-colors p-2">
+                                    <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
+                                </div>
+                            </a>
+                            <p class="text-white/70 text-md leading-relaxed max-w-lg font-medium">
+                                At Cosy Home Care, we ensure safety, quality, and personalised care tailored to your unique needs. We build a welcoming community where everybody matters.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3 Sub-columns -->
+                    <div id="footer-links-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+                        <!-- Links -->
+                        <div id="footer-links-col">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/15">Links</h4>
+                            <ul class="flex flex-col gap-2.5">
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Home</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">About Us</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">NDIS</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">FAQs</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Feedback</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Blog</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium">Make a Referral</a></li>
+                                <li><a href="#" class="contact-modal-trigger text-white/70 text-sm hover:text-white transition-colors font-medium">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Housing -->
+                        <div id="footer-housing-col">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/15">Housing</h4>
+                            <ul class="flex flex-col gap-2.5">
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Heidelberg West, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Heidelberg Heights, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Ivanhoe East, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Kalkallo, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Bundoora, VIC</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium flex items-start gap-1.5"><i class="fa-solid fa-location-dot text-[#57B2E9] text-xs mt-0.5 flex-shrink-0"></i>Laverton, VIC</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div id="footer-services-col">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/15">Services</h4>
+                            <ul class="flex flex-col gap-2.5">
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Supported Independent Living (SIL)</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Specialist Disability Accommodation (SDA)</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Assistance with Self Care and Daily Living</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Community Access and Participation</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Respite Care / STA / MTA</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Life Skills Development</a></li>
+                                <li><a href="#" class="text-white/70 text-sm hover:text-white transition-colors font-medium leading-snug">Inclusive Youth Basketball Competition</a></li>
+                            </ul>
+                            <figure class="bg-white rounded-xl p-2 mt-6 w-max">
+                                <img src="images/i-love-ndis.png" alt="I Love NDIS" class="h-[80px] w-auto object-contain">
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column (4/12) -->
+                <div id="footer-right" class="lg:col-span-4 flex flex-col gap-4">
+                    <!-- Newsletter Subscription -->
+                    <div class="mb-8">
+                        <h3 class="text-white font-bold text-xl tracking-tight mb-4">Subscribe to our newsletter</h3>
+                        <form class="flex flex-col gap-3">
+                            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-xl text-sm border outline-none bg-white/10 text-white placeholder-white/50 focus:ring-2 transition-all" style="border-color: rgba(255,255,255,0.2);" />
+                            <button type="submit" class="w-full px-6 py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.5);">
+                                Submit
+                            </button>
+                        </form>
+                        <p class="text-white/70 text-sm leading-relaxed mt-3 font-medium">Receive a FREE printable property brochure when you join our mailing list.</p>
+                    </div>
+
+                    <h3 class="text-white font-bold text-xl tracking-tight">Get in touch</h3>
+
+                    <!-- Address -->
+                    <div id="footer-address" class="flex items-start gap-4">
+                        <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(255,255,255,0.1);">
+                            <i class="fa-solid fa-location-dot text-[#57B2E9] text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">Address</p>
+                            <p class="text-white/70 text-sm leading-relaxed font-medium">Level 2, Uni Hill Town Centre<br>1-3 Janefield Dr,<br>Bundoora VIC 3083</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div id="footer-contact" class="flex items-start gap-4">
+                        <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(255,255,255,0.1);">
+                            <i class="fa-solid fa-phone text-[#57B2E9] text-sm"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">Contact Info</p>
+                            <a href="tel:+61394575968" class="block text-white/70 text-sm font-medium hover:text-white transition-colors">(03) 9457 5968</a>
+                            <a href="mailto:referral@cosyhomecare.com.au" class="block text-white/70 text-sm font-medium hover:text-white transition-colors mt-1">referral@cosyhomecare.com.au</a>
+                        </div>
+                    </div>
+
+                    <!-- Social -->
+                    <div id="footer-social">
+                        <p class="text-white font-semibold text-sm mb-4">Follow us on</p>
+                        <div class="flex items-center gap-3">
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors" style="background-color: rgba(255,255,255,0.1);" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors" style="background-color: rgba(255,255,255,0.1);" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors" style="background-color: rgba(255,255,255,0.1);" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </a>
-          <p class="text-sm leading-relaxed max-w-sm" style="color:#cbd5e1;">At Cosy Home Care, we ensure safety, quality, and personalised care tailored to your unique needs.</p>
         </div>
 
-        <!-- 3 sub-columns -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <!-- Links -->
-          <div>
-            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Links</h4>
-            <ul class="flex flex-col gap-2.5">
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Home</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">About Us</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">NDIS</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">FAQs</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Feedback</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Blog</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Make a Referral</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Contact Us</a></li>
-            </ul>
-          </div>
-          <!-- Housing -->
-          <div>
-            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Housing</h4>
-            <ul class="flex flex-col gap-2.5">
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Heidelberg West, VIC</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Heidelberg Heights, VIC</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Ivanhoe East, VIC</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Kalkallo, VIC</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Bundoora, VIC</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Laverton, VIC</a></li>
-            </ul>
-          </div>
-          <!-- Services -->
-          <div>
-            <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Services</h4>
-            <ul class="flex flex-col gap-2.5">
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Supported Independent Living (SIL)</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Specialist Disability Accommodation (SDA)</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Assistance with Self Care and Daily Living</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Community Access and Participation</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Respite Care / STA / MTA</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Life Skills Development</a></li>
-              <li><a href="#" class="text-sm hover:text-white transition-colors" style="color:#94a3b8;">Inclusive Youth Basketball Competition</a></li>
-            </ul>
-          </div>
+        <!-- Footer Bottom Bar -->
+        <div id="footer-bottom" class="border-t w-full" style="border-color: rgba(255,255,255,0.1); background-color: rgba(0,0,0,0.15);">
+            <div class="max-w-[1440px] mx-auto px-3 lg:px-6 py-6 flex flex-col items-center gap-4 text-center">
+                <!-- Copyright -->
+                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-white/60 text-sm font-medium">
+                    <span>© 2025 Cosy Home Care. All Rights Reserved.</span>
+                    <span class="hidden sm:inline text-white/30">|</span>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <span class="text-white/30">|</span>
+                        <a href="#" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+                <!-- Land Acknowledgment -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6 w-full">
+                    <img src="images/acc.webp" alt="Acknowledgment of Country" class="h-[30px] w-auto object-contain">
+                    <p class="text-white/45 text-sm leading-relaxed font-medium whitespace-nowrap">
+                        We acknowledge the traditional custodians of the land on which we work &amp; live, the Wurundjeri, &amp; pay our respects to their Elders past, present, &amp; emerging.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Right Column 4/12 -->
-      <div class="lg:col-span-4 flex flex-col gap-6">
-        <h4 class="text-white font-bold text-lg">Get in touch</h4>
-        <!-- Address -->
-        <div class="flex items-start gap-3">
-          <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:rgba(255,255,255,0.1);">
-            <i class="fa-solid fa-location-dot text-sm" style="color:#57B2E9;"></i>
-          </div>
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-wider mb-1" style="color:#57B2E9;">Address</p>
-            <p class="text-sm leading-relaxed" style="color:#cbd5e1;">Level 2, Uni Hill Town Centre<br>1-3 Janefield Dr, Bundoora VIC 3083</p>
-          </div>
-        </div>
-        <!-- Contact Info -->
-        <div class="flex items-start gap-3">
-          <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:rgba(255,255,255,0.1);">
-            <i class="fa-solid fa-phone text-sm" style="color:#57B2E9;"></i>
-          </div>
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-wider mb-1" style="color:#57B2E9;">Contact Info</p>
-            <a href="tel:+61394575968" class="block text-sm hover:text-white transition-colors" style="color:#cbd5e1;">(03) 9457 5968</a>
-            <a href="mailto:referral@cosyhomecare.com.au" class="block text-sm hover:text-white transition-colors break-all" style="color:#cbd5e1;">referral@cosyhomecare.com.au</a>
-          </div>
-        </div>
-        <!-- Social -->
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:#57B2E9;">Follow us on</p>
-          <div class="flex items-center gap-3">
-            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:opacity-80 transition-colors" style="background-color:rgba(255,255,255,0.12);color:white;"><i class="fa-brands fa-facebook-f text-sm"></i></a>
-            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:opacity-80 transition-colors" style="background-color:rgba(255,255,255,0.12);color:white;"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
-            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center hover:opacity-80 transition-colors" style="background-color:rgba(255,255,255,0.12);color:white;"><i class="fa-brands fa-instagram text-sm"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Divider -->
-    <div class="border-t pt-6 flex flex-col gap-3 text-center" style="border-color:rgba(255,255,255,0.12);">
-      <p class="text-sm" style="color:#94a3b8;">© 2025 Cosy Home Care, All Rights Reserved. <a href="#" class="hover:text-white underline transition-colors" style="color:#94a3b8;">Privacy Policy</a> | <a href="#" class="hover:text-white underline transition-colors" style="color:#94a3b8;">Terms &amp; Conditions</a></p>
-      <p class="text-xs leading-relaxed max-w-2xl mx-auto" style="color:#64748b;">We acknowledge the traditional custodians of the land on which we work &amp; live, the Wurundjeri, &amp; pay our respects to their Elders past, present, &amp; emerging.</p>
-      <img src="images/acc.webp" alt="Acknowledgment of Country" class="h-[30px] w-auto object-contain my-3 mx-auto">
-    </div>
-  </div>
-</footer>
+    </footer>
 
 <script>
 function setPill(btn) {
