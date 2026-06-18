@@ -1,10 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const initHousingDetailStickyContactForm = () => {
-        const section = document.getElementById('house-detail-section');
-        const sidebar = document.getElementById('left-sidebar');
-        const card = document.getElementById('contact-form-card');
+    const initDetailStickyContactForm = () => {
+        const stickyConfigs = [
+            {
+                section: document.getElementById('house-detail-section'),
+                sidebar: document.getElementById('left-sidebar'),
+                card: document.getElementById('contact-form-card')
+            },
+            {
+                section: document.getElementById('service-detail-section'),
+                sidebar: document.getElementById('service-sidebar'),
+                card: document.getElementById('sidebar-contact')
+            }
+        ];
+        const activeConfig = stickyConfigs.find((config) => config.section && config.sidebar && config.card);
 
-        if (!section || !sidebar || !card) return;
+        if (!activeConfig) return;
+
+        const { section, sidebar, card } = activeConfig;
 
         const desktopQuery = window.matchMedia('(min-width: 1024px)');
         const stickyOffset = 105;
@@ -76,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         desktopQuery.addEventListener('change', updateStickyState);
     };
 
-    initHousingDetailStickyContactForm();
+    initDetailStickyContactForm();
 
     const contactForm = document.getElementById('contact-form');
 

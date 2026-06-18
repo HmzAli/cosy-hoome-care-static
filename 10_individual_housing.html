@@ -382,26 +382,30 @@
         </div>
       </div>
 
-      <div id="contact-form-card" class="bg-white rounded-2xl shadow-sm p-6" style="border:1px solid #EEE;">
-        <h3 class="text-base font-bold mb-5" style="color:#0f2a5c;">Get in Touch</h3>
-        <p class="text-sm font-semibold mb-3" style="color:#0f2a5c;">Submit your enquiry and our team will get back to you within 24 hours.</p>
-        <form class="flex flex-col gap-4">
+      <div id="contact-form-card" class="detail-contact-card bg-white rounded-xl shadow-sm border overflow-hidden" style="border-color:#EEE;">
+        <div class="px-5 py-4" style="background-color:#4076B8;">
+          <h3 class="font-bold text-white text-base">Get in Touch</h3>
+        </div>
+        <div class="px-5 pt-5">
+          <p class="text-sm leading-relaxed" style="color:#374151;">Submit your enquiry and our team will get back to you within 24 hours.</p>
+        </div>
+        <form class="p-5 flex flex-col gap-4" onsubmit="return false;">
           <div>
-            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Full Name <span style="color:#ef4444;">*</span></label>
-            <input type="text" placeholder="Full Name" class="w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition" style="border-color:#e2e8f0;color:#0f172a;" />
+            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Full Name <span style="color:#e53e3e;">*</span></label>
+            <input type="text" placeholder="Full Name" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
           </div>
           <div>
-            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Phone <span style="color:#ef4444;">*</span></label>
-            <input type="tel" placeholder="Phone" class="w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition" style="border-color:#e2e8f0;color:#0f172a;" />
+            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Phone <span style="color:#e53e3e;">*</span></label>
+            <input type="tel" placeholder="Phone" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
           </div>
           <div>
-            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Email <span style="color:#ef4444;">*</span></label>
-            <input type="email" placeholder="Email" class="w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition" style="border-color:#e2e8f0;color:#0f172a;" />
+            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Email <span style="color:#e53e3e;">*</span></label>
+            <input type="email" placeholder="Email" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
           </div>
           <div>
-            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Which House are you interested in? <span style="color:#ef4444;">*</span></label>
-            <select class="w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition" style="border-color:#e2e8f0;color:#0f172a;">
-              <option value="">Select Location</option>
+            <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Which House are you interested in? <span style="color:#e53e3e;">*</span></label>
+            <select class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors appearance-none" style="border-color:#d1d5db;color:#0f172a;">
+              <option value="" disabled>Location</option>
               <option value="laverton" selected>Laverton, VIC</option>
               <option value="bundoora">Bundoora, VIC</option>
               <option value="kalkallo">Kalkallo, VIC</option>
@@ -412,9 +416,9 @@
           </div>
           <div>
             <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Additional Info <span class="font-normal" style="color:#94a3b8;">(optional)</span></label>
-            <textarea placeholder="Tell us more about your needs..." rows="3" class="w-full rounded-xl border px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition resize-none" style="border-color:#e2e8f0;color:#0f172a;"></textarea>
+            <textarea placeholder="Tell us more..." rows="3" class="w-full rounded-lg border px-3 py-2 text-sm focus:outline-none transition-colors resize-none" style="border-color:#d1d5db;color:#0f172a;"></textarea>
           </div>
-          <button type="submit" class="w-full py-3 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">Send Enquiry</button>
+          <button type="submit" class="w-full h-11 rounded-lg text-white font-bold text-sm hover:opacity-90 transition-all hover:-translate-y-0.5" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">Submit</button>
         </form>
       </div>
     </div>
