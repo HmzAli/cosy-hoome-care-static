@@ -248,6 +248,20 @@ body{font-family:'Inter',sans-serif;}
           </select>
         </div>
 
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-semibold" style="color:#374151;">NDIS Funding Status <span style="color:#ef4444;">*</span></label>
+          <select name="ndisFundingStatus" required class="w-full px-4 py-3 rounded-xl text-sm border outline-none transition-all" style="border-color:#d1d5db;color:#374151;" onfocus="this.style.borderColor='#4076B8';this.style.boxShadow='0 0 0 3px rgba(64,118,184,0.12)';" onblur="this.style.borderColor='#d1d5db';this.style.boxShadow='none';">
+            <option value="">Select funding status</option>
+            <option value="NDIS Participant - SIL Approved">NDIS Participant - SIL Approved</option>
+            <option value="NDIS Participant - SIL Not Approved">NDIS Participant - SIL Not Approved</option>
+            <option value="NDIS Participant - SIL Application in Progress">NDIS Participant - SIL Application in Progress</option>
+            <option value="NDIS Participant - SDA Approved">NDIS Participant - SDA Approved</option>
+            <option value="NDIS Participant - SDA Application in Progress">NDIS Participant - SDA Application in Progress</option>
+            <option value="Not Yet an NDIS Participant">Not Yet an NDIS Participant</option>
+            <option value="Unsure">Unsure</option>
+          </select>
+        </div>
+
         <div class="flex flex-col gap-3">
           <label class="text-sm font-semibold" style="color:#374151;">Services <span style="color:#ef4444;">*</span></label>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
