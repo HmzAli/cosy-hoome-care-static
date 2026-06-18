@@ -6,7 +6,7 @@
 <title>Vacancies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script>window.FontAwesomeConfig = { autoReplaceSvg: "nest"};</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -35,24 +35,16 @@ body{font-family:'Inter',sans-serif;}
 <body class="m-0 p-0 bg-white">
 
 <!-- Utility Bar -->
-<div id="utility-bar" class="w-full bg-[#0f2a5c] text-white py-2.5 px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center text-sm font-medium z-50 relative hidden lg:flex">
-    <div class="flex items-center gap-6 mb-2 sm:mb-0">
-        <div class="hidden sm:flex items-center gap-2">
-            <i class="fa-solid fa-location-dot text-xs"></i>
-            <span>Level 2, Uni Hill Town Centre 1-3 Janefield Dr, Bundoora VIC 3083</span>
-        </div>
-        <a href="mailto:referral@cosyhomecare.com.au" class="hidden md:flex items-center gap-2 hover:text-[#5bc981] transition-colors">
-            <i class="fa-solid fa-envelope text-xs"></i>
-            <span>referral@cosyhomecare.com.au</span>
+<div id="utility-bar" class="w-full bg-[#0f2a5c] text-white py-2.5 px-6 lg:px-12 flex justify-end items-center text-sm font-medium z-50 relative hidden lg:flex">
+    <div class="flex items-center gap-3">
+        <a href="tel:+61394575968" class="inline-flex items-center gap-2 h-9 px-4 rounded-full border border-white text-white font-semibold text-sm hover:bg-white/10 transition-colors">
+            <i class="fa-solid fa-phone text-xs"></i>
+            <span>(03) 9457 5968</span>
         </a>
-    </div>
-    <div class="flex items-center gap-4">
-        <span class="text-white/80 hidden md:inline">Follow us on</span>
-        <div class="flex items-center gap-3">
-            <a href="https://www.facebook.com/cosyhomecommunity/" target="_blank" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#5bc981] transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-            <a href="https://www.instagram.com/cosyhomecare/" target="_blank" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#5bc981] transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
-            <a href="https://www.linkedin.com/company/cosy-home-community-care?originalSubdomain=au" target="_blank" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#5bc981] transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
-        </div>
+        <button type="button" class="contact-modal-trigger inline-flex items-center gap-2 h-9 px-4 rounded-full border border-[#5bc981] text-white font-semibold text-sm bg-[#5bc981] hover:bg-[#4aa76d] hover:border-[#4aa76d] transition-colors">
+            <i class="fa-solid fa-headset text-xs"></i>
+            <span>Book a call</span>
+        </button>
     </div>
 </div>
 
@@ -201,7 +193,7 @@ body{font-family:'Inter',sans-serif;}
     <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(15,42,92,0.85) 0%,rgba(64,118,184,0.78) 100%);"></div>
   </div>
   <div class="relative z-10 text-center px-6">
-    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">Vacancies</h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight drop-shadow-lg">Vacancies</h1>
   </div>
 </div>
 
@@ -218,7 +210,7 @@ body{font-family:'Inter',sans-serif;}
       <div class="flex-1 p-8 flex flex-col justify-between gap-6">
         <div class="flex flex-col gap-3">
           <div>
-            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Laverton, VIC</h2>
+            <h2 class="text-2xl font-bold tracking-tight" style="color:#0f2a5c;">Laverton, VIC</h2>
             <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Experience Modern SIL at the heart of Laverton! Enquire now!</p>
           </div>
           <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
@@ -229,7 +221,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">6</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
             </div>
           </div>
@@ -238,7 +230,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">7</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">7</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
             </div>
           </div>
@@ -247,7 +239,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">7</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">7</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
             </div>
           </div>
@@ -256,7 +248,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">4</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
             </div>
           </div>
@@ -279,7 +271,7 @@ body{font-family:'Inter',sans-serif;}
       <div class="flex-1 p-8 flex flex-col justify-between gap-6">
         <div class="flex flex-col gap-3">
           <div>
-            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Bundoora, VIC</h2>
+            <h2 class="text-2xl font-bold tracking-tight" style="color:#0f2a5c;">Bundoora, VIC</h2>
             <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Premium SIL living close to shops, parks & transport. Enquire today!</p>
           </div>
           <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
@@ -290,7 +282,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
             </div>
           </div>
@@ -299,7 +291,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
             </div>
           </div>
@@ -308,7 +300,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
             </div>
           </div>
@@ -317,7 +309,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">3</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">3</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
             </div>
           </div>
@@ -326,7 +318,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-sm font-bold leading-none" style="color:#0f2a5c;">2</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
             </div>
           </div>
@@ -349,7 +341,7 @@ body{font-family:'Inter',sans-serif;}
       <div class="flex-1 p-8 flex flex-col justify-between gap-6">
         <div class="flex flex-col gap-3">
           <div>
-            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Kalkallo, VIC</h2>
+            <h2 class="text-2xl font-bold tracking-tight" style="color:#0f2a5c;">Kalkallo, VIC</h2>
             <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Brand-new SDA-ready home in a peaceful community. Enquire now!</p>
           </div>
           <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
@@ -360,7 +352,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">6</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
             </div>
           </div>
@@ -369,7 +361,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">6</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
             </div>
           </div>
@@ -378,7 +370,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">6</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">6</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
             </div>
           </div>
@@ -387,7 +379,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">4</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
             </div>
           </div>
@@ -396,7 +388,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-sm font-bold leading-none" style="color:#0f2a5c;">2</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
             </div>
           </div>
@@ -419,7 +411,7 @@ body{font-family:'Inter',sans-serif;}
       <div class="flex-1 p-8 flex flex-col justify-between gap-6">
         <div class="flex flex-col gap-3">
           <div>
-            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Heidelberg West, VIC</h2>
+            <h2 class="text-2xl font-bold tracking-tight" style="color:#0f2a5c;">Heidelberg West, VIC</h2>
             <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Fully accessible SIL home in vibrant Heidelberg West. Enquire now!</p>
           </div>
           <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
@@ -430,7 +422,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
             </div>
           </div>
@@ -439,7 +431,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
             </div>
           </div>
@@ -448,7 +440,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
             </div>
           </div>
@@ -457,7 +449,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">2</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
             </div>
           </div>
@@ -466,7 +458,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-sm font-bold leading-none" style="color:#0f2a5c;">2</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
             </div>
           </div>
@@ -489,7 +481,7 @@ body{font-family:'Inter',sans-serif;}
       <div class="flex-1 p-8 flex flex-col justify-between gap-6">
         <div class="flex flex-col gap-3">
           <div>
-            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Ivanhoe East, VIC</h2>
+            <h2 class="text-2xl font-bold tracking-tight" style="color:#0f2a5c;">Ivanhoe East, VIC</h2>
             <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Peaceful SIL living in a leafy, connected suburb. Enquire now!</p>
           </div>
           <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
@@ -500,7 +492,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">4</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
             </div>
           </div>
@@ -509,7 +501,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">4</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
             </div>
           </div>
@@ -518,7 +510,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">4</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">4</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
             </div>
           </div>
@@ -527,7 +519,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">2</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
             </div>
           </div>
@@ -536,7 +528,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-sm font-bold leading-none" style="color:#0f2a5c;">2</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
             </div>
           </div>
@@ -559,7 +551,7 @@ body{font-family:'Inter',sans-serif;}
       <div class="flex-1 p-8 flex flex-col justify-between gap-6">
         <div class="flex flex-col gap-3">
           <div>
-            <h2 class="text-2xl font-extrabold tracking-tight" style="color:#0f2a5c;">Heidelberg Heights, VIC</h2>
+            <h2 class="text-2xl font-bold tracking-tight" style="color:#0f2a5c;">Heidelberg Heights, VIC</h2>
             <p class="text-sm font-medium mt-1" style="color:#57B2E9;">Modern accessible home close to Heidelberg Hospital. Enquire now!</p>
           </div>
           <p class="text-sm leading-relaxed font-medium" style="color:#374151;">The rent you will pay is equivalent to 25% of your income.</p>
@@ -570,7 +562,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bedrooms</p>
             </div>
           </div>
@@ -579,7 +571,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Bathrooms</p>
             </div>
           </div>
@@ -588,7 +580,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">5</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">5</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Toilets</p>
             </div>
           </div>
@@ -597,7 +589,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-xl font-extrabold leading-none" style="color:#0f2a5c;">3</p>
+              <p class="text-xl font-bold leading-none" style="color:#0f2a5c;">3</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Parking</p>
             </div>
           </div>
@@ -606,7 +598,7 @@ body{font-family:'Inter',sans-serif;}
               <i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i>
             </div>
             <div>
-              <p class="text-sm font-extrabold leading-none" style="color:#0f2a5c;">2</p>
+              <p class="text-sm font-bold leading-none" style="color:#0f2a5c;">2</p>
               <p class="text-xs font-medium mt-0.5" style="color:#64748b;">Acc. Parking</p>
             </div>
           </div>

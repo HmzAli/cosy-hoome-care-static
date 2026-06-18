@@ -18,7 +18,7 @@
 
 .banner-image-wrapper img {
   position: absolute;
-  bottom: -10px;
+  /* bottom: -10px; */
 }
 
 .tagline {
@@ -44,10 +44,6 @@
   overflow: hidden;
 }
 
-h2 {
-  /* color: #4076B8; */
-}
-
 .main-section {
   border: 1px solid #ebebeb;
 }
@@ -63,4 +59,12 @@ h2 {
 
 .subheading-color {
   color: #4076B8;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
 }
