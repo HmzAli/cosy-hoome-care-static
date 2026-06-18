@@ -1,4 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const initHousingDetailStickyContactForm = () => {
+        const section = document.getElementById('house-detail-section');
+        const sidebar = document.getElementById('left-sidebar');
+        const card = document.getElementById('contact-form-card');
+
+        if (!section || !sidebar || !card) return;
+
+        const desktopQuery = window.matchMedia('(min-width: 1024px)');
+        const stickyOffset = 105;
+        const stickyGap = 8;
+        const topOffset = stickyOffset + stickyGap;
+        const placeholder = document.createElement('div');
+
+        card.parentNode.insertBefore(placeholder, card);
+
+        const resetCard = () => {
+            placeholder.style.display = 'none';
+            placeholder.style.height = '';
+            sidebar.style.position = '';
+            sidebar.style.minHeight = '';
+            card.style.position = '';
+            card.style.top = '';
+            card.style.left = '';
+            card.style.bottom = '';
+            card.style.width = '';
+            card.style.zIndex = '';
+        };
+
+        const updateStickyState = () => {
+            if (!desktopQuery.matches) {
+                resetCard();
+                return;
+            }
+
+            const scrollY = window.scrollY || window.pageYOffset;
+            resetCard();
+
+            const sectionRect = section.getBoundingClientRect();
+            const sidebarRect = sidebar.getBoundingClientRect();
+            const cardRect = card.getBoundingClientRect();
+            const sectionTop = sectionRect.top + scrollY;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            const cardTop = cardRect.top + scrollY;
+            const cardHeight = card.offsetHeight;
+            const fixedStart = cardTop - topOffset;
+            const fixedEnd = sectionBottom - topOffset - cardHeight;
+
+            sidebar.style.position = 'relative';
+            sidebar.style.minHeight = `${section.offsetHeight}px`;
+
+            if (scrollY < fixedStart) return;
+
+            placeholder.style.display = 'block';
+            placeholder.style.height = `${cardHeight}px`;
+
+            if (scrollY >= fixedEnd) {
+                card.style.position = 'absolute';
+                card.style.top = `${sectionBottom - sectionTop - cardHeight}px`;
+                card.style.left = '0';
+                card.style.width = `${sidebarRect.width}px`;
+                card.style.zIndex = '20';
+                return;
+            }
+
+            card.style.position = 'fixed';
+            card.style.top = `${topOffset}px`;
+            card.style.left = `${sidebarRect.left}px`;
+            card.style.width = `${sidebarRect.width}px`;
+            card.style.zIndex = '20';
+        };
+
+        updateStickyState();
+        window.addEventListener('scroll', updateStickyState, { passive: true });
+        window.addEventListener('resize', updateStickyState);
+        desktopQuery.addEventListener('change', updateStickyState);
+    };
+
+    initHousingDetailStickyContactForm();
+
     const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {
