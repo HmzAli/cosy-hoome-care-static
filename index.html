@@ -1406,16 +1406,19 @@
                     'div',
                     {
                         id: 'service-card-' + service.id,
-                        className: 'service-card bg-white rounded-2xl overflow-hidden flex items-stretch border border-[#EEE] hover:border-[#57B2E9] hover:shadow-[0_8px_32px_-8px_rgba(64,118,184,0.18)] transition-all duration-300 group w-full h-36 cursor-pointer',
+                        className: 'service-card bg-white rounded-2xl overflow-hidden flex items-stretch border border-[#EEE] hover:border-[#57B2E9] hover:shadow-[0_8px_32px_-8px_rgba(64,118,184,0.18)] transition-all duration-300 group w-full h-40 cursor-pointer',
                         style: { boxShadow: '0 4px 24px -4px rgba(64,118,184,0.08)' },
                         onClick: function () { window.location.href = '6_services_detail.html'; }
                     },
-                    e('div', { className: 'relative w-36 h-full flex-shrink-0 overflow-hidden' },
+                    e('div', { className: 'relative w-40 h-full flex-shrink-0 overflow-hidden' },
                         e('img', { className: 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', src: service.image, alt: service.alt })
                     ),
                     e('div', { className: 'p-4 flex flex-col justify-center flex-1 min-w-0' },
-                        e('h3', { className: 'text-sm sm:text-base font-bold text-[#0f172a] leading-snug mb-1 group-hover:text-[#4076B8] transition-colors' }, service.title),
-                        e('p', { className: 'text-xs sm:text-sm text-[#64748b] leading-relaxed mb-3 line-clamp-2' }, service.description),
+                        e('h3', { className: 'text-sm sm:text-base font-bold text-[#0f172a] leading-snug mb-2 group-hover:text-[#4076B8] transition-colors flex-shrink-0' }, service.title),
+                        e('p', {
+                            className: 'text-xs sm:text-sm text-[#64748b] mb-3 overflow-hidden',
+                            style: { display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', lineHeight: '1.35rem', maxHeight: '2.7rem' }
+                        }, service.description),
                         e('a', {
                             href: '#',
                             className: 'inline-flex items-center gap-2 text-[#4076B8] font-semibold text-sm hover:gap-3 transition-all duration-200 w-max',
