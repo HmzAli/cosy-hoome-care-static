@@ -47,3 +47,20 @@
 h2 {
   color: #4076B8;
 }
+
+.main-section {
+  border: 1px solid #ebebeb;
+}
+
+#main-header nav a {
+  font-weight: 600;
+  /* color: #4076B8; */
+}
+
+.highlight {
+  color: #57B2E9;
+}
+
+.subheading-color {
+  color: #4076B8;
+}
