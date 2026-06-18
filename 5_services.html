@@ -32,6 +32,9 @@ tailwind.config = {
 }
 ::-webkit-scrollbar { display: none; }
 body { font-family: Inter, sans-serif; }
+.nav-item-active { background-color: #4076B8; color: #fff !important; border-color: #4076B8 !important; }
+.nav-item { transition: all 0.2s; }
+.nav-item:hover { background-color: #f0f5fa; color: #4076B8; }
 </style>
 <link rel="stylesheet" href="styles.css" />
 
@@ -201,15 +204,79 @@ body { font-family: Inter, sans-serif; }
   </div>
 </div>
 
-<section id="services-page-section" class="main-section w-full py-20 px-3 lg:px-12" style="background-color:#F4F6F9;">
+<section id="services-page-section" class="main-section w-full py-16 px-3 lg:px-12" style="background-color:#F4F6F9;">
   <div class="max-w-[1440px] mx-auto">
+    <div class="flex flex-col lg:flex-row gap-10">
 
-    <p class="text-lg text-[#64748b] font-medium max-w-2xl leading-relaxed text-center mx-auto">
-      We offer a comprehensive range of person-centred disability support services - tailored to empower your independence, wellbeing, and quality of life.
-    </p>
+      <!-- Services Sidebar -->
+      <div id="service-sidebar" class="w-full lg:w-[300px] xl:w-[320px] flex-shrink-0 flex flex-col gap-6">
+        <div id="services-nav" class="bg-white rounded-xl overflow-hidden shadow-sm border" style="border-color:#EEE;">
+          <div class="px-5 py-4 border-b" style="border-color:#4076B8;background-color:#4076B8;">
+            <h3 class="font-bold text-sm uppercase tracking-wider text-white">Our Services</h3>
+          </div>
+          <nav class="flex flex-col p-3 gap-1">
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Supported Independent Living (SIL)</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Specialist Disability Accommodation (SDA)</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Assistance with Self Care and Daily Living</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Community Access and Participation</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Respite Care / STA / MTA</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Life Skills Development</a>
+            <a href="#" class="nav-item px-4 py-3 rounded-lg text-sm font-medium" style="color:#64748b;">Inclusive Youth Basketball Competition</a>
+          </nav>
+        </div>
 
-    <div id="services-react-widget"></div>
+        <div id="sidebar-contact" class="detail-contact-card bg-white rounded-xl shadow-sm border overflow-hidden" style="border-color:#EEE;">
+          <div class="px-5 py-4" style="background-color:#4076B8;">
+            <h3 class="font-bold text-white text-base">Get in Touch</h3>
+          </div>
+          <div class="px-5 pt-5">
+            <p class="text-sm leading-relaxed" style="color:#374151;">Submit your enquiry and our team will get back to you within 24 hours.</p>
+          </div>
+          <form class="p-5 flex flex-col gap-4" onsubmit="return false;">
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Full Name <span style="color:#e53e3e;">*</span></label>
+              <input type="text" placeholder="Full Name" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Phone <span style="color:#e53e3e;">*</span></label>
+              <input type="tel" placeholder="Phone" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Email <span style="color:#e53e3e;">*</span></label>
+              <input type="email" placeholder="Email" class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors" style="border-color:#d1d5db;color:#0f172a;" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Which Service are you interested in? <span style="color:#e53e3e;">*</span></label>
+              <select class="w-full h-10 rounded-lg border px-3 text-sm focus:outline-none transition-colors appearance-none" style="border-color:#d1d5db;color:#0f172a;">
+                <option value="" disabled selected>Service</option>
+                <option>Supported Independent Living (SIL)</option>
+                <option>Specialist Disability Accommodation (SDA)</option>
+                <option>Assistance with Self Care and Daily Living</option>
+                <option>Community Access and Participation</option>
+                <option>Respite Care / STA / MTA</option>
+                <option>Life Skills Development</option>
+                <option>Inclusive Youth Basketball Competition</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:#374151;">Additional Info <span class="font-normal" style="color:#94a3b8;">(optional)</span></label>
+              <textarea placeholder="Tell us more..." rows="3" class="w-full rounded-lg border px-3 py-2 text-sm focus:outline-none transition-colors resize-none" style="border-color:#d1d5db;color:#0f172a;"></textarea>
+            </div>
+            <button type="submit" class="w-full h-11 rounded-lg text-white font-bold text-sm hover:opacity-90 transition-all hover:-translate-y-0.5" style="background-color:#4076B8;box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">Submit</button>
+          </form>
+        </div>
+      </div>
 
+      <!-- Main Services Content -->
+      <div id="services-content" class="flex-1 min-w-0 flex flex-col gap-10">
+        <p class="text-lg text-[#64748b] font-medium max-w-2xl leading-relaxed">
+          We offer a comprehensive range of person-centred disability support services - tailored to empower your independence, wellbeing, and quality of life.
+        </p>
+
+        <div id="services-react-widget"></div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -524,7 +591,7 @@ body { font-family: Inter, sans-serif; }
                 );
 
                 if (isCentered) {
-                    return e('div', { key: service.id, className: 'lg:col-start-2 w-full' }, card);
+                    return e('div', { key: service.id, className: 'xl:col-start-2 w-full' }, card);
                 }
 
                 return React.cloneElement(card, { key: service.id });
@@ -532,10 +599,10 @@ body { font-family: Inter, sans-serif; }
 
             function ServicesWidget() {
                 return e(React.Fragment, null,
-                    e('div', { id: 'services-cards-grid', className: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12 mb-10' },
+                    e('div', { id: 'services-cards-grid', className: 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-2 mb-10' },
                         services.length ? services.map(function (service, index) {
                             return e(ServiceCard, { key: service.id, service: service, isCentered: services.length % 3 === 1 && index === services.length - 1 });
-                        }) : e('div', { className: 'md:col-span-2 lg:col-span-3 text-center py-10' },
+                        }) : e('div', { className: 'md:col-span-2 xl:col-span-3 text-center py-10' },
                             e('p', { className: 'text-base font-semibold text-[#0f172a]' }, 'No matching services found.'),
                             e('p', { className: 'text-sm text-[#64748b] mt-2' }, 'Try describing your support needs in a different way.')
                         )
