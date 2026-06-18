@@ -185,7 +185,7 @@ body { font-family: Inter, sans-serif; }
             </a>
             <a href="7_housing-vacancies.html" id="header-vacancies-btn" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-[#4076B8] text-white font-semibold text-sm shadow-[0_4px_14px_-4px rgba(64,118,184,0.45)] hover:bg-[#34629c] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
                 <i class="fa-solid fa-house-chimney-window text-xs"></i>
-                View Housing Vacancies
+                Vacancies
             </a>
         </nav>
         <button id="mobile-menu-btn" class="lg:hidden text-foreground hover:text-[#4076b8] text-xl">
@@ -319,7 +319,8 @@ body { font-family: Inter, sans-serif; }
           <p><strong style="color:#0f172a;">The Cosy Home Care journey.</strong> We began our mission in 2017, as the NDIS first rolled out across Melbourne. From the start, we focused on inclusive, community based housing for people with disabilities, with particular care for those in the mental health sector.</p>
           <p><strong style="color:#0f172a;">Our background.</strong> We started by delivering direct support services, eventually assisting up to 200 participants with everything from community access to daily living. Over time we saw a real gap in housing. Many people were at risk of homelessness or stuck in hospital because there were not enough suitable, affordable homes. That is why we shifted to focus on Supported Independent Living (SIL), a shared model that lowers costs, protects independence, and keeps people connected to their community.</p>
           <div>
-            <h2 class="subheading-color text-xl font-extrabold mb-3 mt-3">What makes us different</h2>
+            <h2 class="text-2xl font-extrabold mb-3 mt-5">What makes us <span class="highlight">different</class></h2>
+              
             <ul class="about-story-points flex flex-col gap-3">
               <li class="flex items-start gap-3"><i class="fa-solid fa-bell-concierge mt-1" style="color:#57B2E9;"></i><span><strong style="color:#0f172a;">Concierge support model.</strong> Instead of rigid schedules, support is flexible and person led. Participants choose when they receive help, whether that is showering, meals, or community outings.</span></li>
               <li class="flex items-start gap-3"><i class="fa-solid fa-people-group mt-1" style="color:#57B2E9;"></i><span><strong style="color:#0f172a;">Community matching.</strong> We recruit high quality staff and carefully match housemates who share similar lifestyles and interests, so each home feels like a genuine community.</span></li>
@@ -336,8 +337,7 @@ body { font-family: Inter, sans-serif; }
             <img class="w-full h-auto object-cover" src="images/about.webp" alt="participants and support workers sharing a warm moment in a welcoming home" />
           </div>
         </div>
-        <div class="about-story-highlight relative z-10 w-full max-w-[500px] rounded-2xl p-6 flex items-start gap-4" style="background-color:#ffffff; border:1px solid rgba(64, 118, 184, 0.3); box-shadow:0 10px 30px -8px rgba(64,118,184,0.18);">
-          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color:#ffffff;"><i class="fa-solid fa-certificate text-[#4076B8]"></i></div>
+        <div class="about-story-highlight relative z-10 w-full max-w-[500px] rounded-2xl p-6" style="background-color:#ffffff; border:1px solid rgba(64, 118, 184, 0.3); box-shadow:0 4px 24px -4px rgba(0,0,0,0.10);">
           <p class="leading-relaxed" style="color:#475569;"><strong style="color:#0f172a;">A registered NDIS provider.</strong> We are dedicated to evolving our practices and meeting the highest standards of quality, so we can keep providing safe, innovative, and welcoming housing for the most vulnerable members of our community.</p>
         </div>
       </div>
@@ -484,7 +484,7 @@ body { font-family: Inter, sans-serif; }
         <div class="absolute w-[340px] h-[340px] rounded-full border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0" style="border-color: rgba(87,178,233,0.2);"></div>
         <div class="relative z-10 w-full max-w-[500px]">
           <div class="organic-mask overflow-hidden rounded-[40px]" style="box-shadow: 0 20px 60px -10px rgba(64,118,184,0.25);">
-            <img class="w-full h-auto object-cover" src="images/about.webp" alt="supportive care scene illustrating values of dignity and independence" />
+            <img class="w-full h-auto object-cover" src="images/about-center.png" alt="supportive care scene illustrating values of dignity and independence" />
           </div>
         </div>
       </div>
@@ -493,44 +493,68 @@ body { font-family: Inter, sans-serif; }
   </div>
 </section>
 
-<!-- Section 3: Why Families Trust Us -->
-<section id="why-families-trust-us" class="main-section about-section about-trust w-full bg-white py-24">
-  <div class="max-w-[1440px] mx-auto px-3 lg:px-12">
-    <div class="flex flex-col items-center text-center mb-12">
-      <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-5 leading-tight" style="color:#0f172a;">Why Families <span style="color:#57B2E9;">Trust Us</span></h2>
-      <p class="text-lg font-medium max-w-3xl leading-relaxed" style="color:#64748b;">The heart of our model is community, choice, and collaboration, so people can live well, stay connected, and feel at home.</p>
+<!-- Section 3: Why Choose Us -->
+<section id="why-choose-cards" class="main-section why-choose-section w-full py-12 md:py-24 px-3 lg:px-12">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-5 leading-tight" style="color: #0f172a;">Why Families <span class="highlight">Trust Us</span></h2>
     </div>
-    <div class="about-trust-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="about-trust-card bg-white rounded-2xl p-6 border" style="border-color:#EEE; box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color:#f0f5fa;"><i class="fa-solid fa-bell-concierge text-[#4076B8]"></i></div>
-        <h3 class="font-bold text-lg mb-2" style="color:#0f172a;">Concierge Support</h3>
-        <p class="text-sm" style="color:#475569;">Flexible, person led daily routines, and participants decide when they want support like meals, showers, or outings.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div id="card-registered" class="why-choose-card bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 flex flex-col gap-5">
+        <div class="why-choose-icon w-12 h-12 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-certificate text-xl" style="color: #4076B8;"></i>
+        </div>
+        <h3 class="text-lg font-extrabold" style="color: #0f172a;">Registered NDIS Provider</h3>
+        <p class="text-sm font-semibold" style="color: #4076B8;">Trusted Care, Delivered with Confidence</p>
+        <p class="text-sm leading-relaxed" style="color: #64748b;">As a registered NDIS provider, we meet the highest standards of quality, safety, and compliance. Our participants and families can trust that every service is delivered by qualified professionals who are committed to providing reliable, ethical, and person-centred support.</p>
       </div>
-      <div class="about-trust-card bg-white rounded-2xl p-6 border" style="border-color:#EEE; box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color:#f0f5fa;"><i class="fa-solid fa-people-group text-[#4076B8]"></i></div>
-        <h3 class="font-bold text-lg mb-2" style="color:#0f172a;">Community Matching</h3>
-        <p class="text-sm" style="color:#475569;">Thoughtful housemate matching and great staff, so each home feels like a cohesive, welcoming community.</p>
+
+      <div id="card-experience" class="why-choose-card bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 flex flex-col gap-5">
+        <div class="why-choose-icon w-12 h-12 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-calendar-check text-xl" style="color: #4076B8;"></i>
+        </div>
+        <h3 class="text-lg font-extrabold" style="color: #0f172a;">Supporting Lives Since 2017</h3>
+        <p class="text-sm font-semibold" style="color: #4076B8;">Experience You Can Rely On</p>
+        <p class="text-sm leading-relaxed" style="color: #64748b;">For years, Cosy Home Care has been helping individuals with disabilities live more independently and achieve their goals. Our proven experience enables us to provide consistent, high-quality support tailored to the evolving needs of participants and their families.</p>
       </div>
-      <div class="about-trust-card bg-white rounded-2xl p-6 border" style="border-color:#EEE; box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color:#f0f5fa;"><i class="fa-solid fa-handshake-angle text-[#4076B8]"></i></div>
-        <h3 class="font-bold text-lg mb-2" style="color:#0f172a;">Allied Collaboration</h3>
-        <p class="text-sm" style="color:#475569;">We work with developers and allied health, and we help you find the right provider if we are not the best fit.</p>
+
+      <div id="card-personalised" class="why-choose-card bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 flex flex-col gap-5">
+        <div class="why-choose-icon w-12 h-12 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-user-pen text-xl" style="color: #4076B8;"></i>
+        </div>
+        <h3 class="text-lg font-extrabold" style="color: #0f172a;">Personalised Support That Puts You First</h3>
+        <p class="text-sm font-semibold" style="color: #4076B8;">Your Goals, Your Journey</p>
+        <p class="text-sm leading-relaxed" style="color: #64748b;">We understand that every participant is unique. That's why we create individualised support plans that reflect your personal goals, preferences, and aspirations, empowering you to make choices and live life on your own terms.</p>
       </div>
-      <div class="about-trust-card bg-white rounded-2xl p-6 border" style="border-color:#EEE; box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color:#f0f5fa;"><i class="fa-solid fa-shield-heart text-[#4076B8]"></i></div>
-        <h3 class="font-bold text-lg mb-2" style="color:#0f172a;">Quality and Safety</h3>
-        <p class="text-sm" style="color:#475569;">Strong governance and continuous improvement underpin consistent, high quality support.</p>
+
+      <div id="card-professionals" class="why-choose-card bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 flex flex-col gap-5">
+        <div class="why-choose-icon w-12 h-12 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-user-doctor text-xl" style="color: #4076B8;"></i>
+        </div>
+        <h3 class="text-lg font-extrabold" style="color: #0f172a;">Experienced Professionals Who Care</h3>
+        <p class="text-sm font-semibold" style="color: #4076B8;">Compassion Backed by Expertise</p>
+        <p class="text-sm leading-relaxed" style="color: #64748b;">Our dedicated team of Support Workers, Occupational Therapists, and Client Managers work together to deliver exceptional care. We build trusted relationships through compassion, respect, professionalism, and a genuine commitment to achieving positive outcomes.</p>
       </div>
-      <div class="about-trust-card bg-white rounded-2xl p-6 border" style="border-color:#EEE; box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color:#f0f5fa;"><i class="fa-solid fa-circle-check text-[#4076B8]"></i></div>
-        <h3 class="font-bold text-lg mb-2" style="color:#0f172a;">Registered NDIS Provider</h3>
-        <p class="text-sm" style="color:#475569;">We meet rigorous standards so participants and families can feel confident and supported.</p>
+
+      <div id="card-accommodation" class="why-choose-card bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 flex flex-col gap-5">
+        <div class="why-choose-icon w-12 h-12 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-house-circle-check text-xl" style="color: #4076B8;"></i>
+        </div>
+        <h3 class="text-lg font-extrabold" style="color: #0f172a;">Quality Accommodation & Independent Living</h3>
+        <p class="text-sm font-semibold" style="color: #4076B8;">Safe, Comfortable, and Accessible Homes</p>
+        <p class="text-sm leading-relaxed" style="color: #64748b;">We provide modern SDA and SIL accommodation designed to support independence, comfort, and wellbeing. Our homes offer participants the opportunity to live in a supportive environment while maintaining choice, control, and dignity.</p>
       </div>
-      <div class="about-trust-card bg-white rounded-2xl p-6 border" style="border-color:#EEE; box-shadow:0 4px 24px -4px rgba(64,118,184,0.08);">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background-color:#f0f5fa;"><i class="fa-solid fa-house-heart text-[#4076B8]"></i></div>
-        <h3 class="font-bold text-lg mb-2" style="color:#0f172a;">Focused on Fit</h3>
-        <p class="text-sm" style="color:#475569;">We prioritise the right home and team over being a one stop shop, and your needs lead the way.</p>
+
+      <div id="card-empowering" class="why-choose-card bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 flex flex-col gap-5">
+        <div class="why-choose-icon w-12 h-12 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-hands-holding-circle text-xl" style="color: #4076B8;"></i>
+        </div>
+        <h3 class="text-lg font-extrabold" style="color: #0f172a;">Empowering Independence & Community Inclusion</h3>
+        <p class="text-sm font-semibold" style="color: #4076B8;">Helping You Thrive Every Day</p>
+        <p class="text-sm leading-relaxed" style="color: #64748b;">We support participants to build life skills, increase confidence, and actively engage with their communities. Through meaningful social connections, skill development, and community participation, we help individuals lead fulfilling and empowered lives.</p>
       </div>
+
     </div>
   </div>
 </section>
