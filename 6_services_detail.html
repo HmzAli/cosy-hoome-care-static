@@ -523,6 +523,7 @@ body { font-family: Inter, sans-serif; }
                   </div>
                 </div>
               </div>
+              </div>
               <!-- Card 2: Ivanhoe East, VIC -->
               <div class="px-2">
                 <div id="property-card-2" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
@@ -602,6 +603,7 @@ body { font-family: Inter, sans-serif; }
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
               <!-- Card 3: Heidelberg West, VIC -->
               <div class="px-2">
@@ -683,6 +685,7 @@ body { font-family: Inter, sans-serif; }
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </div>
         </div>
@@ -696,7 +699,7 @@ body { font-family: Inter, sans-serif; }
 <section id="service-cta" class="w-full py-14 px-6 text-center text-white relative overflow-hidden" style="background: linear-gradient(135deg, #4076B8 0%, #57B2E9 100%);">
   <div class="relative z-10 max-w-[1440px] mx-auto">
     <p class="text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto mb-8">
-      If your NDIS plan provides funding for personal self-care or high-intensity daily activities, we’re here to provide compassionate, respectful assistance for both short-term and long-term needs.
+      If your NDIS plan provides funding for personal self-care or high-intensity daily activities, we're here to provide compassionate, respectful assistance for both short-term and long-term needs.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="8_contact_us.html" class="inline-flex items-center justify-center h-11 px-6 rounded-xl bg-white font-semibold text-sm transition-all hover:-translate-y-0.5" style="color:#4076B8;">Contact Us</a>
@@ -705,8 +708,8 @@ body { font-family: Inter, sans-serif; }
   </div>
 </section>
 
-    <!-- Footer -->
-    <footer id="footer" class="w-full" style="background-color: #2D4C76;">
+<!-- Footer -->
+<footer id="footer" class="w-full" style="background-color: #2D4C76;">
         <!-- Main Footer Content -->
         <div class="max-w-[1440px] mx-auto px-2 lg:px-12 py-16">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
@@ -719,13 +722,13 @@ body { font-family: Inter, sans-serif; }
                             <a href="index.html" class="flex items-center group w-max md:pr-2">
                                 <div class="rounded-xl bg-white flex items-center justify-center shadow-md group-hover:bg-white/90 transition-colors p-2">
                                     <img src="images/logo.png" alt="Cosy Home Care Logo" class="h-[70px] w-auto object-contain">
-                                </div>
+      </div>
                             </a>
                             <p class="text-white/70 text-md leading-relaxed max-w-lg font-medium">
                                 At Cosy Home Care, we ensure safety, quality, and personalised care tailored to your unique needs. We build a welcoming community where everybody matters.
                             </p>
-                        </div>
-                    </div>
+    </div>
+  </div>
 
                     <!-- 3 Sub-columns -->
                     <div id="footer-links-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -962,5 +965,28 @@ body { font-family: Inter, sans-serif; }
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script src="main.js"></script>
+
+<script>
+    (function () {
+        if (!window.jQuery) return;
+        const $ = window.jQuery;
+        $(document).ready(function () {
+            const $slider = $('#homes-slider');
+            if (!$slider.length) return;
+            if ($slider.hasClass('slick-initialized')) return;
+            $slider.slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                arrows: false,
+                responsive: [
+                    { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                    { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true, centerPadding: '30px' } }
+                ]
+            });
+        });
+    })();
+</script>
 </body>
 </html>
