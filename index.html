@@ -138,6 +138,9 @@
                                 "fontSize": {
                                     "md": ["1.0625rem", "1.5rem"]
                                 },
+                                "fontSize": {
+                                    "md": ["1.0625rem", "1.5rem"]
+                                },
                                 "boxShadow": {
                                     "2xs": "var(--shadow-2xs)",
                                     "xs": "var(--shadow-xs)",
@@ -163,10 +166,10 @@
                 <i class="fa-solid fa-phone text-xs"></i>
                 <span>(03) 9457 5968</span>
             </a>
-            <button type="button" class="contact-modal-trigger inline-flex items-center gap-2 h-9 px-4 rounded-full border border-[#5bc981] text-white font-semibold text-sm bg-[#5bc981] hover:bg-[#4aa76d] hover:border-[#4aa76d] transition-colors">
+            <a href="#" class="contact-modal-trigger inline-flex items-center gap-2 h-9 px-4 rounded-full border border-[#5bc981] text-white font-semibold text-sm bg-[#5bc981] hover:bg-[#4aa76d] hover:border-[#4aa76d] transition-colors">
                 <i class="fa-solid fa-headset text-xs"></i>
                 <span>Book a call</span>
-            </button>
+            </a>
         </div>
     </div>
 
@@ -414,7 +417,7 @@
                 <h2 class="text-4xl lg:text-5xl font-bold text-[#0f172a] tracking-tight mb-5 leading-tight">
                     Our <span style="color: #57B2E9;">Cosy</span> Homes
                 </h2>
-                <p class="text-lg text-[#64748b] font-medium max-w-2xl leading-relaxed">
+                <p class="text-lg text-[#64748b] font-medium max-w-2xl leading-relaxed" style="display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
                     Discover our purpose-built, fully accessible SIL homes - thoughtfully designed for comfort, independence, and community connection across Victoria.
                 </p>
             </div>
@@ -1620,6 +1623,24 @@
                 closeAboutDrawer();
             }
         });
+    })();
+</script>
+
+<script>
+    (function () {
+        const header = document.getElementById('main-header');
+        if (!header) return;
+
+        function updateHeaderShadow() {
+            if (window.scrollY > 0) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        }
+
+        updateHeaderShadow();
+        window.addEventListener('scroll', updateHeaderShadow, { passive: true });
     })();
 </script>
 

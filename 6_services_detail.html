@@ -20,6 +20,7 @@ tailwind.config = {
         secondary: { DEFAULT: '#57B2E9', foreground: '#ffffff' },
       },
       fontFamily: { sans: ['Inter', 'sans-serif'] },
+      fontSize: { md: ["1.0625rem", "1.5rem"] },
     }
   }
 }
@@ -44,10 +45,10 @@ body { font-family: Inter, sans-serif; }
             <i class="fa-solid fa-phone text-xs"></i>
             <span>(03) 9457 5968</span>
         </a>
-        <button type="button" class="contact-modal-trigger inline-flex items-center gap-2 h-9 px-4 rounded-full border border-[#5bc981] text-white font-semibold text-sm bg-[#5bc981] hover:bg-[#4aa76d] hover:border-[#4aa76d] transition-colors">
-            <i class="fa-solid fa-headset text-xs"></i>
-            <span>Book a call</span>
-        </button>
+        <a href="#" class="contact-modal-trigger inline-flex items-center gap-2 h-9 px-4 rounded-full border border-[#5bc981] text-white font-semibold text-sm bg-[#5bc981] hover:bg-[#4aa76d] hover:border-[#4aa76d] transition-colors">
+                <i class="fa-solid fa-headset text-xs"></i>
+                <span>Book a call</span>
+            </a>
     </div>
 </div>
 
@@ -59,27 +60,27 @@ body { font-family: Inter, sans-serif; }
         </a>
         <nav class="hidden lg:flex items-center gap-8">
             <div class="relative group py-3 -my-3">
-                <a href="5_services.html" class="text-[#4076B8] font-semibold text-sm hover:text-[#0f2a5c] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-[#4076B8] inline-flex items-center gap-1.5">Services <i class="fa-solid fa-caret-down text-[10px]"></i></a>
+                <a href="5_services.html" class="text-[#4076B8] font-semibold text-sm xl:text-md hover:text-[#0f2a5c] transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-[#4076B8] inline-flex items-center gap-1.5">Services <i class="fa-solid fa-caret-down text-[10px]"></i></a>
                 <div class="absolute left-1/2 top-full z-50 w-80 -translate-x-1/2 pt-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
                     <div class="overflow-hidden rounded-2xl bg-white border border-[#E2EAF4] shadow-[0_18px_45px_-18px rgba(15,42,92,0.35)] p-2">
-                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Supported Independent Living (SIL)</a>
-                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Specialist Disability Accommodation (SDA)</a>
-                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Assistance with Self Care and Daily Living</a>
-                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Community Access and Participation</a>
-                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Respite Care / STA / MTA</a>
-                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Life Skills Development</a>
-                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Inclusive Youth Basketball Competition</a>
+                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm xl:text-md text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Supported Independent Living (SIL)</a>
+                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm xl:text-md text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Specialist Disability Accommodation (SDA)</a>
+                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm xl:text-md text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Assistance with Self Care and Daily Living</a>
+                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm xl:text-md text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Community Access and Participation</a>
+                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm xl:text-md text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Respite Care / STA / MTA</a>
+                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm xl:text-md text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Life Skills Development</a>
+                        <a href="5_services.html" class="block rounded-xl px-4 py-3 text-sm xl:text-md text-[#0f2a5c] hover:bg-[#4076B8] hover:text-white transition-colors">Inclusive Youth Basketball Competition</a>
                     </div>
                 </div>
             </div>
-            <a href="4_hospital_to_home.html" class="text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">Hospital Discharge Program</a>
-            <a href="2_about_us.html" class="text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">About Us</a>
-            <a href="8_contact_us.html" class="text-foreground font-medium text-sm hover:text-[#4076b8] transition-colors">Contact Us</a>
-            <a href="tel:+61394575968" class="inline-flex items-center gap-2 text-[#4076B8] font-semibold text-sm hover:text-[#34629c] transition-colors">
+            <a href="4_hospital_to_home.html" class="text-foreground font-medium text-sm xl:text-md hover:text-[#4076b8] transition-colors">Hospital Discharge Program</a>
+            <a href="2_about_us.html" class="text-foreground font-medium text-sm xl:text-md hover:text-[#4076b8] transition-colors">About Us</a>
+            <a href="8_contact_us.html" class="text-foreground font-medium text-sm xl:text-md hover:text-[#4076b8] transition-colors">Contact Us</a>
+            <a href="tel:+61394575968" class="inline-flex items-center gap-2 text-[#4076B8] font-semibold text-sm xl:text-md hover:text-[#34629c] transition-colors">
                 <i class="fa-solid fa-phone text-xs"></i>
                 <span>(03) 9457 5968</span>
             </a>
-            <a href="7_housing-vacancies.html" id="header-vacancies-btn" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-[#4076B8] text-white font-semibold text-sm shadow-[0_4px_14px_-4px rgba(64,118,184,0.45)] hover:bg-[#34629c] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
+            <a href="7_housing-vacancies.html" id="header-vacancies-btn" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-[#4076B8] text-white font-semibold text-sm xl:text-md shadow-[0_4px_14px_-4px rgba(64,118,184,0.45)] hover:bg-[#34629c] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
                 <i class="fa-solid fa-house-chimney-window text-xs"></i>
                 Vacancies
             </a>
@@ -222,7 +223,7 @@ body { font-family: Inter, sans-serif; }
           </nav>
         </div>
 
-        <div id="sidebar-contact" class="detail-contact-card bg-white rounded-xl shadow-sm border overflow-hidden" style="border-color:#EEE;">
+        <div id="sidebar-contact" class="detail-contact-card bg-white rounded-xl shadow-sm border overflow-hidden lg:sticky lg:top-[100px] lg:self-start" style="border-color:#EEE;">
           <div class="px-5 py-4" style="background-color:#4076B8;">
             <h3 class="font-bold text-white text-base">Get in Touch</h3>
           </div>
@@ -267,14 +268,107 @@ body { font-family: Inter, sans-serif; }
 
         <div id="sda-intro" class="bg-white rounded-xl p-8 shadow-sm border" style="border-color:#EEE;">
           <h2 class="text-2xl font-bold mb-5" style="color:#0f2a5c;">Specialist Disability Accommodation <span style="color:#4076B8;">(SDA)</span></h2>
-          <p class="text-base leading-relaxed" style="color:#475569;">Our Specialist Disability Accommodation is designed for individuals with significant functional limitations or extensive support needs. This type of housing, funded through the NDIS, aims to empower individuals to live independently, engage in their communities, and exercise choice and control over their lives. We offer brand-new SDA approved accommodation in West Melbourne, Ivanhoe, and Kalkallo. Designed with state-of-the-art facilities, our homes provide exceptional comfort and seamless accessibility, setting a new benchmark for quality living.</p>
+          <p class="text-base leading-relaxed mb-6" style="color:#475569;">Our Specialist Disability Accommodation is designed for individuals with significant functional limitations or extensive support needs. This type of housing, funded through the NDIS, aims to empower individuals to live independently, engage in their communities, and exercise choice and control over their lives. We offer brand-new SDA approved accommodation in West Melbourne, Ivanhoe, and Kalkallo. Designed with state-of-the-art facilities, our homes provide exceptional comfort and seamless accessibility, setting a new benchmark for quality living.</p>
+          <div id="sda-body-image" class="rounded-xl overflow-hidden shadow-sm h-[240px] md:h-[360px] lg:h-[360px] mb-8">
+            <img class="w-full h-full object-cover md:object-cover lg:object-cover" style="object-fit: contain;" src="images/sda.webp" alt="disabled person in wheelchair being helped to board a bus by a care worker" />
+          </div>
+
+          <div class="key-inclusion-list mt-4">
+            <h3 class="text-lg font-bold mb-4" style="color:#0f2a5c;">Key inclusion list</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+              <div class="flex items-center gap-3 py-2">
+                <i class="fa-solid fa-bell text-[#4076B8] text-base"></i>
+                <span class="text-sm font-medium" style="color:#475569;">Support with daily living tasks</span>
+              </div>
+              <div class="flex items-center gap-3 py-2">
+                <i class="fa-solid fa-bed text-[#4076B8] text-base"></i>
+                <span class="text-sm font-medium" style="color:#475569;">Overnight or active support if required</span>
+              </div>
+              <div class="flex items-center gap-3 py-2">
+                <i class="fa-solid fa-football text-[#4076B8] text-base"></i>
+                <span class="text-sm font-medium" style="color:#475569;">Personal care and routines</span>
+              </div>
+              <div class="flex items-center gap-3 py-2">
+                <i class="fa-solid fa-person-swimming text-[#4076B8] text-base"></i>
+                <span class="text-sm font-medium" style="color:#475569;">Skill building for independence and confidence</span>
+              </div>
+              <div class="flex items-center gap-3 py-2">
+                <i class="fa-solid fa-mug-hot text-[#4076B8] text-base"></i>
+                <span class="text-sm font-medium" style="color:#475569;">Meal preparation and household skills</span>
+              </div>
+              <div class="flex items-center gap-3 py-2">
+                <i class="fa-solid fa-people-group text-[#4076B8] text-base"></i>
+                <span class="text-sm font-medium" style="color:#475569;">Shared living with compatible housemates</span>
+              </div>
+              <div class="flex items-center gap-3 py-2">
+                <i class="fa-solid fa-file-pen text-[#4076B8] text-base"></i>
+                <span class="text-sm font-medium" style="color:#475569;">Medication support</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div id="sda-image" class="rounded-xl overflow-hidden shadow-sm h-[240px] md:h-[360px] lg:h-[360px]">
-          <img class="w-full h-full object-cover md:object-cover lg:object-cover" style="object-fit: contain;" src="images/sda.webp" alt="disabled person in wheelchair being helped to board a bus by a care worker" />
+        <div id="how-it-works" class="bg-white rounded-xl p-8 shadow-sm border" style="border-color:#EEE;">
+          <h2 class="text-2xl font-bold mb-8 text-center mb-5" style="color:#0f2a5c;">How It <span style="color:#57B2E9;">Works</span></h2>
+          <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] gap-x-3 gap-y-5 items-start">
+
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-3">
+                <i class="fa-solid fa-comment-dots text-[#57B2E9] text-3xl"></i>
+              </div>
+              <h3 class="text-sm font-bold mb-1" style="color:#0f2a5c;">Get in touch</h3>
+              <p class="text-[14px] leading-relaxed" style="color:#64748b;">Enquire online or book a call to see if SIL is right for you.</p>
+            </div>
+            <div class="flex justify-center text-[#57B2E9] pt-3"><i class="fa-solid fa-arrow-right hidden sm:inline"></i><i class="fa-solid fa-arrow-down sm:hidden"></i></div>
+
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-3">
+                <i class="fa-solid fa-phone text-[#57B2E9] text-3xl"></i>
+              </div>
+              <h3 class="text-sm font-bold mb-1" style="color:#0f2a5c;">Initial connection</h3>
+              <p class="text-[14px] leading-relaxed" style="color:#64748b;">We learn about your goals, funding and needs, then plan next steps.</p>
+            </div>
+            <div class="flex justify-center text-[#57B2E9] pt-3"><i class="fa-solid fa-arrow-right hidden sm:inline"></i><i class="fa-solid fa-arrow-down sm:hidden"></i></div>
+
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-3">
+                <i class="fa-solid fa-house-chimney-medical text-[#57B2E9] text-3xl"></i>
+              </div>
+              <h3 class="text-sm font-bold mb-1" style="color:#0f2a5c;">Planning and alignment</h3>
+              <p class="text-[14px] leading-relaxed" style="color:#64748b;">We meet to understand your routines and supports, and define what great SIL looks like for you.</p>
+            </div>
+            <div class="flex justify-center text-[#57B2E9] pt-3"><i class="fa-solid fa-arrow-right hidden sm:inline"></i><i class="fa-solid fa-arrow-down sm:hidden"></i></div>
+
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-3">
+                <i class="fa-solid fa-calendar-check text-[#57B2E9] text-3xl"></i>
+              </div>
+              <h3 class="text-sm font-bold mb-1" style="color:#0f2a5c;">Transition planning</h3>
+              <p class="text-[14px] leading-relaxed" style="color:#64748b;">We create a clear, agreed plan for your home and support team. Nothing moves forward without your approval.</p>
+            </div>
+            <div class="flex justify-center text-[#57B2E9] pt-3"><i class="fa-solid fa-arrow-right hidden sm:inline"></i><i class="fa-solid fa-arrow-down sm:hidden"></i></div>
+
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-3">
+                <i class="fa-solid fa-truck text-[#57B2E9] text-3xl"></i>
+              </div>
+              <h3 class="text-sm font-bold mb-1" style="color:#0f2a5c;">Move-in and settling in</h3>
+              <p class="text-[14px] leading-relaxed" style="color:#64748b;">You move in with your team ready from day one. We check in regularly and adjust early if needed.</p>
+            </div>
+            <div class="flex justify-center text-[#57B2E9] pt-3"><i class="fa-solid fa-arrow-right hidden sm:inline"></i><i class="fa-solid fa-arrow-down sm:hidden"></i></div>
+
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-3">
+                <i class="fa-solid fa-hand-holding-heart text-[#57B2E9] text-3xl"></i>
+              </div>
+              <h3 class="text-sm font-bold mb-1" style="color:#0f2a5c;">Ongoing support and stability</h3>
+              <p class="text-[14px] leading-relaxed" style="color:#64748b;">We review your supports over time to keep them safe, consistent and aligned with your goals.</p>
+            </div>
+
+          </div>
         </div>
 
-        <div id="sda-homes-section" class="w-full py-24" style="background-color: #F4F4F4;">
+        <div id="service-homes-section" class="w-full py-12" style="background-color: #F4F4F4;">
           <div class="max-w-[1440px] mx-auto px-3 lg:px-12">
             <div id="homes-section-header" class="flex flex-col items-center text-center mb-16">
               <h2 class="text-4xl lg:text-5xl font-bold text-[#0f172a] tracking-tight mb-5 leading-tight">
@@ -525,6 +619,17 @@ body { font-family: Inter, sans-serif; }
             </div>
           </div>
         </div>
+
+        <div id="service-cta" class="w-full py-14 px-6 rounded-2xl text-center text-white" style="background: linear-gradient(135deg, #4076B8 0%, #57B2E9 100%);">
+          <p class="text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto mb-8">
+            If your NDIS plan provides funding for personal self-care or high-intensity daily activities, we’re here to provide compassionate, respectful assistance for both short-term and long-term needs.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="8_contact_us.html" class="inline-flex items-center justify-center h-11 px-6 rounded-xl bg-white font-semibold text-sm transition-all hover:-translate-y-0.5" style="color:#4076B8;">Contact Us</a>
+            <a href="11_make-a-referral.html" class="inline-flex items-center justify-center h-11 px-6 rounded-xl border-2 border-white font-semibold text-sm text-white hover:bg-white/10 transition-all hover:-translate-y-0.5">Make a Referral</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
