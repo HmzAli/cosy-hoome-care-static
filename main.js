@@ -90,6 +90,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initDetailStickyContactForm();
 
+    const initFaqAccordion = () => {
+        document.querySelectorAll('.faq-toggle').forEach((toggle) => {
+            toggle.addEventListener('click', () => {
+                const item = toggle.closest('.faq-item');
+                const content = item?.querySelector('.faq-content');
+                const icon = item?.querySelector('.faq-icon');
+                const isOpen = item?.classList.contains('is-open');
+
+                document.querySelectorAll('.faq-item.is-open').forEach((openItem) => {
+                    if (openItem === item) return;
+                    openItem.classList.remove('is-open');
+                    openItem.querySelector('.faq-content').style.maxHeight = '0px';
+                    openItem.querySelector('.faq-icon').classList.replace('fa-chevron-up', 'fa-chevron-down');
+                });
+
+                item.classList.toggle('is-open', !isOpen);
+                content.style.maxHeight = isOpen ? '0px' : `${content.scrollHeight}px`;
+                icon.classList.replace(isOpen ? 'fa-chevron-up' : 'fa-chevron-down', isOpen ? 'fa-chevron-down' : 'fa-chevron-up');
+            });
+        });
+    };
+
+    initFaqAccordion();
+
     const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {
