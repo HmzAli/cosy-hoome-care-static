@@ -114,6 +114,131 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initFaqAccordion();
 
+    const initPropertyGallery = () => {
+        if (!window.jQuery || !window.jQuery.fn?.slick) return;
+
+        const $ = window.jQuery;
+        const modal = document.getElementById('property-gallery-modal');
+        const stage = document.getElementById('property-gallery-stage');
+        const thumbs = document.getElementById('property-gallery-thumbs');
+        const count = document.getElementById('property-gallery-count');
+        const closeButton = document.getElementById('property-gallery-close');
+        const prevButton = document.getElementById('property-gallery-modal-prev');
+        const nextButton = document.getElementById('property-gallery-modal-next');
+        const playToggle = document.getElementById('property-gallery-play-toggle');
+        const openTriggers = document.querySelectorAll('[data-gallery-open]');
+
+        if (!modal || !stage || !thumbs || !openTriggers.length) return;
+
+        const $stage = $(stage);
+        const $thumbs = $(thumbs);
+        const gallerySlideCount = stage.querySelectorAll(':scope > .property-gallery-slide').length;
+        let isPlaying = false;
+
+        const resetZoom = () => {
+            stage.querySelectorAll('img.is-zoomed').forEach((image) => {
+                image.classList.remove('is-zoomed');
+                image.style.transformOrigin = '';
+            });
+        };
+
+        const updateCount = (index) => {
+            if (count) count.textContent = `${index + 1}/${gallerySlideCount}`;
+        };
+
+        const setPlayState = (playing) => {
+            isPlaying = playing;
+            $stage.slick(playing ? 'slickPlay' : 'slickPause');
+            const icon = playToggle?.querySelector('i');
+            if (!icon) return;
+            icon.classList.toggle('fa-play', !playing);
+            icon.classList.toggle('fa-pause', playing);
+            playToggle.setAttribute('aria-label', playing ? 'Pause gallery' : 'Play gallery');
+        };
+
+        $stage.on('init afterChange', (event, slick, currentSlide = 0) => {
+            resetZoom();
+            updateCount(currentSlide);
+        });
+
+        $thumbs.slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '#property-gallery-stage',
+            dots: false,
+            arrows: false,
+            focusOnSelect: true,
+            infinite: true,
+            responsive: [
+                { breakpoint: 768, settings: { slidesToShow: 3 } },
+                { breakpoint: 480, settings: { slidesToShow: 2 } }
+            ]
+        });
+
+        $stage.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            infinite: true,
+            autoplay: false,
+            autoplaySpeed: 2200,
+            asNavFor: '#property-gallery-thumbs',
+            adaptiveHeight: false
+        });
+
+        const openGallery = (index) => {
+            modal.classList.remove('hidden');
+            requestAnimationFrame(() => modal.classList.add('is-open'));
+            document.body.style.overflow = 'hidden';
+            $stage.slick('setPosition');
+            $thumbs.slick('setPosition');
+            $stage.slick('slickGoTo', index, true);
+            updateCount(index);
+            setPlayState(false);
+        };
+
+        const closeGallery = () => {
+            modal.classList.remove('is-open');
+            setPlayState(false);
+            resetZoom();
+            setTimeout(() => modal.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        };
+
+        openTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', () => openGallery(Number(trigger.dataset.galleryOpen) || 0));
+        });
+
+        closeButton?.addEventListener('click', closeGallery);
+        prevButton?.addEventListener('click', () => $stage.slick('slickPrev'));
+        nextButton?.addEventListener('click', () => $stage.slick('slickNext'));
+        playToggle?.addEventListener('click', () => setPlayState(!isPlaying));
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) closeGallery();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (modal.classList.contains('hidden')) return;
+            if (event.key === 'Escape') closeGallery();
+            if (event.key === 'ArrowLeft') $stage.slick('slickPrev');
+            if (event.key === 'ArrowRight') $stage.slick('slickNext');
+        });
+
+        stage.querySelectorAll('.property-gallery-slide img').forEach((image) => {
+            image.addEventListener('click', (event) => {
+                const rect = image.getBoundingClientRect();
+                const x = ((event.clientX - rect.left) / rect.width) * 100;
+                const y = ((event.clientY - rect.top) / rect.height) * 100;
+                image.style.transformOrigin = `${x}% ${y}%`;
+                image.classList.toggle('is-zoomed');
+            });
+        });
+    };
+
+    initPropertyGallery();
+
     const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {

@@ -8,6 +8,8 @@
 <script>window.FontAwesomeConfig = { autoReplaceSvg: "nest"};</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
 
             
@@ -37,51 +39,32 @@
           --shadow: -2px 4px 12px 4px rgba(51,51,51,0.05);
 }
 
-#property-gallery,
-#property-main-image-wrapper,
-#property-gallery-thumbnails {
-          max-width: 100%;
-}
-
-#property-gallery-thumbnails {
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: none;
-}
-
-#property-gallery-thumbnails::-webkit-scrollbar {
-          display: none;
-}
-
-.property-gallery-thumbnail {
-          flex: 0 0 112px;
-}
+#property-gallery { max-width: 100%; }
+.property-gallery-preview { display: grid; grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 12px; height: 460px; }
+.property-gallery-trigger { position: relative; overflow: hidden; border-radius: 10px; background: #fff; cursor: zoom-in; }
+.property-gallery-trigger img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+.property-gallery-trigger:hover img { transform: scale(1.04); }
+.property-gallery-main { grid-row: span 2; }
+.property-gallery-more-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(15, 42, 92, 0.58); color: #fff; font-size: 2.25rem; font-weight: 800; }
+.property-gallery-modal { opacity: 0; pointer-events: none; transition: opacity 0.25s ease; }
+.property-gallery-modal.is-open { opacity: 1; pointer-events: auto; }
+.property-gallery-stage .slick-list, .property-gallery-stage .slick-track { height: 100%; }
+.property-gallery-stage .slick-slide > div { height: 100%; }
+.property-gallery-slide { height: 62vh; display: flex !important; align-items: center; justify-content: center; overflow: hidden; }
+.property-gallery-slide img { max-width: 100%; max-height: 100%; object-fit: contain; cursor: zoom-in; transition: transform 0.2s ease; transform-origin: center center; }
+.property-gallery-slide img.is-zoomed { transform: scale(2); cursor: zoom-out; }
+.property-gallery-thumbs .slick-slide { padding: 0 6px; }
+.property-gallery-thumb { height: 82px; border-radius: 10px; overflow: hidden; border: 3px solid transparent; opacity: 0.65; cursor: pointer; }
+.property-gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.property-gallery-thumbs .slick-current .property-gallery-thumb { border-color: #57B2E9; opacity: 1; }
 
 @media (max-width: 767px) {
-          #house-detail-section > div {
-                    width: 100%;
-                    max-width: 100%;
-                    overflow: hidden;
-          }
-
-          #right-content {
-                    width: 100%;
-                    max-width: 100%;
-          }
-
-          #property-main-image-wrapper {
-                    aspect-ratio: 16 / 11;
-                    height: auto !important;
-          }
-
-          #property-gallery-thumbnails {
-                    padding-right: 28%;
-          }
-
-          .property-gallery-thumbnail {
-                    flex-basis: 72%;
-                    max-width: 72%;
-                    height: 96px;
-          }
+          #house-detail-section > div { width: 100%; max-width: 100%; overflow: hidden; }
+          #right-content { width: 100%; max-width: 100%; }
+          .property-gallery-preview { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
+          .property-gallery-trigger { height: 210px; }
+          .property-gallery-main { grid-row: auto; height: 260px; }
+          .property-gallery-slide { height: 54vh; }
 }
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -181,11 +164,11 @@
     <!-- Utility Bar -->
     <div id="utility-bar" class="w-full bg-[#0f2a5c] text-white py-2.5 px-6 lg:px-12 flex justify-end items-center text-sm font-medium z-50 relative hidden lg:flex">
         <div class="flex items-center gap-3">
-            <a href="tel:+61394575968" class="inline-flex items-center gap-2 h-9 px-4 rounded-full border border-white text-white font-semibold text-sm hover:bg-white/10 transition-colors">
+            <a href="tel:+61394575968" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl border border-white text-white font-semibold text-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-300">
                 <i class="fa-solid fa-phone text-xs"></i>
                 <span>(03) 9457 5968</span>
             </a>
-            <a href="#" class="contact-modal-trigger inline-flex items-center gap-2 h-9 px-4 rounded-full border border-[#5bc981] text-white font-semibold text-sm bg-[#5bc981] hover:bg-[#4aa76d] hover:border-[#4aa76d] transition-colors">
+            <a href="#" class="contact-modal-trigger inline-flex items-center gap-2 h-10 px-5 rounded-xl border border-[#5bc981] text-white font-semibold text-sm bg-[#5bc981] hover:bg-[#4aa76d] hover:border-[#4aa76d] hover:-translate-y-0.5 transition-all duration-300">
                 <i class="fa-solid fa-headset text-xs"></i>
                 <span>Book a call</span>
             </a>
@@ -216,7 +199,7 @@
                 <a href="4_hospital_to_home.html" class="text-foreground font-medium text-sm xl:text-md hover:text-[#4076b8] transition-colors">Hospital Discharge Program</a>
                 <a href="2_about_us.html" class="text-foreground font-medium text-sm xl:text-md hover:text-[#4076b8] transition-colors">About Us</a>
                 <a href="8_contact_us.html" class="text-foreground font-medium text-sm xl:text-md hover:text-[#4076b8] transition-colors">Contact Us</a>
-                <a href="tel:+61394575968" class="inline-flex items-center gap-2 text-[#4076B8] font-semibold text-sm xl:text-md hover:text-[#34629c] transition-colors">
+                <a href="tel:+61394575968" class="inline-flex items-center gap-2 h-10 px-5 rounded-xl border border-[#4076B8] text-[#4076B8] font-semibold text-sm xl:text-md hover:bg-[#4076B8] hover:text-white hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
                     <i class="fa-solid fa-phone text-xs"></i>
                     <span>(03) 9457 5968</span>
                 </a>
@@ -329,7 +312,7 @@
     <i class="fa-solid fa-chevron-right text-xs" style="color:#94a3b8;"></i>
     <a href="7_housing-vacancies.html" class="font-medium hover:underline" style="color:#4076B8;">Vacancies</a>
     <i class="fa-solid fa-chevron-right text-xs" style="color:#94a3b8;"></i>
-    <span class="font-medium" style="color:#64748b;">Laverton, VIC</span>
+    <span class="font-medium" style="color:#64748b;">Laverton, VIC </span>
   </div>
 </div>
 
@@ -339,8 +322,8 @@
     <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(15,42,92,0.88) 0%,rgba(64,118,184,0.80) 100%);"></div>
   </div>
   <div class="relative z-10 text-center px-6">
-    <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight drop-shadow-lg">Laverton, VIC</h1>
-    <p class="mt-3 text-white/80 text-base md:text-lg font-medium">SIL Approved · Modern Accessible Home</p>
+    <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight drop-shadow-lg">Laverton, VIC (sample housing details page)</h1>
+
     <span class="mt-4 inline-flex items-center px-4 py-2 rounded-full text-xs font-bold tracking-[0.18em] uppercase text-white" style="background-color:#16a34a;box-shadow:0 8px 20px -8px rgba(22,163,74,0.65);">Available</span>
   </div>
 </div>
@@ -349,36 +332,6 @@
   <div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
 
     <div id="left-sidebar" class="w-full lg:w-80 xl:w-96 flex-shrink-0 flex flex-col gap-6 order-2 lg:order-1">
-
-      <div id="property-features-card" class="bg-white rounded-2xl shadow-sm p-6" style="border:1px solid #EEE;">
-        <h3 class="text-base font-bold mb-5" style="color:#0f2a5c;">Property Features</h3>
-        <div class="flex flex-col gap-3">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-bed text-sm" style="color:#4076B8;"></i></div>
-            <span class="text-sm font-medium" style="color:#0f2a5c;">6 Bedrooms</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-bath text-sm" style="color:#4076B8;"></i></div>
-            <span class="text-sm font-medium" style="color:#0f2a5c;">7 Bathrooms</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-toilet text-sm" style="color:#4076B8;"></i></div>
-            <span class="text-sm font-medium" style="color:#0f2a5c;">7 Toilets</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-square-parking text-sm" style="color:#4076B8;"></i></div>
-            <span class="text-sm font-medium" style="color:#0f2a5c;">4 Parking</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i></div>
-            <span class="text-sm font-medium" style="color:#0f2a5c;">3 Acc. Parking</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color:#EBF8F0;"><i class="fa-solid fa-door-open text-sm" style="color:#0f2a5c;"></i></div>
-            <span class="text-sm font-medium" style="color:#0f2a5c;">4 Beds Available</span>
-          </div>
-        </div>
-      </div>
 
       <div id="contact-form-card" class="detail-contact-card bg-white rounded-xl shadow-sm border overflow-hidden lg:sticky lg:top-[100px] lg:self-start" style="border-color:#EEE;">
         <div class="px-5 py-4" style="background-color:#4076B8;">
@@ -423,120 +376,182 @@
 
     <div id="right-content" class="flex-1 min-w-0 flex flex-col gap-8 order-1 lg:order-2">
 
-      <div id="property-gallery" class="w-full min-w-0 flex flex-col gap-4">
-        <div id="property-main-image-wrapper" class="relative w-full min-w-0 rounded-2xl overflow-hidden shadow-sm bg-white h-[260px] sm:h-[320px] lg:h-[380px]">
-          <img id="property-main-image" class="w-full h-full object-cover" src="images/samples/house-image-sample-1.jpg" alt="modern accessible SIL home Laverton VIC property gallery image" />
-          <button type="button" id="property-gallery-prev" class="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-200 hover:scale-105" aria-label="Previous property image">
-            <img src="images/chevron-left-white.png" alt="" class="w-7 h-7 sm:w-9 sm:h-9 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]" />
+      <div id="property-gallery" class="w-full min-w-0">
+        <div class="property-gallery-preview">
+          <button type="button" class="property-gallery-trigger property-gallery-main shadow-sm" data-gallery-open="0" aria-label="Open property image 1">
+            <img src="images/samples/house-image-sample-1.jpg" alt="modern accessible SIL home Laverton VIC property gallery image" />
           </button>
-          <button type="button" id="property-gallery-next" class="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center transition-all duration-200 hover:scale-105" aria-label="Next property image">
-            <img src="images/chevron-right-white.png" alt="" class="w-7 h-7 sm:w-9 sm:h-9 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]" />
+          <button type="button" class="property-gallery-trigger shadow-sm" data-gallery-open="1" aria-label="Open property image 2">
+            <img src="images/samples/house-sample-image-2.jpeg" alt="property gallery image 2" />
           </button>
-        </div>
-        <div id="property-gallery-thumbnails" class="w-full min-w-0 flex gap-3 overflow-x-auto overscroll-x-contain scroll-smooth snap-x snap-mandatory pb-2">
-          <button type="button" class="property-gallery-thumbnail snap-start h-20 rounded-xl overflow-hidden border-4 border-[#4076B8]" data-gallery-index="0" aria-label="Show property image 1">
-            <img class="w-full h-full object-cover" src="images/samples/house-image-sample-1.jpg" alt="property gallery thumbnail 1" />
-          </button>
-          <button type="button" class="property-gallery-thumbnail snap-start h-20 rounded-xl overflow-hidden border-4 border-transparent opacity-70" data-gallery-index="1" aria-label="Show property image 2">
-            <img class="w-full h-full object-cover" src="images/samples/house-sample-image-2.jpeg" alt="property gallery thumbnail 2" />
-          </button>
-          <button type="button" class="property-gallery-thumbnail snap-start h-20 rounded-xl overflow-hidden border-4 border-transparent opacity-70" data-gallery-index="2" aria-label="Show property image 3">
-            <img class="w-full h-full object-cover" src="images/samples/house-sample-image-3.webp" alt="property gallery thumbnail 3" />
-          </button>
-          <button type="button" class="property-gallery-thumbnail snap-start h-20 rounded-xl overflow-hidden border-4 border-transparent opacity-70" data-gallery-index="3" aria-label="Show property image 4">
-            <img class="w-full h-full object-cover" src="images/samples/house-sample-image-4.webp" alt="property gallery thumbnail 4" />
+          <button type="button" class="property-gallery-trigger shadow-sm" data-gallery-open="2" aria-label="Open property image 3">
+            <img src="images/samples/house-sample-image-3.webp" alt="property gallery image 3" />
+            <span class="property-gallery-more-overlay">+1</span>
           </button>
         </div>
       </div>
 
-      <div id="property-description" class="bg-white rounded-2xl shadow-sm p-8" style="border:1px solid #EEE;">
-        <h2 class="text-2xl font-bold mb-4" style="color:#0f2a5c;">Stunning Brand-New SIL Home in Laverton</h2>
-        <p class="text-sm leading-relaxed mb-5" style="color:#374151;">Discover this beautifully designed Supported Independent Living (SIL) Home, located in the heart of Melbourne's vibrant Western suburbs. This exceptional home offers:</p>
-        <ul class="flex flex-col gap-3 mb-5">
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#57B2E9;"></i><span class="text-sm leading-relaxed" style="color:#374151;"><strong class="font-semibold" style="color:#0f2a5c;">5 Fully Furnished Bedrooms:</strong> Each room features a kitchenette, wardrobe, TV, fridge, and private ensuite, providing a comfortable and independent living experience.</span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#57B2E9;"></i><span class="text-sm leading-relaxed" style="color:#374151;"><strong class="font-semibold" style="color:#0f2a5c;">Accessibility Features:</strong> Fully wheelchair accessible, including a separate disability bathroom for added convenience.</span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#57B2E9;"></i><span class="text-sm leading-relaxed" style="color:#374151;"><strong class="font-semibold" style="color:#0f2a5c;">Modern Shared Spaces:</strong> A spacious kitchen, laundry, and living areas create a welcoming environment for residents.</span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#57B2E9;"></i><span class="text-sm leading-relaxed" style="color:#374151;"><strong class="font-semibold" style="color:#0f2a5c;">Outdoor Bliss:</strong> Enjoy a generous outdoor area perfect for relaxation and recreation.</span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#57B2E9;"></i><span class="text-sm leading-relaxed" style="color:#374151;"><strong class="font-semibold" style="color:#0f2a5c;">Ample Parking:</strong> Plenty of on-site parking for visitors and residents.</span></li>
-        </ul>
-        <p class="text-sm leading-relaxed mb-5" style="color:#374151;">Conveniently located close to shops, parks, and public transport, this property is ideal for those seeking comfort, accessibility, and independence in a supportive environment.</p>
-        <p class="text-sm font-semibold" style="color:#4076B8;">Contact us today to arrange a viewing.</p>
+      <div id="property-gallery-modal" class="property-gallery-modal fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-md px-4 py-5 sm:px-8">
+        <div class="flex h-full flex-col gap-4">
+          <div class="flex items-center justify-between gap-4 text-white">
+            <div id="property-gallery-count" class="text-sm font-semibold">1/4</div>
+            <div class="flex items-center gap-3">
+              <!-- <button type="button" id="property-gallery-play-toggle" class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white hover:bg-white/20 transition-all" aria-label="Play gallery">
+                <i class="fa-solid fa-play text-sm"></i>
+              </button> -->
+              <button type="button" id="property-gallery-close" class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white hover:bg-white/20 transition-all" aria-label="Close gallery">
+                <i class="fa-solid fa-xmark text-lg"></i>
+              </button>
+            </div>
+          </div>
+          <div class="relative min-h-0 flex-1">
+            <button type="button" id="property-gallery-modal-prev" class="absolute left-0 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-all" aria-label="Previous image">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div id="property-gallery-stage" class="property-gallery-stage h-full px-10">
+              <div class="property-gallery-slide"><img src="images/samples/house-image-sample-1.jpg" alt="property gallery image 1" /></div>
+              <div class="property-gallery-slide"><img src="images/samples/house-sample-image-2.jpeg" alt="property gallery image 2" /></div>
+              <div class="property-gallery-slide"><img src="images/samples/house-sample-image-3.webp" alt="property gallery image 3" /></div>
+              <div class="property-gallery-slide"><img src="images/samples/house-sample-image-4.webp" alt="property gallery image 4" /></div>
+            </div>
+            <button type="button" id="property-gallery-modal-next" class="absolute right-0 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-all" aria-label="Next image">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div id="property-gallery-thumbs" class="property-gallery-thumbs mx-auto w-full max-w-3xl">
+            <div><div class="property-gallery-thumb"><img src="images/samples/house-image-sample-1.jpg" alt="property thumbnail 1" /></div></div>
+            <div><div class="property-gallery-thumb"><img src="images/samples/house-sample-image-2.jpeg" alt="property thumbnail 2" /></div></div>
+            <div><div class="property-gallery-thumb"><img src="images/samples/house-sample-image-3.webp" alt="property thumbnail 3" /></div></div>
+            <div><div class="property-gallery-thumb"><img src="images/samples/house-sample-image-4.webp" alt="property thumbnail 4" /></div></div>
+          </div>
+        </div>
       </div>
 
-      <div id="property-amenities" class="bg-white rounded-2xl shadow-sm p-8" style="border:1px solid #EEE;">
-        <h2 class="text-xl font-bold mb-6" style="color:#0f2a5c;">Property Features</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-fire text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Heating</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-snowflake text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Cooling</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-utensils text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Dishwasher</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-book-open text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Study</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-couch text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Rumpus Room</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-solar-panel text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Solar Panels</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-droplet text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Solar Hot Water</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-tree text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Outdoor Area</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-bell text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Intercom</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-chair text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Furnished</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-wheelchair text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Wheelchair Accessible</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-universal-access text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Accessible Features</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-building text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Strong Construction</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-wifi text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Broadband Internet</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-door-closed text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Built-in Wardrobes</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-ruler-horizontal text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Doorway Widths &gt; 950mm</span></div>
-          <div class="flex items-center gap-2.5"><i class="fa-solid fa-leaf text-sm" style="color:#4076B8;"></i><span class="text-sm" style="color:#374151;">Energy Efficiency: Medium</span></div>
+      <div id="property-header" class="bg-white rounded-2xl shadow-sm px-6 sm:px-8 py-6" style="border:1px solid #EEE;">
+        <h1 class="text-2xl font-bold mb-1" style="color:#0f2a5c;">Laverton, VIC</h1>
+        <p class="text-sm" style="color:#64748b;">
+          <span>Location: Laverton, VIC</span>
+          <span class="mx-2" style="color:#d1d5db;">|</span>
+          <span>Postcode: 3028</span>
+        </p>
+      </div>
+
+      <div id="property-stats" class="bg-white rounded-2xl shadow-sm px-6 sm:px-8 py-5" style="border:1px solid #EEE;">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-bed text-sm" style="color:#57B2E9;"></i>
+            <span class="text-sm font-semibold" style="color:#0f2a5c;">3 Bedrooms</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-bath text-sm" style="color:#57B2E9;"></i>
+            <span class="text-sm font-semibold" style="color:#0f2a5c;">2 Bathrooms</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-house-user text-sm" style="color:#57B2E9;"></i>
+            <span class="text-sm font-semibold" style="color:#0f2a5c;">Improved Livability</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-square-parking text-sm" style="color:#57B2E9;"></i>
+            <span class="text-sm font-semibold" style="color:#0f2a5c;">1 Accessible Parking</span>
+          </div>
+          <a href="8_contact_us.html" class="sm:ml-auto inline-flex items-center gap-2 px-5 h-10 rounded-xl bg-[#4076B8] text-white font-semibold text-sm transition-all hover:-translate-y-0.5" style="box-shadow:0 4px 14px -4px rgba(64,118,184,0.45);">Enquire Now</a>
         </div>
       </div>
 
-      <div id="housemates-section" class="bg-white rounded-2xl shadow-sm p-8" style="border:1px solid #EEE;">
-        <h2 class="text-xl font-bold mb-6" style="color:#0f2a5c;">House Mates</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-7">
-          <div class="rounded-xl p-4" style="background-color:#f8fafc;border:1px solid #e2e8f0;">
-            <p class="text-xs font-semibold uppercase tracking-wider mb-1" style="color:#94a3b8;">Age</p>
-            <p class="text-sm font-semibold" style="color:#0f2a5c;">No specific preference</p>
-          </div>
-          <div class="rounded-xl p-4" style="background-color:#f8fafc;border:1px solid #e2e8f0;">
-            <p class="text-xs font-semibold uppercase tracking-wider mb-1" style="color:#94a3b8;">Gender</p>
-            <p class="text-sm font-semibold" style="color:#0f2a5c;">No specific preference</p>
-          </div>
-          <div class="rounded-xl p-4" style="background-color:#f8fafc;border:1px solid #e2e8f0;">
-            <p class="text-xs font-semibold uppercase tracking-wider mb-1" style="color:#94a3b8;">Number of Tenants</p>
-            <p class="text-sm font-semibold" style="color:#0f2a5c;">5</p>
-          </div>
-        </div>
-        <div class="mb-6">
-          <h4 class="text-sm font-bold mb-3" style="color:#0f2a5c;">Suitable for housemates who:</h4>
-          <ul class="flex flex-col gap-2">
-            <li class="flex items-center gap-2.5"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Want to socialise and spend time together</span></li>
-            <li class="flex items-center gap-2.5"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Enjoy an active and social home (have friends and family over)</span></li>
-            <li class="flex items-center gap-2.5"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Prefer to spend time to themselves</span></li>
-          </ul>
+      <div id="property-features" class="bg-white rounded-2xl shadow-sm overflow-hidden" style="border:1px solid #EEE;">
+        <div class="px-6 sm:px-8 py-5" style="border-bottom:1px solid #EEE;">
+          <h2 class="text-xl font-bold" style="color:#0f2a5c;">Property Features</h2>
         </div>
         <div>
-          <h4 class="text-sm font-bold mb-3" style="color:#0f2a5c;">How tenants choose their housemates:</h4>
-          <p class="text-sm leading-relaxed" style="color:#374151;">At Cosy Home Care, tenant selection is based on each individual's specific needs and how well we can accommodate those needs. We carefully consider factors such as compatibility, support requirements, and personal preferences to ensure a harmonious living environment. Our goal is to match participants with tenants who will best meet their needs and contribute to a supportive and comfortable community.</p>
+
+          <div class="flex items-start gap-4 px-6 sm:px-8 py-5" style="border-bottom:1px solid #EEE;">
+            <div class="flex items-start gap-3 flex-shrink-0" style="width:220px;">
+              <i class="fa-solid fa-house-chimney-user text-sm mt-0.5 flex-shrink-0" style="color:#57B2E9;"></i>
+              <span class="text-sm font-semibold" style="color:#0f2a5c;">SDA Design Category</span>
+            </div>
+            <span class="text-sm" style="color:#374151;">Improved Liveability, Basic</span>
+          </div>
+
+          <div class="flex items-start gap-4 px-6 sm:px-8 py-5" style="border-bottom:1px solid #EEE;background:#fafbfc;">
+            <div class="flex items-start gap-3 flex-shrink-0" style="width:220px;">
+              <i class="fa-solid fa-house text-sm mt-0.5 flex-shrink-0" style="color:#57B2E9;"></i>
+              <span class="text-sm font-semibold" style="color:#0f2a5c;">House Features</span>
+            </div>
+            <div>
+              <p class="text-sm leading-relaxed mb-3" style="color:#374151;">Discover this beautifully designed Supported Independent Living (SIL) Home, located in the heart of Melbourne's vibrant Western suburbs. This exceptional home offers 5 fully furnished bedrooms, each with a kitchenette, wardrobe, TV, fridge, and private ensuite. Modern shared spaces include a spacious kitchen, laundry, and living areas, while a generous outdoor area and ample on-site parking add to the lifestyle. Conveniently located close to shops, parks, and public transport, this property is ideal for those seeking comfort, accessibility, and independence in a supportive environment.</p>
+              <p class="text-sm leading-relaxed mb-3" style="color:#374151;">Heating, Cooling, Dishwasher, Study, Rumpus room, Solar Panels, Solar Hot Water, Outdoor Area, Intercom, Furnished, Wheelchair Accessible, Accessible Features, Strong and Robust Construction, Broadband internet available, Built-in Wardrobes, Doorway Widths &gt; 950mm, Energy Efficiency Rating: Medium.</p>
+              <p class="text-sm font-semibold" style="color:#4076B8;">Contact us today to arrange a viewing.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 px-6 sm:px-8 py-5" style="border-bottom:1px solid #EEE;">
+            <div class="flex items-start gap-3 flex-shrink-0" style="width:220px;">
+              <i class="fa-solid fa-wheelchair text-sm mt-0.5 flex-shrink-0" style="color:#57B2E9;"></i>
+              <span class="text-sm font-semibold" style="color:#0f2a5c;">Accessibility</span>
+            </div>
+            <ul class="flex flex-col gap-1.5">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Fully wheelchair accessible</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Separate disability bathroom for added convenience</span></li>
+            </ul>
+          </div>
+
+          <div class="flex items-start gap-4 px-6 sm:px-8 py-5">
+            <div class="flex items-start gap-3 flex-shrink-0" style="width:220px;">
+              <i class="fa-solid fa-people-group text-sm mt-0.5 flex-shrink-0" style="color:#57B2E9;"></i>
+              <span class="text-sm font-semibold" style="color:#0f2a5c;">Current Residents</span>
+            </div>
+            <div>
+              <p class="text-sm leading-relaxed mb-3" style="color:#374151;">Age: No specific preference. Gender: No specific preference. Number of tenants: 5.</p>
+              <p class="text-sm font-semibold mb-2" style="color:#0f2a5c;">Suitable for housemates who:</p>
+              <ul class="flex flex-col gap-1.5 mb-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Want to socialise and spend time together</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Enjoy an active and social home (have friends and family over)</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs" style="color:#57B2E9;"></i><span class="text-sm" style="color:#374151;">Prefer to spend time to themselves</span></li>
+              </ul>
+              <p class="text-sm leading-relaxed" style="color:#374151;">How tenants choose their housemates: At Cosy Home Care, tenant selection is based on each individual's specific needs and how well we can accommodate those needs. We carefully consider factors such as compatibility, support requirements, and personal preferences to ensure a harmonious living environment. Our goal is to match participants with tenants who will best meet their needs and contribute to a supportive and comfortable community.</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div id="ndis-funding-section" class="rounded-2xl shadow-sm p-8" style="background-color:#EAF5FC;border:1px solid #BFE2F6;">
-        <h2 class="text-2xl font-bold mb-4" style="color:#0f2a5c;">How NDIS Funding Works</h2>
-        <p class="text-sm leading-relaxed mb-4" style="color:#374151;">NDIS funding refers to the money allocated in a participant’s NDIS plan to help access supports and services that are related to their disability and approved goals.</p>
-        <p class="text-sm leading-relaxed mb-4" style="color:#374151;">The amount of funding included in a participant’s plan is based on the participant’s individual circumstances, support needs, evidence provided, and the reasonable and necessary supports required to help them achieve their goals.</p>
-        <p class="text-sm leading-relaxed mb-8" style="color:#374151;">NDIS funding is designed to provide participants with access to the supports they need while considering their personal situation and the types of services that will best support their independence and wellbeing.</p>
-
-        <h2 class="text-2xl font-bold mb-4" style="color:#0f2a5c;">What NDIS Funding Can Be Used For</h2>
-        <p class="text-sm leading-relaxed mb-4" style="color:#374151;">NDIS funding can be used to access approved NDIS supports and pay registered providers for services that align with the participant’s plan and disability-related needs.</p>
-        <p class="text-sm leading-relaxed mb-4" style="color:#374151;">Funding is organised into different support budgets, which help participants access supports across areas such as daily living, independence, personal care, and achieving their goals.</p>
-        <p class="text-sm leading-relaxed mb-5" style="color:#374151;">Depending on a participant’s individual needs and plan, funding may be available across different support categories. Every participant’s plan is different because support requirements vary from person to person.</p>
-        <p class="text-sm font-semibold mb-3" style="color:#0f2a5c;">NDIS funding may help cover supports such as:</p>
-        <ul class="flex flex-col gap-2 mb-6">
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#4076B8;"></i><span class="text-sm leading-relaxed" style="color:#374151;">Assistance with household tasks</span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#4076B8;"></i><span class="text-sm leading-relaxed" style="color:#374151;">Personal care and daily living support</span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#4076B8;"></i><span class="text-sm leading-relaxed" style="color:#374151;">Assistive technology, home modifications, or mobility equipment</span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-chevron-right text-xs mt-1 flex-shrink-0" style="color:#4076B8;"></i><span class="text-sm leading-relaxed" style="color:#374151;">Therapeutic and other approved supports</span></li>
-        </ul>
-        <p class="text-sm leading-relaxed" style="color:#374151;">For more details, visit the NDIS website: <a href="https://www.ndis.gov.au/participants/using-your-funding/understanding-your-ndis-funding/what-ndis-funding" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline" style="color:#4076B8;">What is NDIS funding?</a></p>
+      <div id="property-map" class="rounded-2xl shadow-sm overflow-hidden" style="border:1px solid #EEE;">
+        <div class="w-full" style="height:380px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12600.565089751839!2d144.76778815!3d-37.85698475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad689e9869e1f59%3A0x5045675218cda50!2sLaverton%20VIC%203028%2C%20Australia!5e0!3m2!1sen!2ske!4v1781834378601!5m2!1sen!2ske" width="100%" height="100%" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Property location map"></iframe>
+        </div>
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- Property CTA Section -->
+<section id="property-cta" class="main-section w-full py-12 md:py-16 relative overflow-hidden" style="background-color: #eaf5ff;">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-20" style="background: radial-gradient(circle, #57B2E9 0%, transparent 70%); transform: translate(-30%, -40%);"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full opacity-15" style="background: radial-gradient(circle, #4076B8 0%, transparent 70%); transform: translate(30%, 40%);"></div>
+    <svg class="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="property-dot-pattern" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="2" fill="#4076B8"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#property-dot-pattern)"/>
+    </svg>
+    <div class="absolute -top-16 right-24 w-64 h-64 rounded-full border border-[#4076B8]/10"></div>
+    <div class="absolute -top-8 right-32 w-40 h-40 rounded-full border border-[#57B2E9]/10"></div>
+    <div class="absolute -bottom-16 left-24 w-72 h-72 rounded-full border border-[#4076B8]/10"></div>
+    <div class="absolute -bottom-8 left-36 w-44 h-44 rounded-full border border-[#57B2E9]/10"></div>
+  </div>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-3 lg:px-12 flex flex-col items-center text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-[#0f172a] tracking-tight leading-[1.15]">
+      Book a free consultation with our SIL expert team
+    </h2>
+    <a href="8_contact_us.html" class="inline-flex items-center gap-2 h-12 px-8 mt-8 rounded-xl bg-[#4076B8] text-white font-bold text-sm shadow-[0_12px_32px_-8px_rgba(64,118,184,0.45)] hover:bg-[#34629c] hover:-translate-y-1 transition-all duration-300">
+      Book Now
+      <i class="fa-solid fa-arrow-right text-sm"></i>
+    </a>
   </div>
 </section>
 
@@ -740,49 +755,6 @@
         })();
     </script>
 
-    <script>
-        (function () {
-            const galleryImages = [
-                'images/samples/house-image-sample-1.jpg',
-                'images/samples/house-sample-image-2.jpeg',
-                'images/samples/house-sample-image-3.webp',
-                'images/samples/house-sample-image-4.webp'
-            ];
-            const mainImage = document.getElementById('property-main-image');
-            const prevButton = document.getElementById('property-gallery-prev');
-            const nextButton = document.getElementById('property-gallery-next');
-            const thumbnails = document.querySelectorAll('.property-gallery-thumbnail');
-            let selectedIndex = 0;
-
-            function selectImage(index) {
-                selectedIndex = (index + galleryImages.length) % galleryImages.length;
-                mainImage.src = galleryImages[selectedIndex];
-                thumbnails.forEach(function (thumbnail, thumbnailIndex) {
-                    const isSelected = thumbnailIndex === selectedIndex;
-                    thumbnail.classList.toggle('border-[#4076B8]', isSelected);
-                    thumbnail.classList.toggle('border-transparent', !isSelected);
-                    thumbnail.classList.toggle('opacity-70', !isSelected);
-                    if (isSelected) {
-                        thumbnail.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
-                    }
-                });
-            }
-
-            thumbnails.forEach(function (thumbnail) {
-                thumbnail.addEventListener('click', function () {
-                    selectImage(Number(thumbnail.dataset.galleryIndex));
-                });
-            });
-
-            prevButton.addEventListener('click', function () {
-                selectImage(selectedIndex - 1);
-            });
-
-            nextButton.addEventListener('click', function () {
-                selectImage(selectedIndex + 1);
-            });
-        })();
-    </script>
 
     <a href="8_contact_us.html#contact-form-section" class="mobile-sticky-contact-btn md:hidden fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 h-12 px-5 rounded-xl bg-[#4076B8] text-white font-semibold text-sm shadow-[0_8px_20px_-6px_rgba(64,118,184,0.4)]">
         <i class="fa-solid fa-phone text-xs"></i>
@@ -836,6 +808,8 @@
     })();
 </script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
