@@ -300,8 +300,8 @@ body{font-family:Inter,sans-serif;}
   </div>
 </div>
 
-<section id="hospital-intro" class="main-section w-full bg-white py-16 px-3 lg:px-12">
-  <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+<section id="hospital-intro" class="main-section w-full bg-white py-16">
+  <div class="inner-wrapper max-w-[1440px] mx-auto px-3 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
     <div class="lg:col-span-9 flex flex-col gap-8">
       <div class="rounded-[28px] overflow-hidden h-[600px] shadow-[0_20px_60px_-24px_rgba(64,118,184,0.45)]">
         <img src="images/hospital.webp" alt="Hospital discharge support with healthcare team" class="w-full h-full object-cover object-top">
@@ -333,8 +333,8 @@ body{font-family:Inter,sans-serif;}
   </div>
 </section>
 
-<section id="hospital-benefits" class="main-section w-full py-16 px-3 lg:px-12" style="background-color:#F4F4F4;">
-  <div class="max-w-[1440px] mx-auto">
+<section id="hospital-benefits" class="main-section w-full py-16" style="background-color:#F4F4F4;">
+  <div class="inner-wrapper max-w-[1440px] mx-auto px-3 lg:px-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
       <div class="rounded-2xl p-8 bg-white border hover:-translate-y-1 transition-all duration-300" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.10);">
         <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background-color:#EEF4FC;"><i class="fa-solid fa-gauge-high text-xl" style="color:#4076B8;"></i></div>
@@ -360,35 +360,43 @@ body{font-family:Inter,sans-serif;}
   </div>
 </section>
 
-<section id="what-is-involved" class="main-section w-full bg-white py-16 px-3 lg:px-12">
-  <div class="max-w-[1440px] mx-auto">
+<section id="what-is-involved" class="main-section w-full bg-white py-16">
+  <div class="inner-wrapper max-w-[1440px] mx-auto px-3 lg:px-12">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4" style="color:#0f172a;">What Is <span style="color:#57B2E9;">Involved</span></h2>
       <p class="text-base leading-relaxed max-w-3xl mx-auto" style="color:#64748b;">A coordinated transition program designed around the participant, their goals and the supports needed for a safe move from hospital to home.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
       <div class="rounded-2xl overflow-hidden bg-white border" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.10);">
-        <img src="images/hospital-to-home.jpg" alt="Care team planning hospital discharge" class="w-full h-56 object-cover">
+        <img src="images/care-functions.webp" alt="Care team planning hospital discharge" class="w-full h-56 object-cover">
         <div class="p-6">
           <h3 class="text-lg font-bold mb-3" style="color:#0f2a5c;">Our Care Functions</h3>
-          <p class="text-sm leading-relaxed" style="color:#64748b;">Our team helps coordinate care, communication and practical supports so each participant can transition with confidence and clarity.</p>
+          <ul class="custom-list flex flex-col gap-2 text-sm" style="color:#64748b;">
+            <li>Our Customer Relations Team works closely with hospital social workers, support coordinators, and discharge planners to identify and arrange the most suitable care and accommodation options for patients.</li>
+            <li>We begin planning before the patient's care plan is officially assessed and approved, helping to avoid delays in their transition.</li>
+          </ul>
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden bg-white border" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.10);">
-        <img src="images/hospital-to-home.webp" alt="Hospital corridor discharge transition" class="w-full h-56 object-cover">
+        <img src="images/doctors-at-work.webp" alt="Hospital corridor discharge transition" class="w-full h-56 object-cover object-top">
         <div class="p-6">
           <h3 class="text-lg font-bold mb-3" style="color:#0f2a5c;">How We Work Alongside Hospitals</h3>
-          <p class="text-sm leading-relaxed" style="color:#64748b;">We collaborate with discharge teams, support coordinators and allied health providers to confirm goals, care needs and suitable accommodation.</p>
+          <ul class="custom-list flex flex-col gap-2 text-sm" style="color:#64748b;">
+            <li>Reduces discharge delays through early planning of care and accommodation requirements.</li>
+            <li>Improves hospital bed availability by supporting timely patient transitions.</li>
+            <li>Enables hospital staff to focus on patient care while we coordinate discharge arrangements.</li>
+          </ul>
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden bg-white border" style="border-color:#EEE;box-shadow:0 4px 24px -4px rgba(64,118,184,0.10);">
-        <img src="images/hospital.jpg" alt="Support worker helping participant at home" class="w-full h-56 object-cover">
+        <img src="images/core-services.webp" alt="Support worker helping participant at home" class="w-full h-56 object-cover">
         <div class="p-6">
           <h3 class="text-lg font-bold mb-3" style="color:#0f2a5c;">Our Core Services Include</h3>
-          <ul class="flex flex-col gap-2 text-sm" style="color:#64748b;">
-            <li class="flex gap-2"><i class="fa-solid fa-check mt-1 text-[#57B2E9]"></i><span>NDIS accommodation and support coordination</span></li>
-            <li class="flex gap-2"><i class="fa-solid fa-check mt-1 text-[#57B2E9]"></i><span>Daily personal care and in-home support</span></li>
-            <li class="flex gap-2"><i class="fa-solid fa-check mt-1 text-[#57B2E9]"></i><span>Transition planning and ongoing review</span></li>
+          <ul class="custom-list flex flex-col gap-2 text-sm" style="color:#64748b;">
+            <li>NDIS Supported Independent Living (SIL): Flexible housing and support options for people with disabilities.</li>
+            <li>Discharge Planning and Transition Support: Early coordination of care and accommodation for a smooth transition from hospital.</li>
+            <li>TAC-Funded Support: Specialised support for individuals recovering from transport-related injuries.</li>
+            <li>Therapy Services: Allied health services to support rehabilitation and recovery.</li>
           </ul>
         </div>
       </div>
@@ -396,52 +404,52 @@ body{font-family:Inter,sans-serif;}
   </div>
 </section>
 
-<section id="hospital-process" class="main-section w-full py-16 px-3 lg:px-12" style="background-color:#F8FBFE;">
-  <div class="max-w-[1440px] mx-auto">
+<section id="hospital-process" class="main-section w-full py-16" style="background-color:#F8FBFE;">
+  <div class="inner-wrapper max-w-[1440px] mx-auto px-3 lg:px-12">
     <div class="text-center mb-10">
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:#0f172a;">What Is The <span style="color:#57B2E9;">Process</span></h2>
-      <p class="text-base font-semibold" style="color:#4076B8;">Week 1</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6" style="color:#0f172a;">What Is The <span style="color:#57B2E9;">Process</span></h2>
+      <p class="text-lg font-bold" style="color:#4076B8;">Week 1</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 items-start mb-12">
       <div class="flex flex-col items-center text-center bg-white rounded-2xl border p-6" style="border-color:#EEE;">
         <i class="fa-solid fa-circle-check text-[#57B2E9] text-3xl mb-4"></i>
-        <h3 class="text-sm font-bold mb-2" style="color:#0f2a5c;">Approval</h3>
+        <h3 class="text-lg font-bold mb-2" style="color:#0f2a5c;">Approval</h3>
         <p class="text-[14px] leading-relaxed" style="color:#64748b;">Cosy Home Care receives the referral and reviews the participant's discharge and accommodation needs.</p>
       </div>
       <div class="flex flex-col items-center text-center bg-white rounded-2xl border p-6" style="border-color:#EEE;">
         <i class="fa-solid fa-clipboard-list text-[#57B2E9] text-3xl mb-4"></i>
-        <h3 class="text-sm font-bold mb-2" style="color:#0f2a5c;">Care Plan</h3>
+        <h3 class="text-lg font-bold mb-2" style="color:#0f2a5c;">Care Plan</h3>
         <p class="text-[14px] leading-relaxed" style="color:#64748b;">We work with the participant, hospital team and supporters to develop a transition plan.</p>
       </div>
       <div class="flex flex-col items-center text-center bg-white rounded-2xl border p-6" style="border-color:#EEE;">
         <i class="fa-solid fa-user-plus text-[#57B2E9] text-3xl mb-4"></i>
-        <h3 class="text-sm font-bold mb-2" style="color:#0f2a5c;">Staff Training & Preparation</h3>
+        <h3 class="text-lg font-bold mb-2" style="color:#0f2a5c;">Staff Training & Preparation</h3>
         <p class="text-[14px] leading-relaxed" style="color:#64748b;">Our team prepares the support model, routines and risk planning for safe service commencement.</p>
       </div>
     </div>
-    <div class="text-center mb-10"><p class="text-base font-semibold" style="color:#4076B8;">Week 2</p></div>
+    <div class="text-center mb-10"><p class="text-lg font-bold" style="color:#4076B8;">Week 2</p></div>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 items-start">
       <div class="flex flex-col items-center text-center bg-white rounded-2xl border p-6" style="border-color:#EEE;">
         <i class="fa-solid fa-house-medical text-[#57B2E9] text-3xl mb-4"></i>
-        <h3 class="text-sm font-bold mb-2" style="color:#0f2a5c;">Accommodation Set Up</h3>
+        <h3 class="text-lg font-bold mb-2" style="color:#0f2a5c;">Accommodation Set Up</h3>
         <p class="text-[14px] leading-relaxed" style="color:#64748b;">The accommodation is prepared with the required equipment, routines and practical supports.</p>
       </div>
       <div class="flex flex-col items-center text-center bg-white rounded-2xl border p-6" style="border-color:#EEE;">
         <i class="fa-solid fa-notes-medical text-[#57B2E9] text-3xl mb-4"></i>
-        <h3 class="text-sm font-bold mb-2" style="color:#0f2a5c;">Allied Health Handover</h3>
+        <h3 class="text-lg font-bold mb-2" style="color:#0f2a5c;">Allied Health Handover</h3>
         <p class="text-[14px] leading-relaxed" style="color:#64748b;">Clinical and allied health recommendations are handed over and embedded into the care model.</p>
       </div>
       <div class="flex flex-col items-center text-center bg-white rounded-2xl border p-6" style="border-color:#EEE;">
         <i class="fa-solid fa-truck-medical text-[#57B2E9] text-3xl mb-4"></i>
-        <h3 class="text-sm font-bold mb-2" style="color:#0f2a5c;">Discharge & Transition Day</h3>
+        <h3 class="text-lg font-bold mb-2" style="color:#0f2a5c;">Discharge & Transition Day</h3>
         <p class="text-[14px] leading-relaxed" style="color:#64748b;">The participant transitions from hospital to their new accommodation with coordinated support.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="post-transition-support" class="main-section w-full py-16 px-3 lg:px-12" style="background-color:#f0f0f0;">
-  <div class="max-w-[1440px] mx-auto">
+<section id="post-transition-support" class="main-section w-full py-16" style="background-color:#f0f0f0;">
+  <div class="inner-wrapper max-w-[1440px] mx-auto px-3 lg:px-12">
     <div class="text-center mb-10">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color:#0f172a;">Discharge & Transition Day and Post Transition Support</h2>
     </div>
