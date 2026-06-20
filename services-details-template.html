@@ -432,265 +432,278 @@ body { font-family: Inter, sans-serif; }
           </div>
         </div>
 
-        <div id="service-homes-section" class="w-full py-12" style="background-color: #F4F4F4;">
-          <div class="max-w-[1440px] mx-auto px-3 lg:px-12">
+
+    <!-- Cosy Homes Listing Section -->
+    <section id="cosy-homes-section" class="main-section w-full py-12 md:py-24" style="background-color: #F4F4F4;">
+        <div class="max-w-[1440px] mx-auto px-3 lg:px-12">
+
+            <!-- Section Header -->
             <div id="homes-section-header" class="flex flex-col items-center text-center mb-16">
-              <h2 class="text-4xl lg:text-5xl font-bold text-[#0f172a] tracking-tight mb-5 leading-tight">
-                Available <span style="color: #57B2E9;">Houses</span>
-              </h2>
-              <p class="text-lg text-[#64748b] font-medium max-w-2xl leading-relaxed">
-                Discover our purpose-built, fully accessible SIL homes - thoughtfully designed for comfort, independence, and community connection across Victoria.
-              </p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-[#0f172a] tracking-tight mb-5 leading-tight">
+                    Available <span style="color: #57B2E9;">Homes</span>
+                </h2>
+                <p class="text-lg text-[#64748b] font-medium max-w-2xl leading-relaxed" style="display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                    Discover our purpose-built, fully accessible SIL homes - thoughtfully designed for comfort, independence, and community connection across Victoria.
+                </p>
             </div>
-            <div id="homes-slider" class="homes-slider">
-              <!-- Card 1: Kalkallo, VIC -->
-              <div class="px-2">
-                <div id="property-card-1" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
-                <div class="relative h-56 overflow-hidden">
-                  <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e91926fdf-3166b2ece49a8c4762e8.png" alt="modern accessible house exterior in Kalkallo VIC" />
-                  <div class="absolute top-0 left-0 z-10">
-                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#16a34a] text-white text-sm font-bold px-3 py-1.5 tracking-wide" style="border-radius: 0 6px 6px 0;">
-                      Available
-                    </span>
-                  </div>
-                  <div class="absolute top-3 right-3 z-10">
-                    <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
-                      <i class="fa-solid fa-share-nodes text-sm"></i>
-                    </a>
-                  </div>
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
-                </div>
-                <div class="p-6">
-                  <div class="mb-3">
-                    <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Kalkallo, VIC</h3>
-                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
-                      <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
-                      <span>25 Harvest Drive, Kalkallo 3064</span>
+
+            <!-- Property Cards Slider -->
+            <div class="relative mb-14">
+                <div id="homes-slider" class="homes-slider">
+                    <!-- Card 1: Kalkallo, VIC -->
+                    <div class="px-2">
+                        <div id="property-card-1" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
+                            <a href="10_individual_housing.html" class="relative h-56 overflow-hidden block">
+                                <img class="w-full h-full object-cover" src="./images/Laverton-new.webp" alt="Modern accessible SIL home exterior in Kalkallo Victoria" />
+                                <div class="absolute top-0 left-0 z-10">
+                                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#16a34a] text-white text-sm font-bold px-3 py-1.5 tracking-wide" style="border-radius: 0 6px 6px 0;">
+                                        Available
+                                    </span>
+                                </div>
+                                <div class="absolute top-3 right-3 z-10">
+                                    <div class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] shadow-md">
+                                        <i class="fa-solid fa-share-nodes text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                            </a>
+                            <div class="p-6 flex flex-col">
+                                <div class="mb-3">
+                                    <a href="10_individual_housing.html" class="text-xl font-bold text-[#4076B8] leading-tight mb-1 hover:text-[#0f2a5c] transition-colors">Laverton, VIC</a>
+                                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
+                                        <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
+                                        <span>25 Harvest Drive, Kalkallo 3064</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-sm text-[#64748b] leading-relaxed mb-5 line-clamp-3">
+                                   Discover this beautifully designed Supported Independent Living (SIL) Home, located in the heart of Melbourne's vibrant Western suburbs. 
+                                </p>
+
+                                <div class="border-t border-[#EEE] pt-5">
+                                    <div class="grid grid-cols-2 gap-y-4 gap-x-2">
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">4</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">2</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">3</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-wheelchair text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">1</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Accessible Parking</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end mt-5">
+                                    <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90" style="background-color:#16a34a;">View Property <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <p class="text-sm text-[#64748b] leading-relaxed mb-5">
-                    A warm, modern home with open-plan living, wide hallways and full wheelchair access - designed to maximise independence and comfort.
-                  </p>
-                  <div class="border-t border-[#EEE] pt-5">
-                    <div class="grid grid-cols-3 gap-y-4 gap-x-2">
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-bed text-[#4076B8] text-xs"></i>
+
+                    <!-- Card 2: Kalkallo, VIC -->
+                    <div class="px-2">
+                        <div id="property-card-2" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
+                                <a href="10_individual_housing.html" class="relative h-56 overflow-hidden block">
+                                    <img class="w-full h-full object-cover" src="./images/Kalkallo.webp" alt="Spacious modern accessible home interior Craigieburn Victoria" />
+                                    <div class="absolute top-0 left-0 z-10">
+                                        <span class="sil-badge inline-flex items-center gap-1.5 bg-[#16a34a] text-white text-sm font-bold px-3 py-1.5 tracking-wide" style="border-radius: 0 6px 6px 0;">
+                                            Available
+                                        </span>
+                                    </div>
+                                    <div class="absolute top-3 right-3 z-10">
+                                        <div class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] shadow-md">
+                                            <i class="fa-solid fa-share-nodes text-sm"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                                </a>
+                                <div class="p-6 flex flex-col">
+                                    <div class="mb-3">
+                                        <a href="10_individual_housing.html" class="text-xl font-bold text-[#4076B8] leading-tight mb-1 hover:text-[#0f2a5c] transition-colors">Kalkallo, VIC</a>
+                                        <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
+                                            <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
+                                            <span>8 Ridgeline Blvd, Craigieburn 3064</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-sm text-[#64748b] leading-relaxed mb-5 line-clamp-3">
+                                        Welcome to our brand new SDA home in Kalkallo! This property is designed with high physical support and a 1:2 ratio, but ideal for Supported Independent Living (SIL) as well.
+                                    </p>
+
+                                    <div class="border-t border-[#EEE] pt-5">
+                                        <div class="grid grid-cols-2 gap-y-4 gap-x-2">
+                                            <div class="spec-item flex gap-2.5">
+                                                <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                    <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-[#0f172a] leading-none">5</p>
+                                                    <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="spec-item flex gap-2.5">
+                                                <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                    <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-[#0f172a] leading-none">3</p>
+                                                    <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="spec-item flex gap-2.5">
+                                                <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                    <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-[#0f172a] leading-none">4</p>
+                                                    <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
+                                                </div>
+                                            </div>
+                                            <div class="spec-item flex gap-2.5">
+                                                <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                    <i class="fa-solid fa-wheelchair text-[#4076B8] text-sm"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-2xl font-bold text-[#0f172a] leading-none">2</p>
+                                                    <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Accessible Parking</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-end mt-5">
+                                        <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90" style="background-color:#16a34a;">View Property <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                                    </div>
+                                </div>
                         </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">5</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-bath text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">3</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-restroom text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">3</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-car text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">2</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Parking</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-wheelchair text-[#5bc981] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">2</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Accessible</p>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-              <!-- Card 2: Ivanhoe East, VIC -->
-              <div class="px-2">
-                <div id="property-card-2" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
-                <div class="relative h-56 overflow-hidden">
-                  <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e91926fdf-f67530fd7359061b6150.png" alt="modern accessible house exterior in Ivanhoe East VIC" />
-                  <div class="absolute top-0 left-0 z-10">
-                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#16a34a] text-white text-sm font-bold px-3 py-1.5 tracking-wide" style="border-radius: 0 6px 6px 0;">
-                      Available
-                    </span>
-                  </div>
-                  <div class="absolute top-3 right-3 z-10">
-                    <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
-                      <i class="fa-solid fa-share-nodes text-sm"></i>
-                    </a>
-                  </div>
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
-                </div>
-                <div class="p-6">
-                  <div class="mb-3">
-                    <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Ivanhoe East, VIC</h3>
-                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
-                      <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
-                      <span>12 Burke Road, Ivanhoe East 3079</span>
+
+                    <!-- Card 3: Heidelberg West, VIC -->
+                    <div class="px-2">
+                        <div id="property-card-3" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
+                            <a href="10_individual_housing.html" class="relative h-56 overflow-hidden block">
+                                <img class="w-full h-full object-cover" src="./images/Heidelberg.webp" alt="Beautiful modern accessible SIL home exterior Wollert Victoria" />
+                                <div class="absolute top-0 left-0 z-10">
+                                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#94a3b8] text-white text-sm font-bold px-3 py-1.5 tracking-wide" style="border-radius: 0 6px 6px 0;">
+                                        Unavailable
+                                    </span>
+                                </div>
+                                <div class="absolute top-3 right-3 z-10">
+                                    <div class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] shadow-md">
+                                        <i class="fa-solid fa-share-nodes text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                            </a>
+                            <div class="p-6 flex flex-col">
+                                <div class="mb-3">
+                                    <a href="10_individual_housing.html" class="text-xl font-bold text-[#4076B8] leading-tight mb-1 hover:text-[#0f2a5c] transition-colors">Heidelberg West</a>
+                                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
+                                        <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
+                                        <span>14 Sunbury Crescent, Wollert 3750</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-sm text-[#64748b] leading-relaxed mb-5 line-clamp-3">
+                                   Brand-new 4-bed home in Heidelberg Heights offering modern furnished rooms with ensuites, heating/cooling, shared kitchen, outdoor area, 24/7 support, near shops, transport & parks.
+                                </p>
+
+                                <div class="border-t border-[#EEE] pt-5">
+                                    <div class="grid grid-cols-2 gap-y-4 gap-x-2">
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-bed text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">4</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-bath text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">3</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-restroom text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">4</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item flex gap-2.5">
+                                            <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-xl bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
+                                                <i class="fa-solid fa-wheelchair text-[#4076B8] text-sm"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-2xl font-bold text-[#0f172a] leading-none">2</p>
+                                                <p class="text-xs text-[#64748b] leading-tight font-medium mt-0.5">Accessible Parking</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end mt-5">
+                                    <a href="10_individual_housing.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90" style="background-color:#16a34a;">View Property <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <p class="text-sm text-[#64748b] leading-relaxed mb-5">
-                    Elegantly designed with ceiling hoists, roll-in showers and a north-facing garden, this home offers premium accessible living close to shops and transport.
-                  </p>
-                  <div class="border-t border-[#EEE] pt-5">
-                    <div class="grid grid-cols-3 gap-y-4 gap-x-2">
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-bed text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">4</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-bath text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">2</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-restroom text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">2</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-car text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">2</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Parking</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-wheelchair text-[#5bc981] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">1</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Accessible</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              </div>
-              <!-- Card 3: Heidelberg West, VIC -->
-              <div class="px-2">
-                <div id="property-card-3" class="property-card bg-white rounded-[10px] overflow-hidden" style="box-shadow: 0 4px 24px -4px rgba(64,118,184,0.10);">
-                <div class="relative h-56 overflow-hidden">
-                  <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e91926fdf-63eea989772e2262ba34.png" alt="modern accessible house exterior in Heidelberg West VIC" />
-                  <div class="absolute top-0 left-0 z-10">
-                    <span class="sil-badge inline-flex items-center gap-1.5 bg-[#16a34a] text-white text-sm font-bold px-3 py-1.5 tracking-wide" style="border-radius: 0 6px 6px 0;">
-                      Available
-                    </span>
-                  </div>
-                  <div class="absolute top-3 right-3 z-10">
-                    <a href="#" class="w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4076B8] hover:bg-white transition-colors shadow-md">
-                      <i class="fa-solid fa-share-nodes text-sm"></i>
-                    </a>
-                  </div>
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
-                </div>
-                <div class="p-6">
-                  <div class="mb-3">
-                    <h3 class="text-xl font-bold text-[#4076B8] leading-tight mb-1">Heidelberg West, VIC</h3>
-                    <div class="flex items-center gap-1.5 text-[#64748b] text-sm font-medium">
-                      <i class="fa-solid fa-location-dot text-[#57B2E9] text-xs"></i>
-                      <span>8 Olympic Avenue, Heidelberg West 3081</span>
-                    </div>
-                  </div>
-                  <p class="text-sm text-[#64748b] leading-relaxed mb-5">
-                    Spacious and bright with wide doorways, step-free access and a large accessible backyard perfect for outdoor activities and relaxation.
-                  </p>
-                  <div class="border-t border-[#EEE] pt-5">
-                    <div class="grid grid-cols-3 gap-y-4 gap-x-2">
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-bed text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">5</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Bedrooms</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-bath text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">3</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Bathrooms</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-restroom text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">3</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Toilets</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#f0f5fa] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-car text-[#4076B8] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">2</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Parking</p>
-                        </div>
-                      </div>
-                      <div class="spec-item flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-[#eef8f2] flex items-center justify-center flex-shrink-0">
-                          <i class="fa-solid fa-wheelchair text-[#5bc981] text-xs"></i>
-                        </div>
-                        <div>
-                          <p class="text-lg font-bold text-[#0f172a] leading-none">2</p>
-                          <p class="text-[10px] text-[#64748b] leading-tight font-medium mt-0.5">Accessible</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>
             </div>
-          </div>
+
+            <!-- CTA Button -->
+            <div id="homes-cta" class="flex flex-col items-center gap-4">
+                <a href="7_housing-vacancies.html" class="view-all-btn inline-flex items-center gap-3 h-14 px-10 rounded-xl text-white font-semibold text-base" style="background-color:#4076B8;">
+                    <i class="fa-solid fa-house-chimney-window text-sm"></i>
+                    View All Vacancies
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <p class="text-sm text-[#64748b] font-medium text-center md:text-left">
+                    <i class="fa-solid fa-circle-info text-[#57B2E9] mr-1.5"></i>
+                    Can't find the right home? <a href="#" class="contact-modal-trigger text-[#4076B8] font-semibold hover:underline">Contact our team</a> and we'll help you find the perfect match.
+                </p>
+            </div>
+
         </div>
+    </section>
 
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Service CTA Section -->
 <section id="service-cta" class="w-full py-14 px-6 text-center text-white relative overflow-hidden" style="background: linear-gradient(135deg, #4076B8 0%, #57B2E9 100%);">
