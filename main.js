@@ -90,6 +90,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initDetailStickyContactForm();
 
+    const initInteractiveMaps = () => {
+        document.querySelectorAll('[data-interactive-map]').forEach((map) => {
+            const iframe = map.querySelector('[data-map-iframe]');
+            const overlay = map.querySelector('[data-map-interaction-overlay]');
+
+            if (!iframe || !overlay) return;
+
+            const enableMap = () => {
+                iframe.classList.remove('pointer-events-none');
+                overlay.classList.add('hidden');
+            };
+
+            const resetMap = () => {
+                iframe.classList.add('pointer-events-none');
+                overlay.classList.remove('hidden');
+            };
+
+            overlay.addEventListener('click', enableMap);
+            map.addEventListener('mouseleave', resetMap);
+        });
+    };
+
+    initInteractiveMaps();
+
     const initFaqAccordion = () => {
         document.querySelectorAll('.faq-toggle').forEach((toggle) => {
             toggle.addEventListener('click', () => {

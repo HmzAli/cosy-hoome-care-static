@@ -428,18 +428,23 @@ body { font-family: Inter, sans-serif; }
     </div>
 
     <!-- Map Section -->
-    <section id="map-section" class="w-full relative transform -translate-y-10">
-        <div class="w-full h-[600px]">
+    <section id="map-section" class="w-full relative transform -translate-y-10 group" data-interactive-map>
+        <div class="w-full h-[600px] relative">
             <iframe 
+                class="w-full h-full border-0 pointer-events-none"
+                data-map-iframe
                 src="https://www.google.com/maps/d/embed?mid=1NqMhRoWJgwp2uSnwTEBoZLG5gvl_9mo" 
                 width="100%" 
                 height="100%" 
-                style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy">
             </iframe>
+            <button type="button" class="absolute inset-0 mt-20 z-10 flex items-center justify-center text-center bg-black/45 text-white font-semibold text-base md:text-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200" data-map-interaction-overlay>
+                <span class="hidden md:inline">Click to interact</span>
+                <span class="md:hidden">Tap to interact</span>
+            </button>
         </div>
-        <div class="absolute top-0 left-0 w-full h-20 bg-[#F4F6F9]"></div>
+        <div class="absolute top-0 left-0 z-20 w-full h-20 bg-[#F4F6F9]"></div>
     </section>
 
       </div>
